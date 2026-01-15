@@ -8,15 +8,38 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #fffefb;
     --foreground: #ededed;
   }
+}
+
+@font-face {
+  font-family: "Better-land";
+  src: url("../../public/fonts/better_land_rus.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../../public/fonts/Manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype");
+  src: url("../../public/fonts/Manrope/static/Manrope-Bold.ttf")
+    format("truetype");
+  src: url("../../public/fonts/Manrope/static/Manrope-ExtraBold.ttf")
+    format("truetype");
+  src: url("../../public/fonts/Manrope/static/Manrope-ExtraLight.ttf")
+    format("truetype");
+  src: url("../../public/fonts/Manrope/static/Manrope-Light.ttf")
+    format("truetype");
+  src: url("../../public/fonts/Manrope/static/Manrope-Regular.ttf")
+    format("truetype");
+  src: url("../../public/fonts/Manrope/static/Manrope-SemiBold.ttf")
+    format("truetype");
+  src: url("../../public/fonts/Manrope/static/Manrope-Medium.ttf")
+    format("truetype");
 }
 
 body {
