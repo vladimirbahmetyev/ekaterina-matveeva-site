@@ -6,7 +6,7 @@ import { Text } from "@/app/ui/typography/Text";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 interface SwiperCardProps {
@@ -44,7 +44,7 @@ const SwiperCard: FC<SwiperCardProps> = ({ imgUrl, step, text, title }) => {
 };
 
 export const Steps: FC = () => {
-  const swiper = useRef(null);
+  const swiper = useRef<null | SwiperRef>(null);
   const [isFirst, setIsFirst] = useState(true);
   const [isLast, setIsLast] = useState(false);
 

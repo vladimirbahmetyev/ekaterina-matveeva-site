@@ -1,6 +1,7 @@
 import { Intro } from "@/app/main/components/Intro";
 import { WorkWithMe } from "@/app/main/components/WorkWithMe";
 import { Steps } from "@/app/main/components/Steps";
+import { Projects } from "@/app/main/components/Projects";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Intro />
         <WorkWithMe />
         <Steps />
+        <Projects />
       </main>
     </div>
   );
