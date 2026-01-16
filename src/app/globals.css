@@ -17,6 +17,14 @@
   }
 }
 
+.arrow-mask {
+    width: 40px;
+    height: 40px;
+    background-color: #434343;
+    mask: url('../../public/svg/arrow.svg') no-repeat center / contain;
+    -webkit-mask: url('../../public/svg/arrow.svg') no-repeat center / contain;
+}
+
 @font-face {
   font-family: "Better-land";
   src: url("../../public/fonts/better_land_rus.otf") format("opentype");
