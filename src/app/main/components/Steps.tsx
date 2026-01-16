@@ -47,20 +47,19 @@ export const Steps: FC = () => {
   const swiper = useRef(null);
   const [isFirst, setIsFirst] = useState(true);
   const [isLast, setIsLast] = useState(false);
+
+  const onSwipe = () => {
+    setIsLast(swiper.current?.isEnd);
+    setIsFirst(swiper.current?.isBeginning);
+  };
+
   const onArrowClick = (direction: "next" | "prev") => {
     if (direction === "next") {
-      setIsFirst(false);
       swiper.current?.slideNext();
-      if (swiper.current?.isEnd) {
-        setIsLast(true);
-      }
     } else {
-      setIsLast(false);
       swiper.current?.slidePrev();
-      if (swiper.current?.isBeginning) {
-        setIsFirst(true);
-      }
     }
+    onSwipe();
   };
 
   return (
@@ -89,6 +88,7 @@ export const Steps: FC = () => {
           onSwiper={(swiperInstance) => {
             swiper.current = swiperInstance;
           }}
+          onTransitionEnd={() => onSwipe()}
         >
           <SwiperSlide className="w-full">
             <SwiperCard
