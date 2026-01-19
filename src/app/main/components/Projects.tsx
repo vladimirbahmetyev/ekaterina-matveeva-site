@@ -1,6 +1,7 @@
 import { Heading } from "@/app/ui/typography/Heading";
 import { Text } from "@/app/ui/typography/Text";
 import { ProjectCard, ProjectCardProps } from "@/app/ui/card/ProjectCard";
+
 const projects: ProjectCardProps[] = [
   {
     imgUrl: "/img/main/projects/mobile_home_case_1_presentations.png",
@@ -34,7 +35,7 @@ const projects: ProjectCardProps[] = [
   },
   {
     imgUrl: "/img/main/projects/mobile_home_case6_yandex.png",
-    title: "Сайт для анонса мероприятия и сбора заявок на конференцию",
+    title: "Система учета работы сотрудников на складе  Яндекс Маркета",
     link: "",
     tags: ["Редизайн", "UI/UX дизайн", "Многостраничный сайт"],
   },

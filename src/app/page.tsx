@@ -2,6 +2,7 @@ import { Intro } from "@/app/main/components/Intro";
 import { WorkWithMe } from "@/app/main/components/WorkWithMe";
 import { Steps } from "@/app/main/components/Steps";
 import { Projects } from "@/app/main/components/Projects";
+import { Services } from "@/app/main/components/Services";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <WorkWithMe />
         <Steps />
         <Projects />
+        <Services />
       </main>
     </div>
   );
