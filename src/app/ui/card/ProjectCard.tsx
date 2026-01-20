@@ -1,11 +1,12 @@
 import { FC } from "react";
 import Image from "next/image";
 import { Text } from "@/app/ui/typography/Text";
+import { project } from "@/app/hooks/useProjectMeta";
 
 export interface ProjectCardProps {
   imgUrl?: string;
   title?: string;
-  link?: string;
+  link?: `/projects/${project}`;
   tags?: string[];
 }
 
