@@ -6,7 +6,7 @@ const projects: ProjectCardProps[] = [
   {
     imgUrl: "/img/main/projects/mobile_home_case_1_presentations.png",
     title: "Создание графических материалов для вашего проекта ",
-    link: "/projects/cosmetics",
+    link: "/graphMaterials",
     tags: ["Презентации", "PDF-гайды", "Оформление соцсетей"],
   },
   {

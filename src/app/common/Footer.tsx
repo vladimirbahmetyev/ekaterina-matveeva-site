@@ -1,35 +1,12 @@
-"use client";
-
 import { OrderButton } from "@/app/ui/buttons/OrderButton";
 import { Heading } from "@/app/ui/typography/Heading";
 import { Text } from "@/app/ui/typography/Text";
 
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 export const Footer = () => {
-  const path = usePathname();
   return (
     <footer className="flex flex-col items-center justify-center gap-6">
       <div className="flex flex-col items-center justify-center gap-6 px-2.5 w-full">
-        {!path.split("/").includes("projects") && (
-          <div className="bg-white flex flex-col items-center border-[#B6B2A8] border-1 rounded-xl p-4 relative w-full">
-            <Image
-              src={"/img/footer/klev.png"}
-              alt=""
-              width={50}
-              height={50}
-              className="absolute top-[-25%] left-[-3%]"
-            />
-            <Text className="text-center">
-              Если вы не нашли в списке услуг
-              <br />
-              то, что вам нужно, <span className="underline">напишите мне</span>
-              <br />
-              для обсуждения задач
-            </Text>
-          </div>
-        )}
-
         <Heading className={"text-[#777162]"}>Екатерина Матвеева</Heading>
         <Image
           className="rounded-xl"

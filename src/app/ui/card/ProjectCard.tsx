@@ -6,7 +6,7 @@ import { project } from "@/app/hooks/useProjectMeta";
 export interface ProjectCardProps {
   imgUrl?: string;
   title?: string;
-  link?: `/projects/${project}`;
+  link?: `/projects/${project}` | "/graphMaterials";
   tags?: string[];
 }
 

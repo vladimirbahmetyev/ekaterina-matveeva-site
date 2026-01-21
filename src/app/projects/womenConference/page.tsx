@@ -1,15 +1,10 @@
-"use client";
-
 import { FC } from "react";
 import Image from "next/image";
 import { Text } from "@/app/ui/typography/Text";
-import { NavigationButton } from "@/app/ui/buttons/NavigationButton";
 
-import { useRouter } from "next/navigation";
 import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
 
 export default function WomenConference(): FC {
-  const router = useRouter();
   return (
     <div className="px-2.5 flex flex-col gap-10">
       <Image
@@ -140,10 +135,6 @@ export default function WomenConference(): FC {
           оказалась особенно высокой — это подтвердило, что акцент на мобильный
           UX был стратегически верным.
         </Text>
-      </div>
-      <div className="flex justify-between w-full items-center">
-        <NavigationButton text="На главную" onClick={() => router.push("/")} />
-        <ExternalLinkButton link={"test.com"} />
       </div>
     </div>
   );

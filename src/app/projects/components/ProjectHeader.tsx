@@ -2,17 +2,14 @@
 
 import { Text } from "@/app/ui/typography/Text";
 
-import { useRouter } from "next/navigation";
 import { useProjectMeta } from "@/app/hooks/useProjectMeta";
 import { NavigationButton } from "@/app/ui/buttons/NavigationButton";
 
 export const ProjectHeader = () => {
   const projectMeta = useProjectMeta();
-  const router = useRouter();
-  const handleBack = () => router.back();
   return (
     <div className="flex flex-col gap-5 px-2.5 py-4">
-      <NavigationButton onClick={handleBack} text="назад" />
+      <NavigationButton back text="назад" />
       <Text className="font-semibold text-[#35322A]">{projectMeta.title}</Text>
       <Text className="text-[#35322A]">{projectMeta.description}</Text>
       <div className="flex flex-col w-full gap-2">
