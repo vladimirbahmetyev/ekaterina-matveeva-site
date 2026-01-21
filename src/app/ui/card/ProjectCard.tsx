@@ -4,10 +4,10 @@ import { Text } from "@/app/ui/typography/Text";
 import { project } from "@/app/hooks/useProjectMeta";
 
 export interface ProjectCardProps {
-  imgUrl?: string;
-  title?: string;
+  imgUrl: string;
+  title: string;
   link?: `/projects/${project}` | "/graphMaterials";
-  tags?: string[];
+  tags: string[];
 }
 
 export const ProjectCard: FC<ProjectCardProps> = ({
