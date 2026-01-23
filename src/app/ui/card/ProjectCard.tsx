@@ -1,3 +1,5 @@
+"use client";
+
 import { FC, useContext } from "react";
 import Image from "next/image";
 import { Text } from "@/app/ui/typography/Text";
