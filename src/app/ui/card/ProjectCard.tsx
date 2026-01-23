@@ -1,13 +1,18 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import Image from "next/image";
 import { Text } from "@/app/ui/typography/Text";
 import { project } from "@/app/hooks/useProjectMeta";
+import {
+  PopupContext,
+  registeredPopups,
+} from "@/app/graphMaterials/MaterialsPopupProvider";
 
 export interface ProjectCardProps {
   imgUrl: string;
   title: string;
   link?: `/projects/${project}` | "/graphMaterials";
   tags: string[];
+  popupId: registeredPopups;
 }
 
 export const ProjectCard: FC<ProjectCardProps> = ({
@@ -15,9 +20,14 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   tags,
   link,
   title = "",
+  popupId,
 }) => {
+  const { openPopup } = useContext(PopupContext);
   return (
-    <div className="flex flex-col w-full gap-2 mb-10">
+    <div
+      className="flex flex-col w-full gap-2 mb-10"
+      onClick={popupId ? () => openPopup(popupId) : () => {}}
+    >
       {imgUrl && (
         <Image
           src={imgUrl}

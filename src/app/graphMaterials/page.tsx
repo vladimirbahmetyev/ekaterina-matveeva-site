@@ -1,26 +1,17 @@
+"use client";
+
 import { Text } from "@/app/ui/typography/Text";
 import { NavigationButton } from "@/app/ui/buttons/NavigationButton";
 import { OrderButton } from "@/app/ui/buttons/OrderButton";
 import { ProjectCard, ProjectCardProps } from "@/app/ui/card/ProjectCard";
+
 import {
   MaterialsPopupProvider,
-  Popup,
+  registeredPopups,
 } from "@/app/graphMaterials/MaterialsPopupProvider";
+import { Popup } from "@/app/graphMaterials/Popup";
 
-type popupId =
-  | "alex"
-  | "rent"
-  | "jul"
-  | "massage"
-  | "conference"
-  | "smm"
-  | "commercial"
-  | "speakers"
-  | "languageSchool"
-  | "lips"
-  | "vk";
-
-const Material: (ProjectCardProps & { popupId: popupId })[] = [
+const Material: (ProjectCardProps & { popupId: registeredPopups })[] = [
   {
     imgUrl: "/img/graphMaterials/main/presentations_1.png",
     title: "Баннеры, креативы для рекламы, превью для видео",
@@ -109,10 +100,24 @@ export default function GraphMaterials() {
         </div>
 
         {Material.map((project) => (
-          <ProjectCard {...project} key={project.title + project.imgUrl} />
+          <ProjectCard
+            {...project}
+            key={project.title + project.imgUrl}
+            popupId={project.popupId}
+          />
         ))}
       </div>
-      <Popup popupId="test">Test popup</Popup>
+      <Popup popupId="alex">Test popup</Popup>
+      <Popup popupId="rent">Test popup</Popup>
+      <Popup popupId="jul">Test popup</Popup>
+      <Popup popupId="massage">Test popup</Popup>
+      <Popup popupId="commercial">Test popup</Popup>
+      <Popup popupId="conference">Test popup</Popup>
+      <Popup popupId="smm">Test popup</Popup>
+      <Popup popupId="speakers">Test popup</Popup>
+      <Popup popupId="languageSchool">Test popup</Popup>
+      <Popup popupId="lips">Test popup</Popup>
+      <Popup popupId="vk">Test popup</Popup>
     </MaterialsPopupProvider>
   );
 }
