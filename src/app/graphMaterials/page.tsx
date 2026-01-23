@@ -4,6 +4,7 @@ import { Text } from "@/app/ui/typography/Text";
 import { NavigationButton } from "@/app/ui/buttons/NavigationButton";
 import { OrderButton } from "@/app/ui/buttons/OrderButton";
 import { ProjectCard, ProjectCardProps } from "@/app/ui/card/ProjectCard";
+import Image from "next/image";
 
 import {
   MaterialsPopupProvider,
@@ -107,7 +108,15 @@ export default function GraphMaterials() {
           />
         ))}
       </div>
-      <Popup popupId="alex">Test popup</Popup>
+      <Popup popupId="alex">
+        <Image
+          src="/img/graphMaterials/popup/alex.png"
+          alt=""
+          width={400}
+          height={400}
+          className="w-full"
+        />
+      </Popup>
       <Popup popupId="rent">Test popup</Popup>
       <Popup popupId="jul">Test popup</Popup>
       <Popup popupId="massage">Test popup</Popup>

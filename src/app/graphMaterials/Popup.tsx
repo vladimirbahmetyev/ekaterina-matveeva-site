@@ -32,7 +32,7 @@ export function Popup({
     >
       <div
         ref={nodeRef}
-        className="content fixed h-screen w-screen bg-[#00000080] top-0 left-0 justify-center flex items-center"
+        className="content fixed h-screen w-screen bg-[#00000080] top-0 left-0 justify-center flex pt-20"
         onClick={() => closePopup(popupId)}
       >
         <Image
@@ -44,7 +44,7 @@ export function Popup({
           className="absolute top-2 right-2 cursor-pointer"
         />
         <div
-          className="bg-white w-8/10 p-10 h-8/10 rounded-xl"
+          className="bg-white w-9/10 p-5 h-8/10 rounded-xl"
           onClick={handlePopupContentClick}
         >
           {children}
