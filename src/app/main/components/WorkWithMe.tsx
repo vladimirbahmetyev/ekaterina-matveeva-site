@@ -5,13 +5,20 @@ import Image from "next/image";
 import { Heading } from "@/app/ui/typography/Heading";
 
 export const WorkWithMe: FC = () => (
-  <div className="flex flex-col px-2.5 gap-1 items-center mt-5">
+  <div className="flex flex-col px-2.5 md:px-30 gap-1 items-center mt-5 md:pt-15">
     <Heading className="text-5xl">Работа со мной</Heading>
-    <Text className="text-center font-semibold text-[#B6B2A8] mb-3">
+    <Text className="text-center font-semibold text-[#B6B2A8] mb-3 md:mb-10">
       Это качественный результат <br />с комфортом для всех
     </Text>
-    <div className={"grid grid-cols-2 grid-rows-4 gap-2 grid-flow-row"}>
-      <Card variant="filled" className={"col-span-2"}>
+    <div
+      className={
+        "grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-2 gap-2 md:gap-5 grid-flow-row"
+      }
+    >
+      <Card
+        variant="filled"
+        className={"col-span-2 md:col-start-2 md:row-start-1"}
+      >
         <div className="flex  justify-between mb-1.5">
           <Text className="font-semibold text-[#777163]">
             Применяю UX-исследования
@@ -29,7 +36,7 @@ export const WorkWithMe: FC = () => (
           анализ конкурентов и аудитории)
         </Text>
       </Card>
-      <Card variant="white" className="">
+      <Card variant="white" className="md:col-start-1">
         <div className="flex flex-col justify-between h-full">
           <Text className="font-semibold text-[#777163]">
             Глубоко погружаюсь в проект
@@ -58,7 +65,7 @@ export const WorkWithMe: FC = () => (
           </Text>
         </div>
       </Card>
-      <Card variant="filled" className={"col-span-2"}>
+      <Card variant="filled" className={"col-span-2 md: col-start-3"}>
         <div className="flex flex-col justify-between h-full">
           <div className="flex  justify-between mb-1.5">
             <Text className="font-semibold text-[#777163]">
@@ -78,7 +85,7 @@ export const WorkWithMe: FC = () => (
           </Text>
         </div>
       </Card>
-      <Card variant="white" className="">
+      <Card variant="white" className="md:col-start-2 md:row-start-2">
         <div className="flex flex-col justify-between h-full">
           <Text className="font-semibold text-[#777163]">
             Ответственно подхожу к своей работе
@@ -88,7 +95,7 @@ export const WorkWithMe: FC = () => (
           </Text>
         </div>
       </Card>
-      <Card variant="filled" className="">
+      <Card variant="filled" className="md:col-start-1 md:row-start-2">
         <div className="flex flex-col justify-between h-full relative">
           <Text className="font-semibold text-[#777163]">
             Работаю легально и по договору

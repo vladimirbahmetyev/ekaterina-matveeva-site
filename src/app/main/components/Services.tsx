@@ -55,19 +55,23 @@ const Service: FC<ServiceProps> = ({ title, bordered, price, description }) => {
           <Text className="font-semibold">от {price} тыс.рублей</Text>
         )}
       </div>
-      <Text className="text-[#B6B2A8] font-semibold">{description}</Text>
+      <Text className="text-[#B6B2A8] font-semibold md:max-w-1/2">
+        {description}
+      </Text>
     </div>
   );
 };
 
 export const Services = () => {
   return (
-    <div className="flex flex-col gap-6 px-2.5 mb-12">
+    <div className="flex flex-col gap-6 px-2.5 md:px-30 mb-12 md:mt-10 md:w-full">
       <div className="flex flex-col items-center gap-2 mb-8">
         <Heading>Услуги и стоимость</Heading>
-        <Text className="text-center font-semibold text-[#B6B2A8]">
-          Каждый проект уникален и имеет свои задачи. Поэтому точную сумму я
-          смогу назввать только после знакомства с вашим проектом.
+        <Text
+          className="text-center font-semibold text-[#B6B2A8]"
+          preserveFormatting
+        >
+          {`Каждый проект уникален и имеет свои задачи.\nПоэтому точную сумму я смогу назввать только после знакомства с вашим проектом.`}
         </Text>
       </div>
 

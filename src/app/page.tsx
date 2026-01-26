@@ -15,8 +15,15 @@ export default function Home() {
         <Steps />
         <Projects />
         <Services />
-        <div className="px-2.5 w-full mb-10">
-          <div className="bg-white flex flex-col items-center border-[#B6B2A8] border-1 rounded-xl p-4 relative w-full">
+        <div className="px-2.5 md:px-30 w-full mb-10 md:mb-[-20px] md:flex md:justify-between">
+          <Image
+            src="/svg/heart.svg"
+            alt=""
+            width={42}
+            height={56}
+            className="hidden md:block"
+          />
+          <div className="bg-white flex flex-col items-center border-[#B6B2A8] border-1 rounded-xl md:rounded-3xl p-4 relative w-full md:w-75">
             <Image
               src={"/img/footer/klev.png"}
               alt=""

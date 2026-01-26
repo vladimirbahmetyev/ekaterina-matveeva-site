@@ -26,9 +26,10 @@ export const ProjectCard: FC<ProjectCardProps> = ({
 }) => {
   const { openPopup } = useContext(PopupContext);
   return (
-    <div
+    <a
       className="flex flex-col w-full gap-2 mb-10"
       onClick={popupId ? () => openPopup(popupId) : () => {}}
+      href={link}
     >
       {imgUrl && (
         <Image
@@ -41,12 +42,9 @@ export const ProjectCard: FC<ProjectCardProps> = ({
       )}
       <div className="flex justify-between w-full items-center py-1">
         <Text className="max-w-2/3">{title}</Text>
-        <a
-          href={link}
-          className="cursor-pointer flex w-10 h-10 border-1 border-[#FAF4E8] justify-center items-center rounded-full"
-        >
+        <div className="cursor-pointer flex w-10 h-10 border-1 border-[#FAF4E8] justify-center items-center rounded-full">
           <Image src="/svg/linkArrow.svg" alt="" width={10} height={10} />
-        </a>
+        </div>
       </div>
       <div className="flex gap-1">
         {tags?.map((tag) => (
@@ -58,6 +56,6 @@ export const ProjectCard: FC<ProjectCardProps> = ({
           </div>
         ))}
       </div>
-    </div>
+    </a>
   );
 };

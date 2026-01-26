@@ -28,7 +28,7 @@ const SwiperCard: FC<SwiperCardProps> = ({ imgUrl, step, text, title }) => {
           height={140}
         />
       )}
-      <div className="p-5 min-h-[73vw]">
+      <div className="p-5 md:p-8 min-h-[73vw] md:min-h-[19vw]">
         <div className="flex flex-col gap-3">
           <Text className="text-[10px] text-[#B6B2A8] font-medium">{step}</Text>
           <Text className="font-semibold text-[#35322A] leading-[110%]">
@@ -63,13 +63,13 @@ export const Steps: FC = () => {
   };
 
   return (
-    <div className="max-w-full flex flex-col items-center pl-2.5 gap-2 my-10">
+    <div className="max-w-full flex flex-col items-center gap-2 my-10 md:my-15">
       <Heading>Этапы работы</Heading>
       <Text className="text-center text-[#B6B2A8] font-semibold">
         Благодаря которым сотрудничество будет понятным и безопасным
       </Text>
       <div className="max-w-full pl-2.5">
-        <div className="flex gap-2 justify-center w-full">
+        <div className="flex gap-2 justify-center md:justify-end md:px-30 w-full">
           <div
             className="rotate-180 cursor-pointer"
             onClick={() => onArrowClick("prev")}
@@ -81,10 +81,18 @@ export const Steps: FC = () => {
           </div>
         </div>
         <Swiper
-          className="mt-3 relative"
+          className="mt-3 md:mt-10 relative"
           slidesPerView={1.4}
           spaceBetween={8}
           modules={[Navigation]}
+          breakpoints={{
+            768: {
+              slidesPerView: 2.5,
+              spaceBetween: 20,
+              slidesOffsetBefore: 120,
+              slidesOffsetAfter: 120,
+            },
+          }}
           onSwiper={(swiperInstance) => {
             swiper.current = swiperInstance;
           }}

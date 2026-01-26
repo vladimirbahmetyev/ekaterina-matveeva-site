@@ -61,14 +61,16 @@ const projects: ProjectCardProps[] = [
 
 export const Projects = () => {
   return (
-    <div className="flex flex-col items-center gap-2 px-2.5">
+    <div className="flex flex-col items-center gap-2 px-2.5 md:px-30 md:mt-10">
       <Heading>Рабочие проекты</Heading>
       <Text className="mb-6 mt-2 font-semibold text-xs text-[#B6B2A8]">
         Портфолио с дизайн-кейсами
       </Text>
-      {projects.map((project) => (
-        <ProjectCard {...project} key={project.title} />
-      ))}
+      <div className="md:grid md:grid-cols-3 md:gap-5">
+        {projects.map((project) => (
+          <ProjectCard {...project} key={project.title} />
+        ))}
+      </div>
     </div>
   );
 };

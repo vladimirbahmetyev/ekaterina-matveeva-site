@@ -4,7 +4,7 @@ import { Heading } from "@/app/ui/typography/Heading";
 import { OrderButton } from "@/app/ui/buttons/OrderButton";
 
 export const Intro = () => (
-  <div className="flex flex-col items-center gap-2 py-5 px-2.5 w-full h-screen justify-between">
+  <div className="flex flex-col items-center gap-2 py-5 md:pt-6 md:pb-12 px-2.5 md:px-30 w-full h-screen justify-between">
     <Text>Web · UI/UX designer</Text>
     <div className="flex flex-col items-center gap-2">
       <Image src={"/img/main/kv_photo.png"} alt="" width={173} height={200} />
