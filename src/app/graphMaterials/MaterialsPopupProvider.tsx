@@ -13,11 +13,11 @@ interface Context {
 
 export type registeredPopups =
   | "alex"
-  | "rent"
-  | "jul"
-  | "massage"
-  | "conference"
-  | "smm"
+  | "wings"
+  | "presentation_jul"
+  | "presentation_massage"
+  | "presentation_conference"
+  | "presentation_smm"
   | "commercial"
   | "speakers"
   | "languageSchool"
