@@ -51,28 +51,32 @@ const presentationCards: PresentationCardProps[] = [
 
 export default function BusinessMentoring() {
   return (
-    <div className="flex flex-col gap-10 px-2.5">
-      {presentationCards.map((val) => (
-        <PresentationCard {...val} key={val.title} />
-      ))}
+    <div className="flex flex-col gap-10 px-2.5 md:px-30">
+      <div className="flex flex-col gap-10 md:grid md:grid-cols-3">
+        {presentationCards.map((val) => (
+          <PresentationCard {...val} key={val.title} />
+        ))}
+      </div>
       <Info
         title="Вводные данные"
         description={
           "Я сотрудничаю с маркетинговым отделом Алекса Яновского на постоянной основе, разрабатывая цифровые и визуальные материалы для продвижения образовательных проектов, мероприятий и онлайн-продуктов. Моя задача — создавать дизайн, который решает маркетинговые цели, используя комплексный подход к дизайну."
         }
       />
-      <Image
-        src="/img/projects/businessMentoring/alex_9.png"
-        alt=""
-        width={590}
-        height={590}
-      />
-      <Image
-        src="/img/projects/businessMentoring/alex_10.png"
-        alt=""
-        width={590}
-        height={590}
-      />
+      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
+        <Image
+          src="/img/projects/businessMentoring/alex_9.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+        <Image
+          src="/img/projects/businessMentoring/alex_10.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+      </div>
       <Info
         title={"Основные направления работы включают"}
         description={
@@ -98,6 +102,7 @@ export default function BusinessMentoring() {
         alt=""
         width={590}
         height={590}
+        className="w-full"
       />
       <Info
         title={
@@ -107,18 +112,20 @@ export default function BusinessMentoring() {
           "Применяю нейросети для генерации изображений по мере необходимости, что позволяет быстрее воплощать идеи и создавать уникальные визуалы для маркетинга. "
         }
       />
-      <Image
-        src="/img/projects/businessMentoring/alex_13.png"
-        alt=""
-        width={590}
-        height={590}
-      />
-      <Image
-        src="/img/projects/businessMentoring/alex_14.png"
-        alt=""
-        width={590}
-        height={590}
-      />
+      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
+        <Image
+          src="/img/projects/businessMentoring/alex_13.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+        <Image
+          src="/img/projects/businessMentoring/alex_14.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+      </div>
       <Info
         title={
           "За время работы я создала сотни лендингов, тысычи рекламных макетов и визуальных материалов, которые регулярно используются в продвижении проектов, запуске продаж и освещении мероприятий."

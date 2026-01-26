@@ -3,12 +3,13 @@ import Image from "next/image";
 
 export default function AboutLips() {
   return (
-    <div className="flex flex-col gap-10 px-2.5">
+    <div className="flex flex-col gap-10 px-2.5 md:px-30">
       <Image
         src="/img/projects/aboutLips/lips_1_video.png"
         alt=""
         width={590}
         height={590}
+        className="w-full"
       />
       <Info
         title={"Вводные данные"}
@@ -16,18 +17,20 @@ export default function AboutLips() {
           "Ко мне обратились с задачей разработать лендинг для продажи онлайн-курса по перманентному макияжу губ, рассчитанного на действующих мастеров, желающих повысить квалификацию. Основной целью проекта было создание сайта, который собирает заявки и принимает оплату, а также наглядно демонстрирует ценность курса, качество контента, профессионализм преподавателя и реальные результаты учеников."
         }
       />
-      <Image
-        src="/img/projects/aboutLips/lips_2.png"
-        alt=""
-        width={590}
-        height={590}
-      />
-      <Image
-        src="/img/projects/aboutLips/lips_3.png"
-        alt=""
-        width={590}
-        height={590}
-      />
+      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
+        <Image
+          src="/img/projects/aboutLips/lips_2.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+        <Image
+          src="/img/projects/aboutLips/lips_3.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+      </div>
       <Info
         title={
           "Я разработала дизайн и верстку лендинга на Tilda, а также настроила обучающую платформу и создала дополнительны pdf-материалы для обучения."
@@ -42,6 +45,7 @@ export default function AboutLips() {
         alt=""
         width={590}
         height={590}
+        className="w-full"
       />
       <Info
         title={
@@ -56,6 +60,7 @@ export default function AboutLips() {
         alt=""
         width={590}
         height={590}
+        className="w-full"
       />
       <Info
         title={
@@ -65,18 +70,20 @@ export default function AboutLips() {
           "Дополнительно я разработала печатные материалы для учеников — схемы, буклеты и методички по техникам перманентного макияжа. Все материалы студенты получают на обучающей платформе в процеесе прохождения курса, в формате PDF."
         }
       />
-      <Image
-        src="/img/projects/aboutLips/lips_6.png"
-        alt=""
-        width={590}
-        height={590}
-      />
-      <Image
-        src="/img/projects/aboutLips/lips_7.png"
-        alt=""
-        width={590}
-        height={590}
-      />
+      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
+        <Image
+          src="/img/projects/aboutLips/lips_6.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+        <Image
+          src="/img/projects/aboutLips/lips_7.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+      </div>
       <Info
         title={
           "Благодаря тщательно выстроенной структуре и визуальному акценту на реальных результатах, конверсия в заявки значительно выросла уже в первые недели запуска."

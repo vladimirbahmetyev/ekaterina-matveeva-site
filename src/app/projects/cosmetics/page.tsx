@@ -5,10 +5,11 @@ import Image from "next/image";
 import { Text } from "@/app/ui/typography/Text";
 
 import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
+import { Info } from "@/app/projects/components/Info";
 
 export default function Cosmetics(): FC {
   return (
-    <div className="px-2.5 flex flex-col gap-10">
+    <div className="px-2.5 md:px-30 flex flex-col gap-10">
       <Image
         src="/img/projects/cosmetics/portfolio_video1.png"
         width={1200}
@@ -28,18 +29,20 @@ export default function Cosmetics(): FC {
           покупателя и эффективным инструментом для бизнеса.
         </Text>
       </div>
-      <Image
-        src="/img/projects/cosmetics/portfolio_mockup1.png"
-        alt=""
-        width={590}
-        height={590}
-      />
-      <Image
-        src="/img/projects/cosmetics/portfolio_screen2.png"
-        alt=""
-        width={590}
-        height={590}
-      />
+      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
+        <Image
+          src="/img/projects/cosmetics/portfolio_mockup1.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+        <Image
+          src="/img/projects/cosmetics/portfolio_screen2.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+      </div>
       <div className="flex flex-col gap-4">
         <Text color="primary" className="font-semibold text-[16px]">
           Сайт был полностью разработан мной на платформе Tilda. Визуальное
@@ -60,6 +63,7 @@ export default function Cosmetics(): FC {
         width={1200}
         height={588}
         alt=""
+        className="w-full"
       />
       <div className="flex flex-col gap-4">
         <Text color="primary" className="font-semibold text-[16px]">
@@ -77,6 +81,7 @@ export default function Cosmetics(): FC {
         width={1200}
         height={588}
         alt=""
+        className="w-full"
       />
       <div className="flex flex-col gap-4">
         <Text color="primary" className="font-semibold text-[16px]">
@@ -91,50 +96,54 @@ export default function Cosmetics(): FC {
           с новостями бренда создают устойчивую коммуникацию с клиентами.
         </Text>
       </div>
-
-      <Image
-        src="/img/projects/cosmetics/portfolio_screen5.png"
-        alt=""
-        width={590}
-        height={590}
-      />
-      <Image
-        src="/img/projects/cosmetics/portfolio_screen6.png"
-        alt=""
-        width={590}
-        height={590}
-      />
-      <Image
-        src="/img/projects/cosmetics/portfolio_mockups_7.png"
-        alt=""
-        width={590}
-        height={590}
-      />
-      <Image
-        src="/img/projects/cosmetics/portfolio_screen8.png"
-        alt=""
-        width={590}
-        height={590}
-      />
-      <Image
-        src="/img/projects/cosmetics/portfolio_screen9.png"
-        alt=""
-        width={590}
-        height={590}
-      />
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-5">
+        <Image
+          src="/img/projects/cosmetics/portfolio_screen5.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+        <Image
+          src="/img/projects/cosmetics/portfolio_screen6.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+        <Image
+          src="/img/projects/cosmetics/portfolio_mockups_7.png"
+          alt=""
+          width={590}
+          height={590}
+          className="col-span-2 w-full"
+        />
+        <Image
+          src="/img/projects/cosmetics/portfolio_screen8.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+        <Image
+          src="/img/projects/cosmetics/portfolio_screen9.png"
+          alt=""
+          width={590}
+          height={590}
+        />
+      </div>
       <div className="flex flex-col gap-4">
-        <Text color="primary" className="font-semibold text-[16px]">
-          С технической стороны проект оптимизирован под SEO и адаптирован для
-          самостоятельного ведения: заказчик может без помощи разработчика
-          обновлять каталог, публиковать статьи и управлять контентом.
-        </Text>
-        <Text color="secondary" className="text-[12px]">
-          Моя работа охватывала весь цикл — от аналитики и дизайна до настройки
-          продаж. Это позволило создать цельный, функциональный и визуально
-          гармоничный продукт, который помогает бренду японской косметики
-          укреплять присутствие на рынке и выстраивать долгосрочные отношения с
-          клиентами.
-        </Text>
+        <Info
+          title={
+            "  С технической стороны проект оптимизирован под SEO и адаптирован для\n" +
+            "          самостоятельного ведения: заказчик может без помощи разработчика\n" +
+            "          обновлять каталог, публиковать статьи и управлять контентом."
+          }
+          description={
+            "          Моя работа охватывала весь цикл — от аналитики и дизайна до настройки\n" +
+            "          продаж. Это позволило создать цельный, функциональный и визуально\n" +
+            "          гармоничный продукт, который помогает бренду японской косметики\n" +
+            "          укреплять присутствие на рынке и выстраивать долгосрочные отношения с\n" +
+            "          клиентами."
+          }
+        />
       </div>
     </div>
   );
