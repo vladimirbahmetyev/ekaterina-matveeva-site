@@ -12,13 +12,10 @@ export const WorkWithMe: FC = () => (
     </Text>
     <div
       className={
-        "grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-2 gap-2 md:gap-5 grid-flow-row"
+        "grid grid-cols-1 md:grid-cols-4 grid-rows-6 md:grid-rows-2 gap-2 md:gap-5"
       }
     >
-      <Card
-        variant="filled"
-        className={"col-span-2 md:col-start-2 md:row-start-1"}
-      >
+      <Card variant="filled" className={"md:col-start-2 md:row-start-1"}>
         <div className="flex  justify-between mb-1.5">
           <Text className="font-semibold text-[#777163]">
             Применяю UX-исследования
@@ -65,7 +62,7 @@ export const WorkWithMe: FC = () => (
           </Text>
         </div>
       </Card>
-      <Card variant="filled" className={"col-span-2 md: col-start-3"}>
+      <Card variant="filled" className={"md:col-start-3"}>
         <div className="flex flex-col justify-between h-full">
           <div className="flex  justify-between mb-1.5">
             <Text className="font-semibold text-[#777163]">
@@ -78,7 +75,6 @@ export const WorkWithMe: FC = () => (
               alt=""
             />
           </div>
-
           <Text>
             Разрабатываю не только сайты, но и презентации, оформляю соцсети,
             готовлю PDF-файлы — всё в едином стиле

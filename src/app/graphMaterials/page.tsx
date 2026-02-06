@@ -211,7 +211,7 @@ export default function GraphMaterials() {
         ))}
       </div>
       <Popup popupId="alex">
-        <Text className="mb-3">
+        <Text className="mb-3" variant="h4" color="heading">
           Баннеры, креативы для рекламы, превью для видео
         </Text>
         <Text className="mb-5">

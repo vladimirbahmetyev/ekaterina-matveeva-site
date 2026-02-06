@@ -30,7 +30,7 @@ const colorMap: Record<colorType, string> = {
 const variantMap: Record<variantType, string> = {
   h3: "md:text-[20px]/[120%] md:font-semibold md:tracking-[3%]",
   h4: "md:text-[18px]/[110%] md:font-semibold md:tracking-[3%]",
-  h5: "md:text-[18px]/[110%] md:font-regular md:tracking-[0%]",
+  h5: "text-[16px]/[120%] font-regular md:text-[18px]/[110%] md:font-regular",
   button:
     "text-[16px]/[120%] md:text-[16px]/[100%] font-semibold md:font-semibold tracking-normal md:tracking-[3%]",
   body: "text-[14px]/[120%] md:text-[16px]/[120%] font-medium md:font-medium md:tracking-[0%]",
