@@ -44,7 +44,7 @@ export function Popup({
           className="absolute top-2 right-2 cursor-pointer"
         />
         <div
-          className="bg-white w-9/10 p-5 h-8/10 rounded-xl"
+          className="bg-white w-9/10 p-5 h-min rounded-xl"
           onClick={handlePopupContentClick}
         >
           {children}

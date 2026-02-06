@@ -72,3 +72,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.swiper {
+    --swiper-pagination-color: #877B64;
+    --swiper-pagination-bullet-inactive-color: #877B6466;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    padding-bottom: 32px !important;
+}
