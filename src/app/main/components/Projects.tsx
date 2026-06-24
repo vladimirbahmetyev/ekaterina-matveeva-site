@@ -2,7 +2,7 @@ import { Heading } from "@/app/ui/typography/Heading";
 import { Text } from "@/app/ui/typography/Text";
 import { ProjectCard, ProjectCardProps } from "@/app/ui/card/ProjectCard";
 
-const projects: ProjectCardProps[] = [
+export const projects: ProjectCardProps[] = [
   {
     imgUrl: "/img/main/projects/mobile_home_case_1_presentations.png",
     title: "Создание графических материалов для вашего проекта ",

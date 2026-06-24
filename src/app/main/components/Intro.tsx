@@ -5,11 +5,11 @@ import { OrderButton } from "@/app/ui/buttons/OrderButton";
 
 export const Intro = () => (
   <div className="flex flex-col items-center gap-2 py-5 md:pt-6 md:pb-12 px-2.5 md:px-30 w-full h-screen justify-between">
-    <Text>Web · UI/UX designer</Text>
+    <Text variant="text" color='dark-beige'>Web · UI/UX designer</Text>
     <div className="flex flex-col items-center gap-2">
       <Image src={"/img/main/kv_photo.png"} alt="" width={173} height={200} />
       <Heading>Екатерина Матвеева</Heading>
-      <Text className="text-center">
+      <Text className="text-center" variant="h3" color='dark-beige'>
         Проектирую запоминающиеся интерфейсы, <br /> эффективные для бизнеса
       </Text>
       <div className="py-3.5">

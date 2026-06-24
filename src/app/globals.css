@@ -73,6 +73,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 .swiper {
     --swiper-pagination-color: #877B64;
     --swiper-pagination-bullet-inactive-color: #877B6466;

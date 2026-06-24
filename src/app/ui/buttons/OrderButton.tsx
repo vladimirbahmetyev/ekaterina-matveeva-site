@@ -6,7 +6,7 @@ export const OrderButton = () => {
     <div className="flex flex-col items-center relative">
       <Image src="/svg/circle.svg" alt="" width={180} height={100} />
       <Text className="absolute bottom-[50%] translate-y-[90%] !text-[#434136] !text-[14px] font-semibold">
-        Заказать дизайн
+        Обсудить проект
       </Text>
     </div>
   );

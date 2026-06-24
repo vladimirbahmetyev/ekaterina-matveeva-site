@@ -45,7 +45,7 @@ const SwiperCard: FC<SwiperCardProps> = ({ imgUrl, step, text, title }) => {
 
 export const Steps: FC = () => {
   const swiper = useRef<null | SwiperRef>(null);
-  const [isFirst, setIsFirst] = useState(true);
+  const [isFirst, setIsFirst] = useState(false);
   const [isLast, setIsLast] = useState(false);
 
   const onSwipe = () => {
