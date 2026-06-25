@@ -6,39 +6,39 @@ import { Heading } from "@/app/ui/typography/Heading";
 
 export const WorkWithMe: FC = () => (
   <div className="flex flex-col px-2.5 md:px-30 gap-1 items-center mt-5 md:pt-15">
-    <Heading className="text-5xl">Работа со мной</Heading>
-    <Text className="text-center font-semibold text-[#B6B2A8] mb-3 md:mb-10">
-      Это качественный результат <br />с комфортом для всех
+    <Heading variant="h2">Работа со мной</Heading>
+    <Text className="text-center mb-3 md:mb-10" variant="h4" color='light-beige'>
+      Это качественный результатс комфортом для всех
     </Text>
     <div
       className={
         "grid grid-cols-1 md:grid-cols-4 grid-rows-6 md:grid-rows-2 gap-2 md:gap-5"
       }
     >
-      <Card variant="filled" className={"md:col-start-2 md:row-start-1"}>
-        <div className="flex  justify-between mb-1.5">
-          <Text className="font-semibold text-[#777163]">
+      <Card variant="filled" className={"md:col-start-2 col-span-2 md:row-start-1 relative"}>
+        <div className="relative flex flex-col justify-between h-full">
+          <Text className="max-w-[50%]" color="dark-beige" variant="h4">
             Применяю UX-исследования
           </Text>
-          <Image
-            src={"/img/main/work/res.png"}
-            width={200}
-            height={200}
-            alt=""
-          />
+          <div className="max-w-[75%] flex flex-col gap-2">
+            <Text color='dark-beige' variant="text">Чтобы сделать интерфейс интуитивным и удобным</Text>
+            <Text color='beige' variant="text">JTBD, персоны, интервью, опросы, анализ конкурентов и аудитории</Text>
+          </div>
         </div>
-        <Text>
-          Основываюсь на данных и поведении пользователей, чтобы сделать
-          интерфейс интуитивным и удобным (JTBD, персоны, интервью, опросы,
-          анализ конкурентов и аудитории)
-        </Text>
+          <Image
+              className="absolute right-0 top-0"
+              src={"/img/main/work/res.png"}
+              width={273}
+              height={313}
+              alt=""
+            />
       </Card>
-      <Card variant="white" className="md:col-start-1">
+      <Card variant="white" className="md:col-start-1 min-h-[313px]">
         <div className="flex flex-col justify-between h-full">
-          <Text className="font-semibold text-[#777163]">
-            Глубоко погружаюсь в проект
+          <Text variant='h4' color='dark-beige'>
+            Глубоко погружаюсь в проект
           </Text>
-          <Text>
+          <Text variant="text" color='beige'>
             Изучаю бизнес, аудиторию и цели, чтобы дизайн точно решал нужные
             задачи
           </Text>
@@ -46,68 +46,72 @@ export const WorkWithMe: FC = () => (
       </Card>
       <Card variant="orange" className="">
         <div className="flex flex-col justify-between h-full">
-          <Text className="font-semibold text-[#777163]">
-            Понимаю психологию пользователя
+          <div className="flex flex-col gap-3">
             <Image
-              src={"/svg/group.svg"}
-              alt=""
-              width={24}
-              height={24}
-              className="mt-12"
-            />
-          </Text>
-          <Text>
+                src={"/svg/group.svg"}
+                alt=""
+                width={37}
+                height={37}
+              />
+            <Text variant="h4" color="dark-beige">
+              Понимаю психологию пользователя
+            </Text>
+          </div>
+          <Text variant="text" color="beige">
             Психологическое образование помогает мне проектировать интерфейсы,
             вызывающие доверие и эмоции у пользователей
           </Text>
         </div>
       </Card>
-      <Card variant="filled" className={"md:col-start-3"}>
-        <div className="flex flex-col justify-between h-full">
+      <Card variant="filled" className={"md:col-start-3 col-span-2 relative overflow-hidden"}>
+        <div className="flex flex-col justify-between h-full w-[50%]">
           <div className="flex  justify-between mb-1.5">
-            <Text className="font-semibold text-[#777163]">
+            <Text variant="h4" color="dark-beige">
               Комплексно подхожу к дизайну продукта
             </Text>
-            <Image
-              src={"/img/main/work/com.png"}
-              width={250}
-              height={200}
-              alt=""
-            />
           </div>
-          <Text>
+          <Text variant="text" color='beige'>
             Разрабатываю не только сайты, но и презентации, оформляю соцсети,
-            готовлю PDF-файлы — всё в едином стиле
+            готовлю PDF-файлы— всё в едином стиле
           </Text>
         </div>
+          <Image
+            src={"/img/main/work/com.png"}
+            width={275}
+            height={335}
+            alt=""
+            className="absolute top-0 right-0"
+          />
       </Card>
       <Card variant="white" className="md:col-start-2 md:row-start-2">
         <div className="flex flex-col justify-between h-full">
-          <Text className="font-semibold text-[#777163]">
-            Ответственно подхожу к своей работе
+          <Text color='dark-beige' variant='h4'>
+            Ответственно подхожу к своей работе
           </Text>
-          <Text>
+          <Text variant='text' color='beige'>
             Соблюдаю дедлайны, остаюсь на связи, держу в курсе этапов работы
           </Text>
         </div>
       </Card>
-      <Card variant="filled" className="md:col-start-1 md:row-start-2">
-        <div className="flex flex-col justify-between h-full relative">
-          <Text className="font-semibold text-[#777163]">
-            Работаю легально и по договору
-          </Text>
-          <Text>
-            Я зарегистрирована как самозанятая, выдаю чеки и работаю
-            по договору, который защищает обе стороны
-          </Text>{" "}
+      <Card variant="filled" className="md:col-start-1 md:row-start-2 relative">
+        <>
+          <div className="flex flex-col justify-between h-full relative z-10">
+            <Text color='dark-beige' variant='h4'>
+              Работаю легально по договору
+            </Text>
+            <Text variant='text' color='beige'>
+              Я зарегистрирована как самозанятая, выдаю чеки и работаю
+              по договору, который защищает обе стороны
+            </Text>{" "}
+          </div>
           <Image
-            src={"/img/main/work/stamp.png"}
-            width={100}
-            height={100}
-            alt=""
-            className="right-[-12px] absolute top-8"
+              src={"/img/main/work/stamp.png"}
+              width={173}
+              height={173}
+              alt=""
+              className="right-0 absolute top-14" 
           />
-        </div>
+        </>
       </Card>
     </div>
   </div>

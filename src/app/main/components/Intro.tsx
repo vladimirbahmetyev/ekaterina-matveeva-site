@@ -4,22 +4,30 @@ import { Heading } from "@/app/ui/typography/Heading";
 import { OrderButton } from "@/app/ui/buttons/OrderButton";
 
 export const Intro = () => (
-  <div className="flex flex-col items-center gap-2 py-5 md:pt-6 md:pb-12 px-2.5 md:px-30 w-full h-screen justify-between">
-    <Text variant="text" color='dark-beige'>Web · UI/UX designer</Text>
-    <div className="flex flex-col items-center gap-2">
-      <Image src={"/img/main/kv_photo.png"} alt="" width={173} height={200} />
+  <div className="px-30 h-screen w-full pb-10">
+  <div className="flex gap-2 h-full justify-between ">
+    <div className="flex flex-col justify-center">
+        <Image className="mt-5" src={"/img/main/kv_2.png"} alt="" width={252} height={310} />
+    </div>
+    <div className="mt-18 flex flex-col items-center justify-center gap-6 ">
+      <Text variant="text" color='dark-beige'>Web · UI/UX designer</Text>
       <Heading>Екатерина Матвеева</Heading>
       <Text className="text-center" variant="h3" color='dark-beige'>
         Проектирую запоминающиеся интерфейсы, <br /> эффективные для бизнеса
       </Text>
-      <div className="py-3.5">
-        <OrderButton />
+      <OrderButton />
+    </div>
+    <div className="flex flex-col justify-center mt-10 items-end">
+      <div className="flex flex-col gap-5 items-end mt-12">
+        <Image className="w-10" height={41} width={77} src={"/svg/yellow-heart.svg"} alt='hellow heart'/>
+        <Image src={"/img/main/kv_1.png"} alt="" width={190} height={260} />
       </div>
     </div>
-    <div className="flex justify-between w-full mt-10">
-      <Text>Tilda · Figma</Text>
-      <Image src="/svg/icon_arrow.svg" alt="" width={15} height={22} />
-      <Text className="underline">Скачать резюме</Text>
+    </div>
+    <div className="flex w-full justify-between items-center mt-[-40px]">
+      <Text variant="text" color='dark-beige'>Tilda · Figma</Text>
+      <Image className="mb-0" src="/svg/icon_arrow.svg" alt="" width={36} height={36} />
+      <Text variant="text" color='dark-beige'>Скачать резюме</Text>
     </div>
   </div>
 );

@@ -6,32 +6,38 @@ import Image from "next/image";
 export const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-center gap-6">
-      <div className="flex flex-col items-center justify-center gap-6 px-2.5 w-full">
-        <Heading className={"text-[#777162]"}>Екатерина Матвеева</Heading>
+      <div className="flex flex-col items-center justify-center px-2.5 w-full mb-[-60px]">
+        <Image 
+          src="/img/footer/bg.png"
+          width={300}
+          height={300}
+          alt='bg'
+        />
+        <Heading className="mb-5">Екатерина Матвеева</Heading>
         <Image
-          className="rounded-xl"
+          className="rounded-xl mb-5"
           src="/img/footer/photo.png"
           alt="logo"
-          width={130}
-          height={130}
+          width={192}
+          height={193}
         />
-        <Text>На связи пн-пт 8:00-18:00 мск</Text>
+        <Text variant="text" color="heading" className="mb-5">Я на связи пн-пт 8:00-18:00 мск</Text>
         <div className="py-4">
           <OrderButton />
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-3 items-center md:justify-between md:w-full md:px-30 relative">
         <div className="md:order-2">
-          <a className="flex gap-2 items-center">
-            <Text className="underline font-semibold">Скачать резюме </Text>
+          <a className="flex gap-2 items-center mb-3">
+            <Text variant="h4" color="dark-beige" >Скачать резюме </Text>
             <Image src="/svg/external.svg" alt="" width={15} height={15} />
           </a>
-          <Text className="font-semibold">matveevae.work@gmail.com</Text>
+          <Text variant="h4" color="dark-beige">matveevae.work@gmail.com</Text>
         </div>
         <div className="md:order-1">
-          <Text className="underline font-semibold">Вконтакте</Text>
-          <Text className="underline font-semibold">Instagram*</Text>
-          <Text className="text-[#D7D2C3] text-[9px] font-semibold text-center md:mt-5">
+          <Text variant="h4" color="dark-beige" className="mb-3">Вконтакте</Text>
+          <Text variant="h4" color="dark-beige" className="mb-5">Instagram*</Text>
+          <Text variant="footnote" color="light-beige" className="text-center">
             *признан экстремистской организацией в РФ
           </Text>
         </div>
@@ -44,8 +50,8 @@ export const Footer = () => {
         />
       </div>
       <div className="flex justify-between gap-3 px-2.5 md:px-30 py-3 md:py-5 border-t-[#F2F1F1] border-t-1 w-full">
-        <Text className={"text-[10px]"}>Все права защищены © 2026</Text>
-        <Text className={"text-[10px]"}>
+        <Text variant="caption" color="light-beige">Все права защищены © 2026</Text>
+        <Text variant="caption" color="light-beige">
           Дизайн разработала Матвеева Екатерина
         </Text>
       </div>

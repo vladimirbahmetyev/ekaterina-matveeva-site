@@ -41,7 +41,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         />
       )}
       <div className="flex justify-between w-full items-center py-1">
-        <Text className="max-w-2/3">{title}</Text>
+        <Text className="max-w-2/3" variant="text" color="dark-beige" >{title}</Text>
         <div className="cursor-pointer flex w-10 h-10 border-1 border-[#FAF4E8] justify-center items-center rounded-full">
           <Image src="/svg/linkArrow.svg" alt="" width={10} height={10} />
         </div>
@@ -49,10 +49,12 @@ export const ProjectCard: FC<ProjectCardProps> = ({
       <div className="flex gap-1">
         {tags?.map((tag) => (
           <div
-            className="px-2 py-1 border-1 border-[#C2BCAF] rounded-full flex justify-center items-center text-[10px] text-[#C2BCAF]"
+            className="px-2 py-1 border-1 border-[#C2BCAF] rounded-full flex justify-center items-center"
             key={tag}
           >
+            <Text variant="caption" color="light-beige">
             {tag}
+            </Text>
           </div>
         ))}
       </div>

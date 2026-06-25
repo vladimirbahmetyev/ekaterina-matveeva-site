@@ -15,7 +15,7 @@ export default function Home() {
         <Steps />
         <Projects />
         <Services />
-        <div className="px-2.5 md:px-30 w-full mb-10 md:mb-[-20px] md:flex md:justify-between">
+        <div className="px-2.5 md:px-30 w-full mb-10 md:mb-[-60px] md:flex md:justify-between">
           <Image
             src="/svg/heart.svg"
             alt=""
@@ -23,7 +23,7 @@ export default function Home() {
             height={56}
             className="hidden md:block"
           />
-          <div className="bg-white flex flex-col items-center border-[#B6B2A8] border-1 rounded-xl md:rounded-3xl p-4 relative w-full md:w-75">
+          <div className="grow-0 bg-white flex flex-col items-center border-[#B6B2A8] border-1 rounded-xl md:rounded-3xl p-4 relative w-full md:w-75">
             <Image
               src={"/img/footer/klev.png"}
               alt=""
@@ -31,10 +31,10 @@ export default function Home() {
               height={50}
               className="absolute top-[-25%] left-[-3%]"
             />
-            <Text className="text-center">
+            <Text variant="text" color="dark-beige">
               Если вы не нашли в списке услуг
               <br />
-              то, что вам нужно, <span className="underline">напишите мне</span>
+              то, что вам нужно, <span>напишите мне</span>
               <br />
               для обсуждения задач
             </Text>

@@ -11,9 +11,9 @@ interface ServiceProps {
 
 const servicesData: ServiceProps[] = [
   {
-    title: "Одностраничный сайт (лендинг)",
+    title: "Лендинг",
     description:
-      "Сайт, который ведет пользователя к целевому действию: заявке, подписке или покупке. Подходит для продажи курса, презентации услуги, продукта, мероприятия или сбора контактов.",
+      "Одностраничный сайт, который ведет пользователя к целевому действию: заявке, подписке или покупке. Подходит для продажи курса, презентации услуги, продукта, мероприятия или сбора контактов.",
     price: 30,
   },
   {
@@ -38,24 +38,24 @@ const servicesData: ServiceProps[] = [
     title: "Дизайн презентаций\n" + "и др.материалов",
     description:
       "Кроме сайта, я могу подготовить для вас презентации, баннеры, оформить соцсети и множество других дизайн-услуг.",
-    price: 30,
+    price: 'depends',
   },
 ];
 
 const Service: FC<ServiceProps> = ({ title, bordered, price, description }) => {
   return (
     <div
-      className={`flex gap-3 flex-col pb-4 ${bordered ? "border-b-1 border-[#E6E6E6]" : ""}`}
+      className={`flex gap-5 flex-col pb-4 ${bordered ? "border-b-1 border-[#E6E6E6]" : ""}`}
     >
       <div className="flex justify-between w-full">
-        <Text className="font-semibold">{title}</Text>
+        <Text variant="h3" color="dark-beige">{title}</Text>
         {price === "depends" ? (
-          <Text className="font-semibold">зависит от запроса</Text>
+          <Text variant="h3" color="dark-beige" className="font-semibold">зависит от запроса</Text>
         ) : (
-          <Text className="font-semibold">от {price} тыс.рублей</Text>
+          <Text variant="h3" color="dark-beige" className="font-semibold">от {price} тыс.рублей</Text>
         )}
       </div>
-      <Text className="text-[#B6B2A8] font-semibold md:max-w-1/2">
+      <Text variant="text" color="beige" className="md:max-w-1/2">
         {description}
       </Text>
     </div>
@@ -65,23 +65,18 @@ const Service: FC<ServiceProps> = ({ title, bordered, price, description }) => {
 export const Services = () => {
   return (
     <div className="flex flex-col gap-6 px-2.5 md:px-30 mb-12 md:mt-10 md:w-full">
-      <div className="flex flex-col items-center gap-2 mb-8">
+      <div className="flex flex-col items-center gap-2 mb-14">
         <Heading>Услуги и стоимость</Heading>
-        <Text
-          className="text-center font-semibold text-[#B6B2A8]"
-          preserveFormatting
-        >
-          {`Каждый проект уникален и имеет свои задачи.\nПоэтому точную сумму я смогу назввать только после знакомства с вашим проектом.`}
-        </Text>
       </div>
-
-      {servicesData.map((service, index) => (
-        <Service
-          {...service}
-          key={service.title}
-          bordered={index !== servicesData.length - 1}
-        />
-      ))}
+      <div className="flex flex-col gap-15">
+        {servicesData.map((service, index) => (
+          <Service
+            {...service}
+            key={service.title}
+            bordered={index !== servicesData.length - 1}
+          />
+        ))}
+      </div>
     </div>
   );
 };
