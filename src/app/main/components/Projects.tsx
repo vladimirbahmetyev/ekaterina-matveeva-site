@@ -105,12 +105,12 @@ export const Projects = () => {
   const projectsToDraw = isAllOpen ? projects : projects.slice(0, 3)
 
   return (
-    <div className="flex flex-col items-center gap-2 md:px-30 md:mt-10 pb-10">
+    <div className="flex flex-col items-center gap-2 md:px-30 md:mt-10 pb-10 px-4">
       <Heading variant="h2" className="mb-2">Рабочие проекты</Heading>
       <Text className="mb-6 mb-10" variant="h4" color="beige">
         Портфолио с дизайн-кейсами
       </Text>
-      <div className="flex gap-2 mb-10 flex-wrap">
+      <div className="flex justify-center md:justify-start gap-2 mb-10 flex-wrap">
         {filterTags.map(val => {
           return (
           <div onClick={() => handleTagClick(val.value)}  className={`border-1 border-[#434343] rounded-full py-3 px-4 cursor-pointer ${selectedTag === val.value ? 'text-white! bg-[#434343]' : ''}`} key={val.value}>
