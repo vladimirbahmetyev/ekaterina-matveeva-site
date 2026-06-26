@@ -1,14 +1,43 @@
+"use client";
+
 import {
   PresentationCard,
   PresentationCardProps,
 } from "@/app/projects/businessMentoring/components/PresentationCard";
 import { Info } from "@/app/projects/components/Info";
+import { Text } from "@/app/ui/typography/Text";
 import Image from "next/image";
+import { useState } from "react";
 
 const presentationCards: PresentationCardProps[] = [
   {
+    imgUrl: "/img/projects/businessMentoring/alex_17.png",
+    title: "Лендинг для сбора заявок на индивидуальное обучение (консалтинг)",
+    link: "google.com",
+  },
+  {
+    imgUrl: "/img/projects/businessMentoring/alex_18.png",
+    title: "Лендинг для сбора заявок на интенсив по бизнесу с AI",
+    link: "google.com",
+  },
+  {
+    imgUrl: "/img/projects/businessMentoring/alex_8.png",
+    title: "Лендинг для сбора заявок на интенсив по масштабированию бизнеса",
+    link: "google.com",
+  },
+  {
     imgUrl: "/img/projects/businessMentoring/alex_1.png",
     title: "Лендинг для сбора заявок на онлайн-курс “Предприниматель”",
+    link: "google.com",
+  },
+  {
+    imgUrl: "/img/projects/businessMentoring/alex_15.png",
+    title: "Лендинг для анонса мероприятия в Майами",
+    link: "google.com",
+  },
+  {
+    imgUrl: "/img/projects/businessMentoring/alex_16.png",
+    title: "Информационный сайт консалтинговой компании ",
     link: "google.com",
   },
   {
@@ -22,14 +51,10 @@ const presentationCards: PresentationCardProps[] = [
     title: "Лендинг для сбора заявок в онлайн-сообщество “Алекс Клуб”",
     link: "google.com",
   },
+
   {
     imgUrl: "/img/projects/businessMentoring/alex_4.png",
-    title: "Онлайн-распродажа записей ТОП-программ Алекса Яновского",
-    link: "google.com",
-  },
-  {
-    imgUrl: "/img/projects/businessMentoring/alex_5.png",
-    title: "Лендинг для сбора заявок на онлайн-курс “Мастер группа”",
+    title: "Онлайн-распродажа записейТОП-программ Алекса Яновского",
     link: "google.com",
   },
   {
@@ -43,19 +68,34 @@ const presentationCards: PresentationCardProps[] = [
     link: "google.com",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_8.png",
-    title: "Лендинг для сбора заявок на онлайн-курс “Масштабирование”",
+    imgUrl: "/img/projects/businessMentoring/alex_5.png",
+    title: "Лендинг для сбора заявок на онлайн-курс “Мастер группа”",
     link: "google.com",
   },
 ];
 
 export default function BusinessMentoring() {
+  const [isAllShown, setIsAllShown] = useState(false);
+  const handleViewClick = () => setIsAllShown((prev) => !prev);
+  const cardsToDraw = isAllShown
+    ? presentationCards
+    : presentationCards.slice(0, 3);
   return (
     <div className="flex flex-col gap-10 px-2.5 md:px-30">
       <div className="flex flex-col gap-10 md:grid md:grid-cols-3">
-        {presentationCards.map((val) => (
+        {cardsToDraw.map((val) => (
           <PresentationCard {...val} key={val.title} />
         ))}
+      </div>
+      <div
+        className="w-full flex justify-center border-1 border-[#B6B2A8] rounded-full py-4 bg-[#F9F5EC] cursor-pointer"
+        onClick={() => handleViewClick()}
+      >
+        <Text variant="text" color="dark-beige">
+          {!isAllShown
+            ? `Смотреть другие проекты ( +${presentationCards.length - 3})`
+            : "Свернуть кейсы"}
+        </Text>
       </div>
       <Info
         title="Вводные данные"
@@ -80,7 +120,7 @@ export default function BusinessMentoring() {
       <Info
         title={"Основные направления работы включают"}
         description={
-          " — разработку лендингов для сбора заявок, акций и продвижения мероприятий;  — создание баннеров и рекламных материалов для digital- и офлайн-кампаний;  — оформление YouTube-канала (обложки для видео и эфиров);  — дизайн постов, сторис и обложек рилсов для Instagram и Telegram;  — создание презентаций, брендированных аватаров;  — генерацию визуального контента с помощью нейросетей."
+          " — разработку лендингов для сбора заявок, акций и продвижения мероприятий; — создание баннеров и рекламных материалов для digital- и офлайн-кампаний; — оформление YouTube-канала (обложки для видео и эфиров); — дизайн постов, сторис и обложек рилсов для Instagram и Telegram; — создание презентаций, брендированных аватаров; — генерацию визуального контента с помощью нейросетей."
         }
       />
       <Image
@@ -91,7 +131,7 @@ export default function BusinessMentoring() {
       />
       <Info
         title={
-          "Я разрабатываю лендинги совместно с верстальщиком и маркетологом, готовя дизайн-макеты, которые обеспечивают конверсию."
+          "Я разрабатываю лендинги совместно с верстальщиком и маркетологом,готовя дизайн-макеты, которые обеспечивают конверсию."
         }
         description={
           "Работа с командой проходит в формате ежедневного взаимодействия с маркетологами, копирайтерами и руководителями проектов. Каждый макет проходит несколько этапов согласований с арт-директором и генеральным директором, что требует высокой скорости, аккуратности и умения адаптироваться к разным задачам."
