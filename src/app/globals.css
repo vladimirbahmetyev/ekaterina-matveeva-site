@@ -5,6 +5,17 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+  #approach,
+  #steps,
+  #cases,
+  #price,
+  #contacts {
+    scroll-margin-top: 72px !important;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -18,11 +29,11 @@
 }
 
 .arrow-mask {
-    width: 40px;
-    height: 40px;
-    background-color: #434343;
-    mask: url('../../public/svg/arrow.svg') no-repeat center / contain;
-    -webkit-mask: url('../../public/svg/arrow.svg') no-repeat center / contain;
+  width: 40px;
+  height: 40px;
+  background-color: #434343;
+  mask: url("../../public/svg/arrow.svg") no-repeat center / contain;
+  -webkit-mask: url("../../public/svg/arrow.svg") no-repeat center / contain;
 }
 
 @font-face {
@@ -51,21 +62,20 @@
 }
 
 .popup-enter {
-    opacity: 0;
+  opacity: 0;
 }
 .popup-enter-active {
-    opacity: 1;
-    transition: opacity 300ms;
+  opacity: 1;
+  transition: opacity 300ms;
 }
 
 .popup-exit {
-    opacity: 1;
+  opacity: 1;
 }
 .popup-exit-active {
-    opacity: 0;
-    transition: opacity 300ms;
+  opacity: 0;
+  transition: opacity 300ms;
 }
-
 
 body {
   background: var(--background);
@@ -74,12 +84,12 @@ body {
 }
 
 body.menu-open {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .swiper {
-    --swiper-pagination-color: #877B64;
-    --swiper-pagination-bullet-inactive-color: #877B6466;
-    --swiper-pagination-bullet-inactive-opacity: 1;
-    padding-bottom: 32px !important;
+  --swiper-pagination-color: #877b64;
+  --swiper-pagination-bullet-inactive-color: #877b6466;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  padding-bottom: 32px !important;
 }

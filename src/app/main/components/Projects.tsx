@@ -1,41 +1,40 @@
-'use client'
+"use client";
 
 import { Heading } from "@/app/ui/typography/Heading";
 import { Text } from "@/app/ui/typography/Text";
 import { ProjectCard, ProjectCardProps } from "@/app/ui/card/ProjectCard";
 import { useState } from "react";
 
-
 const filterTags = [
   {
-    label: 'Все',
-    value: 'all'
+    label: "Все",
+    value: "all",
   },
   {
-    label: 'Магазин',
-    value: 'shop'
+    label: "Магазин",
+    value: "shop",
   },
   {
-    label: 'Мероприятие',
-    value: 'event'
+    label: "Мероприятие",
+    value: "event",
   },
   {
-    label: 'Медиа:  Презентации, креативы',
-    value: 'media'
+    label: "Медиа:  Презентации, креативы",
+    value: "media",
   },
   {
-    label: 'Мобильные приложения',
-    value: 'mobile'
+    label: "Мобильные приложения",
+    value: "mobile",
   },
   {
-    label: 'Онлайн-курсы',
-    value: 'courses'
+    label: "Онлайн-курсы",
+    value: "courses",
   },
   {
-    label: 'Другое',
-    value: 'other'
+    label: "Другое",
+    value: "other",
   },
-]
+];
 
 export const projects: ProjectCardProps[] = [
   {
@@ -94,41 +93,58 @@ export const projects: ProjectCardProps[] = [
   },
 ];
 
-
 export const Projects = () => {
-  const [isAllOpen, setIsAllOpen] = useState(false)
-  const handleViewClick = () => setIsAllOpen((prev) => !prev)
-  
-  const [selectedTag, setSelectedTag] = useState('all')
-  const handleTagClick = (newVal: string) => setSelectedTag(newVal) 
+  const [isAllOpen, setIsAllOpen] = useState(false);
+  const handleViewClick = () => setIsAllOpen((prev) => !prev);
 
-  const projectsToDraw = isAllOpen ? projects : projects.slice(0, 3)
+  const [selectedTag, setSelectedTag] = useState("all");
+  const handleTagClick = (newVal: string) => setSelectedTag(newVal);
+
+  const projectsToDraw = isAllOpen ? projects : projects.slice(0, 3);
 
   return (
-    <div className="flex flex-col items-center gap-2 md:px-30 md:mt-10 pb-10 px-4">
-      <Heading variant="h2" className="mb-2">Рабочие проекты</Heading>
+    <div
+      id="cases"
+      className="flex flex-col items-center gap-2 md:px-30 md:mt-10 pb-10 px-4"
+    >
+      <Heading variant="h2" className="mb-2">
+        Рабочие проекты
+      </Heading>
       <Text className="mb-6 mb-10" variant="h4" color="beige">
         Портфолио с дизайн-кейсами
       </Text>
       <div className="flex justify-center md:justify-start gap-2 mb-10 flex-wrap">
-        {filterTags.map(val => {
+        {filterTags.map((val) => {
           return (
-          <div onClick={() => handleTagClick(val.value)}  className={`border-1 border-[#434343] rounded-full py-3 px-4 cursor-pointer ${selectedTag === val.value ? 'text-white! bg-[#434343]' : ''}`} key={val.value}>
-              <Text variant="h4" color={selectedTag === val.value ? 'white' : "heading"} className="text-nowrap">
+            <div
+              onClick={() => handleTagClick(val.value)}
+              className={`border-1 border-[#434343] rounded-full py-3 px-4 cursor-pointer ${selectedTag === val.value ? "text-white! bg-[#434343]" : ""}`}
+              key={val.value}
+            >
+              <Text
+                variant="h4"
+                color={selectedTag === val.value ? "white" : "heading"}
+                className="text-nowrap"
+              >
                 {val.label}
               </Text>
-          </div>
-          )
-        }) }
+            </div>
+          );
+        })}
       </div>
       <div className="md:grid md:grid-cols-3 md:gap-5">
         {projectsToDraw.map((project) => (
           <ProjectCard {...project} key={project.title} />
         ))}
       </div>
-      <div className="w-full flex justify-center border-1 border-[#B6B2A8] rounded-full py-4 bg-[#F9F5EC] cursor-pointer" onClick={() => handleViewClick()}>
+      <div
+        className="w-full flex justify-center border-1 border-[#B6B2A8] rounded-full py-4 bg-[#F9F5EC] cursor-pointer"
+        onClick={() => handleViewClick()}
+      >
         <Text variant="text" color="dark-beige">
-          {!isAllOpen ? `Смотреть другие проекты ( +${projects.length - 3})` : 'Свернуть кейсы'}
+          {!isAllOpen
+            ? `Смотреть другие проекты ( +${projects.length - 3})`
+            : "Свернуть кейсы"}
         </Text>
       </div>
     </div>
