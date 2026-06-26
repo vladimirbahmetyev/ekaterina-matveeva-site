@@ -8,7 +8,7 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mb-10">
+    <div className="mb-10" id="top">
       <ProjectHeader />
       <section>{children}</section>
       <div className="flex justify-center md:justify-start w-full items-center px-2.5 md:px-30 mt-10">

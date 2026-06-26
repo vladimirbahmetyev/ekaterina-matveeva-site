@@ -4,6 +4,8 @@ import { Text } from "@/app/ui/typography/Text";
 import { projects } from "@/app/main/components/Projects";
 
 import { FC, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const rootUrls = [
   {
@@ -33,6 +35,7 @@ type navigationSubroute = "cases" | "contacts";
 export const Navigation: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [subroute, setSubroute] = useState<navigationSubroute | null>(null);
+  const router = useRouter();
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("menu-open");
@@ -44,17 +47,32 @@ export const Navigation: FC = () => {
       document.body.classList.remove("menu-open");
     };
   }, [isOpen]);
+
+  const handleBackTap = () => {
+    setSubroute(null);
+  };
+
   const handleSubrouteClick = (id: string) => {
     if (id === "contacts" || id === "cases") {
       setSubroute(id);
     } else {
-      setSubroute(null);
+      setIsOpen(false);
+      router.push(`/#${id}`);
     }
+  };
+  const handleProjectClick = () => {
+    setIsOpen(false);
+    setSubroute(null);
   };
   return (
     <>
       <div className="md:hidden">
-        <div className="fixed z-10 top-0 w-full flex pt-6 justify-end px-5">
+        <div className="fixed z-10 top-0 w-full flex items-center py-3.5 justify-between px-5 bg-[#F9F5EC]">
+          <Link href="/#top">
+            <Text variant="body-text" color="beige">
+              Web · UI/UX designer
+            </Text>
+          </Link>
           <Image
             className="cursor-pointer"
             src={"/svg/burger.svg"}
@@ -68,7 +86,7 @@ export const Navigation: FC = () => {
           <div className="fixed w-screen h-screen bg-white top-0 left-0 z-10 mb-3">
             <div className="px-5 py-5 bg-[#434343] flex items-center justify-between">
               <Text color="white" preserveFormatting variant={"text"}>
-                {"Web · UI/UX designer\nЕкатерина Матвеева"}
+                {"Web · UI/UX designer"}
               </Text>
               <Image
                 src={"/svg/close-nav.svg"}
@@ -80,11 +98,13 @@ export const Navigation: FC = () => {
             </div>
             {rootUrls.map((val) => (
               <div
-                className="flex justify-between items-center px-5 py-3.5 border-b-1 border-[#EBE6DB]"
+                className="cursor-pointer flex justify-between items-center px-5 py-3.5 border-b-1 border-[#EBE6DB] mt-5"
                 key={val.id}
                 onClick={() => handleSubrouteClick(val.id)}
               >
-                <Text variant="text">{val.label}</Text>
+                <Text variant="text" color="beige">
+                  {val.label}
+                </Text>
                 {["cases", "contacts"].includes(val.id) && (
                   <Image
                     src="/svg/navigation-shevron.svg"
@@ -103,7 +123,10 @@ export const Navigation: FC = () => {
               className="bg-[#434343] px-5 py-3"
               onClick={() => handleSubrouteClick("main")}
             >
-              <div className="flex gap-4 items-center">
+              <div
+                className="flex py-3.5 gap-4 items-center"
+                onClick={handleBackTap}
+              >
                 <Image
                   src="/svg/arrow-back.svg"
                   alt=""
@@ -115,16 +138,18 @@ export const Navigation: FC = () => {
                 </Text>
               </div>
             </div>
-            <div className="overflow-y-auto h-full">
+            <div className="overflow-y-auto h-full ">
               {subroute === "cases" ? (
                 <div>
-                  <Text className="mt-5 ml-5" variant="h3" color="heading">
+                  <Text className="mt-5 mb-4 ml-5" variant="h3" color="heading">
                     Дизайн-кейсы
                   </Text>
                   {projects.map((value) => (
-                    <div
+                    <Link
+                      href={`${value.link}#top`}
                       key={value.title}
                       className="flex gap-3 items-center w-full px-5 py-3 border-b-1 border-[#EBE6DB]"
+                      onClick={handleProjectClick}
                     >
                       <Image
                         src={value.imgUrl}
@@ -136,7 +161,7 @@ export const Navigation: FC = () => {
                       />
                       <div>
                         <Text className="mb-3" variant="h3" color="dark-beige">
-                          {value.title}
+                          {value.smallTitle}
                         </Text>
                         <div className="flex gap-1 flex-wrap">
                           {value.tags.map((val) => (
@@ -151,11 +176,68 @@ export const Navigation: FC = () => {
                           ))}
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
+                  <div className="w-full min-h-30!" />
                 </div>
               ) : (
-                <div>Контакты</div>
+                <div className="p-5 overflow-scroll h-screen">
+                  <Text variant="h3" color="dark-beige">
+                    Контакты
+                  </Text>
+                  <Text variant="text" color="beige" className="mb-5">
+                    Я на связи пн-пт 8:00-18:00 мск
+                  </Text>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="border-1 border-[#FFCB6B] px-3 py-5 rounded-xl">
+                      <Text className="mb-8" variant="body-text" color="beige">
+                        Телеграм
+                      </Text>
+                      <Text className="mb-2" variant="h3" color="heading">
+                        @prezakatya
+                      </Text>
+                      <Text variant="body-text" color="beige">
+                        – предпочитаемый способ связи
+                      </Text>
+                    </div>
+                    <div className="px-3 py-5 bg-[#F9F5EC] rounded-xl">
+                      <Text variant="body-text" color="beige" className="mb-5">
+                        Подробнее обо мне
+                      </Text>
+                      <Text variant="h3" color="heading">
+                        Резюме
+                      </Text>
+                    </div>
+                    <div className="px-3 py-5 bg-[#F9F5EC] rounded-xl">
+                      <Text variant="body-text" color="beige" className="mb-5">
+                        Почта
+                      </Text>
+                      <Text variant="h3" color="heading">
+                        matveevae.work@gmail.com
+                      </Text>
+                    </div>
+                    <div className="px-3 py-5 bg-[#F9F5EC] rounded-xl">
+                      <Text variant="body-text" color="beige" className="mb-5">
+                        Вконтакте
+                      </Text>
+                      <Text variant="h3" color="heading">
+                        vk.com/prezakatya
+                      </Text>
+                    </div>
+                    <div className="px-3 py-5 bg-[#F9F5EC] rounded-xl">
+                      <Text variant="body-text" color="beige" className="mb-2">
+                        Instagram*{" "}
+                      </Text>
+                      <Text variant="footnote" color="beige" className="mb-5">
+                        *признан экстремистской организацией в РФ
+                      </Text>
+                      <Text variant="h3" color="heading">
+                        Instagram*
+                      </Text>
+                    </div>
+                    <div className="min-h-20 w-full" />
+                  </div>
+                </div>
               )}
             </div>
           </div>

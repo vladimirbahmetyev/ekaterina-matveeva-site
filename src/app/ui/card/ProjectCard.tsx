@@ -15,6 +15,7 @@ export interface ProjectCardProps {
   link?: `/projects/${project}` | "/graphMaterials";
   tags: string[];
   popupId?: registeredPopups;
+  smallTitle: string;
 }
 
 export const ProjectCard: FC<ProjectCardProps> = ({
@@ -41,7 +42,9 @@ export const ProjectCard: FC<ProjectCardProps> = ({
         />
       )}
       <div className="flex justify-between w-full items-center py-1">
-        <Text className="max-w-2/3" variant="text" color="dark-beige" >{title}</Text>
+        <Text className="max-w-2/3" variant="text" color="dark-beige">
+          {title}
+        </Text>
         <div className="cursor-pointer flex w-10 h-10 border-1 border-[#FAF4E8] justify-center items-center rounded-full">
           <Image src="/svg/linkArrow.svg" alt="" width={10} height={10} />
         </div>
@@ -53,7 +56,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             key={tag}
           >
             <Text variant="caption" color="light-beige">
-            {tag}
+              {tag}
             </Text>
           </div>
         ))}

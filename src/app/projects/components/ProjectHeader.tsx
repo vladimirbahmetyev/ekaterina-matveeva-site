@@ -8,33 +8,49 @@ import { NavigationButton } from "@/app/ui/buttons/NavigationButton";
 export const ProjectHeader = () => {
   const projectMeta = useProjectMeta();
   return (
-    <div className="px-2.5 md:px-30 py-4 md:py-15 pb-10">
-      <NavigationButton back text="На главную" className="mb-3" />
+    <div className="px-2.5 md:px-30 pt-15! md:pt-[auto] md:py-15 pb-10">
+      <NavigationButton
+        back
+        text="На главную"
+        className="md:block hidden mb-3"
+      />
       <div className="flex flex-col md:flex-row gap-4 md:justify-between mt-10">
         <div className="flex flex-col gap-6 md:w-1/3">
           <Text variant="h3" color="heading">
             {projectMeta.title}
           </Text>
-          <Text variant="text" color="beige">{projectMeta.description}</Text>
+          <Text variant="text" color="beige">
+            {projectMeta.description}
+          </Text>
         </div>
         <div className="flex flex-col w-full md:w-1/3 gap-2 md:gap-4">
           <div className="flex w-full">
-            <Text variant="text" color="light-beige" className="w-1/2 ">тип сайта</Text>
+            <Text variant="text" color="light-beige" className="w-1/2 ">
+              тип сайта
+            </Text>
             <Text variant="text" color="heading" className="max-w-1/2">
               {projectMeta.siteType}
             </Text>
           </div>
           <div className="flex  w-full">
-            <Text variant="text" color="light-beige" className="w-1/2 ">ниша</Text>
+            <Text variant="text" color="light-beige" className="w-1/2 ">
+              ниша
+            </Text>
             <Text className="text-[#35322A] max-w-1/2">
               {projectMeta.niche}
             </Text>
           </div>
           <div className="flex w-full">
-            <Text variant="text" color="light-beige" className="w-1/2 max-w-1/2">
+            <Text
+              variant="text"
+              color="light-beige"
+              className="w-1/2 max-w-1/2"
+            >
               формат разработки
             </Text>
-            <Text variant="text" color="heading">{projectMeta.type}</Text>
+            <Text variant="text" color="heading">
+              {projectMeta.type}
+            </Text>
           </div>
         </div>
       </div>
