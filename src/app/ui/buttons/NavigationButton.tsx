@@ -32,7 +32,9 @@ export const NavigationButton: FC<BackProps> = ({
       onClick={onClick}
     >
       <Image src="/svg/smallArrow.svg" width={11} height={10} alt="" />
-      <Text className="text-[#E3A127] font-semibold text-[14px]">{text}</Text>
+      <Text className="text-[#E3A127]" variant="text">
+        {text}
+      </Text>
     </button>
   );
 };

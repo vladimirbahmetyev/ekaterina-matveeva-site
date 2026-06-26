@@ -15,7 +15,7 @@ export const ExternalLinkButton: FC<ExternalLinkButtonProps> = ({
     <a
       href={link}
       target="_blank"
-      className={`bg-[#777162] px-5 py-3 rounded-full flex gap-1 items-center ${className ? className : ""}`}
+      className={`bg-[#777162] px-5 py-3 rounded-full flex justify-center gap-1 items-center ${className ? className : ""}`}
     >
       <Text className="text-white font-medium">Перейти на сайт</Text>
       <Image src="/svg/planet.svg" width={9} height={9} alt="" />

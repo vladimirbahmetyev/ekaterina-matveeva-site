@@ -4,12 +4,13 @@ import Image from "next/image";
 
 export default function WhereYouWant(): FC {
   return (
-    <div className="flex flex-col px-2.5 gap-10">
+    <div className="flex flex-col px-2.5 gap-10 md:px-30">
       <Image
         src="/img/projects/whereYouWant/kudaygodno_1_video.png"
         width={590}
         height={590}
         alt=""
+        className="w-full"
       />
       <Info
         title={"Вводные данные"}
@@ -17,18 +18,20 @@ export default function WhereYouWant(): FC {
           "«КудаУгодно» — онлайн-платформа для поиска туров и отелей, ориентированная на пользователей, которые хотят путешествовать легко, спонтанно и с вдохновением. Главная идея проекта — сделать процесс выбора путешествия простым, эмоциональным и приятным. Проект выполнялся в команде UI/UX дизайнеров."
         }
       />
-      <Image
-        src="/img/projects/whereYouWant/kudaygodno_2.png"
-        width={590}
-        height={590}
-        alt=""
-      />
-      <Image
-        src="/img/projects/whereYouWant/kudaygodno_3.png"
-        width={590}
-        height={590}
-        alt=""
-      />
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <Image
+          src="/img/projects/whereYouWant/kudaygodno_2.png"
+          width={590}
+          height={590}
+          alt=""
+        />
+        <Image
+          src="/img/projects/whereYouWant/kudaygodno_3.png"
+          width={590}
+          height={590}
+          alt=""
+        />
+      </div>
       <Info
         title={
           "Так как проект создавался с нуля, значительная часть работы была исследовательской. Мы провели анализ конкурентов, чтобы определить точки роста и дифференциации. Составили пользовательские пути, отражающие реальные сценарии взаимодействия с сайтом. Тестировали прототипы, чтобы подтвердить гипотезы и улучшить пользовательский опыт."
@@ -42,53 +45,65 @@ export default function WhereYouWant(): FC {
         width={590}
         height={590}
         alt=""
+        className="w-full"
       />
       <Info
         title="Мы создали единую визуальную концепцию сервиса — лёгкую, вдохновляющую и узнаваемую.
 В цветовой палитре использованы теплые и контрастные акценты, передающие энергию путешествий."
-        description="Мои основные задачи включали:
- — разработку главной страницы и визуальной концепции сайта;  — проектирование страницы «Блог», где пользователи могли публиковать свои статьи и получать за это баллы;  — оформление окна отзывов об отелях;  — создание раздела «Акции» с горящими предложениями и промокодами;  — участие в разработке дизайн-системы, состояний и вариантов компонентов;  — проектирование хедера и футера — ключевых навигационных элементов сайта."
+        description={`
+Мои основные задачи включали:
+ — разработку главной страницы и визуальной концепции сайта; 
+ — проектирование страницы «Блог», где пользователи могли публиковать свои статьи и получать за это баллы; 
+ — оформление окна отзывов об отелях; — создание раздела «Акции» с горящими предложениями и промокодами; 
+ — участие в разработке дизайн-системы, состояний и вариантов компонентов; 
+ — проектирование хедера и футера — ключевых навигационных элементов сайта.`}
       />
-      <Image
-        src="/img/projects/whereYouWant/kudaygodno_5.png"
-        width={590}
-        height={590}
-        alt=""
-      />
-      <Image
-        src="/img/projects/whereYouWant/kudaygodno_6.png"
-        width={590}
-        height={590}
-        alt=""
-      />
-      <Image
-        src="/img/projects/whereYouWant/kudaygodno_7.png"
-        width={590}
-        height={590}
-        alt=""
-      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <Image
+          src="/img/projects/whereYouWant/kudaygodno_5.png"
+          width={590}
+          height={590}
+          alt=""
+        />
+        <Image
+          src="/img/projects/whereYouWant/kudaygodno_6.png"
+          width={590}
+          height={590}
+          alt=""
+        />
+        <Image
+          src="/img/projects/whereYouWant/kudaygodno_7.png"
+          width={590}
+          height={590}
+          alt=""
+          className="col-span-2 w-full"
+        />
+      </div>
       <Info
         title="Сайт стал функциональным, эмоционально вовлекающим и удобным в использовании. Продуманная структура, фишки и дизайн-система обеспечили проекту устойчивое конкурентное преимущество и масштабируемость."
         description="Наша команда создала полноценный тревел-сервис с нуля — от исследовательской базы до визуальной реализации. Моя работа в проекте продемонстрировала умение создавать визуально целостный продукт, выстраивать системный подход к дизайну и взаимодействовать с большой командой коллег."
       />
-      <Image
-        src="/img/projects/whereYouWant/kudaygodno_8.png"
-        width={590}
-        height={590}
-        alt=""
-      />
-      <Image
-        src="/img/projects/whereYouWant/kudaygodno_9.png"
-        width={590}
-        height={590}
-        alt=""
-      />
-      <Image
-        src="/img/projects/whereYouWant/kudaygodno_10.png"
-        width={590}
-        height={590}
-        alt=""
-      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <Image
+          src="/img/projects/whereYouWant/kudaygodno_8.png"
+          width={590}
+          height={590}
+          alt=""
+          className="col-span-2 w-full"
+        />
+        <Image
+          src="/img/projects/whereYouWant/kudaygodno_9.png"
+          width={590}
+          height={590}
+          alt=""
+        />
+        <Image
+          src="/img/projects/whereYouWant/kudaygodno_10.png"
+          width={590}
+          height={590}
+          alt=""
+        />
+      </div>
       <Info
         title="Наша команда заложила гибкий фундамент для дальнейшего развития продукта: сайт легко масштабируется, сохраняет целостный стиль и обеспечивает пользователям стабильный и понятный опыт взаимодействия."
         description="Особое внимание мы уделали проработанности дизайн-системы. Это позволило стандартизировать интерфейс и ускорить разработку новых страниц, а также упростить взаимодействие с разработчиками."

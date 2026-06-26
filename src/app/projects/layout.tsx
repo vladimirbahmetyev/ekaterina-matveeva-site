@@ -11,9 +11,8 @@ export default function BlogLayout({
     <div className="mb-10">
       <ProjectHeader />
       <section>{children}</section>
-      <div className="flex justify-between w-full items-center px-2.5 md:px-30 mt-10">
+      <div className="flex justify-center md:justify-start w-full items-center px-2.5 md:px-30 mt-10">
         <NavigationButton text="На главную" url="/" />
-        <ExternalLinkButton link={"test.com"} />
       </div>
     </div>
   );
