@@ -5,7 +5,8 @@ export type colorType =
   | "heading"
   | "light-beige"
   | "beige"
-  | "white";
+  | "white"
+  | "yellow";
 type variantType = "h3" | "h4" | "text" | "body-text" | "caption" | "footnote";
 
 interface TextProps {
@@ -23,6 +24,7 @@ const colorMap: Record<colorType, string> = {
   beige: "!text-[#A7A090]",
   "dark-beige": "!text-[#777162]",
   white: "!text-[#FFFFFF]",
+  yellow: "!text-[#E3A127]",
 };
 
 const variantMap: Record<variantType, string> = {
@@ -46,7 +48,7 @@ export const Text: FC<TextProps> = ({
   const typographyClass = variantMap[variant];
   return (
     <div
-      className={` font-[Manrope] ${className} ${colorClass} ${formattingClass} ${typographyClass}`}
+      className={`font-[Manrope] ${className} ${colorClass} ${formattingClass} ${typographyClass}`}
     >
       {children}
     </div>

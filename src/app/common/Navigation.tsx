@@ -67,7 +67,7 @@ export const Navigation: FC = () => {
   return (
     <>
       <div className="md:hidden">
-        <div className="fixed z-10 top-0 w-full flex items-center py-3.5 justify-between px-5 bg-[#F9F5EC]">
+        <div className="fixed z-30 top-0 w-full flex items-center py-3.5 justify-between px-5 bg-[#F9F5EC]">
           <Link href="/#top">
             <Text variant="body-text" color="beige">
               Web · UI/UX designer

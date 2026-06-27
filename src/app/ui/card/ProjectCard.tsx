@@ -15,7 +15,7 @@ export interface ProjectCardProps {
   link?: `/projects/${project}` | "/graphMaterials";
   tags: string[];
   popupId?: registeredPopups;
-  smallTitle: string;
+  smallTitle?: string;
 }
 
 export const ProjectCard: FC<ProjectCardProps> = ({

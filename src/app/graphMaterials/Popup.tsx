@@ -11,9 +11,11 @@ import {
 export function Popup({
   children,
   popupId,
+  classNames,
 }: {
   children: React.ReactNode;
   popupId: registeredPopups;
+  classNames?: string;
 }) {
   const { closePopup, isOpen } = useContext(PopupContext);
   const handlePopupContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -32,7 +34,7 @@ export function Popup({
     >
       <div
         ref={nodeRef}
-        className="content fixed h-screen w-screen bg-[#00000080] top-0 left-0 justify-center flex pt-20"
+        className="content fixed h-screen w-screen bg-[#00000080] top-0 left-0 justify-center flex pt-20 z-100"
         onClick={() => closePopup(popupId)}
       >
         <Image
@@ -44,7 +46,7 @@ export function Popup({
           className="absolute top-2 right-2 cursor-pointer"
         />
         <div
-          className="bg-white w-9/10 p-5 h-min rounded-xl"
+          className={`bg-white p-5 rounded-xl max-w-9/10 aspect-1213/900 max-h-9/10 overflow-scroll ${classNames ? classNames : ""}`}
           onClick={handlePopupContentClick}
         >
           {children}

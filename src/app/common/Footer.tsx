@@ -1,30 +1,46 @@
+"use client";
+
 import { OrderButton } from "@/app/ui/buttons/OrderButton";
 import { Heading } from "@/app/ui/typography/Heading";
 import { Text } from "@/app/ui/typography/Text";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 export const Footer = () => {
+  const [is404, setIs404] = useState(false);
+
+  useEffect(() => {
+    setIs404(document.body.hasAttribute("data-404"));
+    const observer = new MutationObserver(() => {
+      setIs404(document.body.hasAttribute("data-404"));
+    });
+    observer.observe(document.body, { attributes: true });
+    return () => observer.disconnect();
+  }, []);
   return (
     <footer
       id="contacts"
-      className="flex flex-col items-center justify-center gap-6"
+      className="flex flex-col items-center justify-center gap-6 relative z-20"
     >
-      <div className="flex flex-col items-center justify-center px-2.5 w-full md:mb-[-60px]">
-        <Heading className="mb-5">Екатерина Матвеева</Heading>
-        <Image
-          className="rounded-xl mb-5"
-          src="/img/footer/photo.png"
-          alt="logo"
-          width={192}
-          height={193}
-        />
-        <Text variant="text" color="heading" className="mb-5">
-          Я на связи пн-пт 8:00-18:00 мск
-        </Text>
-        <div className="py-4">
-          <OrderButton />
+      {!is404 && (
+        <div className="flex flex-col items-center justify-center px-2.5 w-full md:mb-[-60px]">
+          <Heading className="mb-5">Екатерина Матвеева</Heading>
+          <Image
+            className="rounded-xl mb-5"
+            src="/img/footer/photo.png"
+            alt="logo"
+            width={192}
+            height={193}
+          />
+          <Text variant="text" color="heading" className="mb-5">
+            Я на связи пн-пт 8:00-18:00 мск
+          </Text>
+          <div className="py-4">
+            <OrderButton />
+          </div>
         </div>
-      </div>
+      )}
+
       <div className="flex flex-col md:flex-row gap-3 items-center md:justify-between md:w-full md:px-30 relative">
         <div className="md:order-2">
           <a className="flex justify-center md:justify-start gap-2 items-center mb-3">
