@@ -35,13 +35,13 @@ export default function WomenConference(): FC {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Image
-          src="/img/projects/womenConference/portfolio_mockup_conference.png"
+          src="/img/projects/womenConference/conference_dk_1.png"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/womenConference/portfolio_mockup_screen_1_conference.png"
+          src="/img/projects/womenConference/conference_dk_2.png"
           alt=""
           width={590}
           height={590}
@@ -64,7 +64,7 @@ export default function WomenConference(): FC {
         </Text>
       </div>
       <Image
-        src="/img/projects/womenConference/portfolio_mockup_screen_2_conference.png"
+        src="/img/projects/womenConference/conference_dk_3.png"
         width={1200}
         height={588}
         alt=""
@@ -86,7 +86,7 @@ export default function WomenConference(): FC {
         </Text>
       </div>
       <Image
-        src="/img/projects/womenConference/portfolio_mockup_screen_3_conference.png"
+        src="/img/projects/womenConference/conference_dk_4.png"
         width={1200}
         height={588}
         alt=""
@@ -104,7 +104,7 @@ export default function WomenConference(): FC {
       </div>
 
       <Image
-        src="/img/projects/womenConference/portfolio_mockup_screen_4_conference.png"
+        src="/img/projects/womenConference/conference_dk_5.png"
         alt=""
         width={590}
         height={590}
@@ -124,7 +124,7 @@ export default function WomenConference(): FC {
         </Text>
       </div>
       <Image
-        src="/img/projects/womenConference/portfolio_mockup_screen_5_conference.png"
+        src="/img/projects/womenConference/conference_dk_6.png"
         alt=""
         width={590}
         height={590}

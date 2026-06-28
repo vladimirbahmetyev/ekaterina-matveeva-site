@@ -11,64 +11,64 @@ import { useState } from "react";
 
 const presentationCards: PresentationCardProps[] = [
   {
-    imgUrl: "/img/projects/businessMentoring/alex_17.png",
+    imgUrl: "/img/projects/businessMentoring/alex_1.png",
     title: "Лендинг для сбора заявок на индивидуальное обучение (консалтинг)",
     link: "https://alexyanovsky.pro/indiv_work",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_18.png",
+    imgUrl: "/img/projects/businessMentoring/alex_2.png",
     title: "Лендинг для сбора заявок на интенсив по бизнесу с AI",
     link: "https://alexyanovsky.com/ai_business/",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_8.png",
+    imgUrl: "/img/projects/businessMentoring/alex_3.png",
     title: "Лендинг для сбора заявок на интенсив по масштабированию бизнеса",
     link: "https://alexyanovsky.com/mbr_strategy/",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_1.png",
+    imgUrl: "/img/projects/businessMentoring/alex_4.png",
     title: "Лендинг для сбора заявок на онлайн-курс “Предприниматель”",
     link: "https://alexyanovsky.com/entrepreneur_new/",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_15.png",
+    imgUrl: "/img/projects/businessMentoring/alex_5.png",
     title: "Лендинг для анонса мероприятия в Майами",
     link: "https://alexyanovsky.com/miami_may/",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_16.png",
+    imgUrl: "/img/projects/businessMentoring/alex_6.png",
     title: "Информационный сайт консалтинговой компании ",
     link: "https://biz-education.pro",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_2.png",
+    imgUrl: "/img/projects/businessMentoring/alex_7.png",
     title: "Лендинг афиша выезного бизнес-тренинга в Турции”",
     link: "https://alexyanovsky.com/may_trening_turkey2025/",
   },
 
   {
-    imgUrl: "/img/projects/businessMentoring/alex_3.png",
+    imgUrl: "/img/projects/businessMentoring/alex_8.png",
     title: "Лендинг для сбора заявок в онлайн-сообщество “Алекс Клуб”",
     link: "https://alexyanovsky.com/alex_club_site/",
   },
 
   {
-    imgUrl: "/img/projects/businessMentoring/alex_4.png",
+    imgUrl: "/img/projects/businessMentoring/alex_9.png",
     title: "Онлайн-распродажа записейТОП-программ Алекса Яновского",
     link: "https://alexyanovsky.com/summer_sales/",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_6.png",
+    imgUrl: "/img/projects/businessMentoring/alex_10.png",
     title: "Онлайн-распродажа инструментов для управления бизнесом",
     link: "https://alexyanovsky.com/bonus_7steps/",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_7.png",
+    imgUrl: "/img/projects/businessMentoring/alex_11.png",
     title: "Лендинг афиша выезного бизнес-тренинга в Ташкенте",
     link: "https://alexyanovsky.com/vip_trening2025/",
   },
   {
-    imgUrl: "/img/projects/businessMentoring/alex_5.png",
+    imgUrl: "/img/projects/businessMentoring/alex_12.png",
     title: "Лендинг для сбора заявок на онлайн-курс “Мастер группа”",
     link: "https://alexyanovsky.com/mastergr/",
   },
@@ -105,13 +105,13 @@ export default function BusinessMentoring() {
       />
       <div className="flex flex-col md:flex-row gap-10 md:gap-5">
         <Image
-          src="/img/projects/businessMentoring/alex_9.png"
+          src="/img/projects/businessMentoring/alex_case_dk_1.png"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/businessMentoring/alex_10.png"
+          src="/img/projects/businessMentoring/alex_case_dk_2.png"
           alt=""
           width={590}
           height={590}
@@ -124,7 +124,7 @@ export default function BusinessMentoring() {
         }
       />
       <Image
-        src="/img/projects/businessMentoring/alex_11.png"
+        src="/img/projects/businessMentoring/alex_case_dk_3.png"
         alt=""
         width={590}
         height={590}
@@ -139,7 +139,7 @@ export default function BusinessMentoring() {
         }
       />
       <Image
-        src="/img/projects/businessMentoring/alex_12.png"
+        src="/img/projects/businessMentoring/alex_case_dk_4.png"
         alt=""
         width={590}
         height={590}
@@ -155,13 +155,13 @@ export default function BusinessMentoring() {
       />
       <div className="flex flex-col md:flex-row gap-10 md:gap-5">
         <Image
-          src="/img/projects/businessMentoring/alex_13.png"
+          src="/img/projects/businessMentoring/alex_case_dk_5.png"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/businessMentoring/alex_14.png"
+          src="/img/projects/businessMentoring/alex_case_dk_6.png"
           alt=""
           width={590}
           height={590}

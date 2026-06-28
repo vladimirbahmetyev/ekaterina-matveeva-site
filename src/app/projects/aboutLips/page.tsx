@@ -19,20 +19,12 @@ export default function AboutLips() {
           "Ко мне обратились с задачей разработать лендинг для продажи онлайн-курса по перманентному макияжу губ, рассчитанного на действующих мастеров, желающих повысить квалификацию. Основной целью проекта было создание сайта, который собирает заявки и принимает оплату, а также наглядно демонстрирует ценность курса, качество контента, профессионализм преподавателя и реальные результаты учеников."
         }
       />
-      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
-        <Image
-          src="/img/projects/aboutLips/lips_2.png"
-          alt=""
-          width={590}
-          height={590}
-        />
-        <Image
-          src="/img/projects/aboutLips/lips_3.png"
-          alt=""
-          width={590}
-          height={590}
-        />
-      </div>
+      <Image
+        src="/img/projects/aboutLips/lips_dk_2.png"
+        alt=""
+        width={590}
+        height={590}
+      />
       <Info
         title={
           "Я разработала дизайн и верстку лендинга на Tilda, а также настроила обучающую платформу и создала дополнительны pdf-материалы для обучения."
@@ -48,7 +40,7 @@ export default function AboutLips() {
 — создать учебную платформу на Tilda.`}
       />
       <Image
-        src="/img/projects/aboutLips/lips_4.png"
+        src="/img/projects/aboutLips/lips_dk_3.png"
         alt=""
         width={590}
         height={590}
@@ -63,7 +55,7 @@ export default function AboutLips() {
         }
       />
       <Image
-        src="/img/projects/aboutLips/lips_5.png"
+        src="/img/projects/aboutLips/lips_dk_4.png"
         alt=""
         width={590}
         height={590}
@@ -79,13 +71,13 @@ export default function AboutLips() {
       />
       <div className="flex flex-col md:flex-row gap-10 md:gap-5">
         <Image
-          src="/img/projects/aboutLips/lips_6.png"
+          src="/img/projects/aboutLips/lips_dk_5.png"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/aboutLips/lips_7.png"
+          src="/img/projects/aboutLips/lips_dk_6.png"
           alt=""
           width={590}
           height={590}

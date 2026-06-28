@@ -20,13 +20,13 @@ export default function WhereYouWant(): FC {
       />
       <div className="grid grid-cols-1 md:grid-cols-2">
         <Image
-          src="/img/projects/whereYouWant/kudaygodno_2.png"
+          src="/img/projects/whereYouWant/kudaygodno_dk_1.png"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/whereYouWant/kudaygodno_3.png"
+          src="/img/projects/whereYouWant/kudaygodno_dk_2.png"
           width={590}
           height={590}
           alt=""
@@ -41,7 +41,7 @@ export default function WhereYouWant(): FC {
         }
       />
       <Image
-        src="/img/projects/whereYouWant/kudaygodno_4.png"
+        src="/img/projects/whereYouWant/kudaygodno_dk_3.png"
         width={590}
         height={590}
         alt=""
@@ -58,25 +58,25 @@ export default function WhereYouWant(): FC {
  — участие в разработке дизайн-системы, состояний и вариантов компонентов; 
  — проектирование хедера и футера — ключевых навигационных элементов сайта.`}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid md:grid-cols-2 gap-5">
         <Image
-          src="/img/projects/whereYouWant/kudaygodno_5.png"
+          src="/img/projects/whereYouWant/kudaygodno_dk_4.png"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/whereYouWant/kudaygodno_6.png"
+          src="/img/projects/whereYouWant/kudaygodno_dk_5.png"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/whereYouWant/kudaygodno_7.png"
+          src="/img/projects/whereYouWant/kudaygodno_dk_6.png"
           width={590}
           height={590}
           alt=""
-          className="col-span-2 w-full"
+          className="md:col-span-2 w-full"
         />
       </div>
       <Info
@@ -85,20 +85,20 @@ export default function WhereYouWant(): FC {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Image
-          src="/img/projects/whereYouWant/kudaygodno_8.png"
+          src="/img/projects/whereYouWant/kudaygodno_dk_7.png"
           width={590}
           height={590}
           alt=""
           className="col-span-2 w-full"
         />
         <Image
-          src="/img/projects/whereYouWant/kudaygodno_9.png"
+          src="/img/projects/whereYouWant/kudaygodno_dk_8.png"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/whereYouWant/kudaygodno_10.png"
+          src="/img/projects/whereYouWant/kudaygodno_dk_9.png"
           width={590}
           height={590}
           alt=""

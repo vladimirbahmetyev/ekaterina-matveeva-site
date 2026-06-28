@@ -30,13 +30,13 @@ export default function Cosmetics(): FC {
       </div>
       <div className="flex flex-col md:flex-row gap-10 md:gap-5">
         <Image
-          src="/img/projects/cosmetics/portfolio_mockup1.png"
+          src="/img/projects/cosmetics/sk_dk_1.png"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/cosmetics/portfolio_screen2.png"
+          src="/img/projects/cosmetics/sk_dk_2.png"
           alt=""
           width={590}
           height={590}
@@ -45,8 +45,8 @@ export default function Cosmetics(): FC {
       <div className="flex flex-col gap-4">
         <Text color="heading" variant="h3" className="md:maw-w-4/5">
           Сайт был полностью разработан мной на платформе Tilda. Визуальное
-          оформление я построилана сочетании минимализма и акцента на
-          продукции, чтобы подчеркнуть премиальность бренда.
+          оформление я построилана сочетании минимализма и акцента на продукции,
+          чтобы подчеркнуть премиальность бренда.
         </Text>
         <Text color="beige" variant="text" className="md:max-w-2/3">
           Я реализовала сайт интернет-магазина с возможностью покупки и
@@ -57,13 +57,22 @@ export default function Cosmetics(): FC {
           технические параметры.
         </Text>
       </div>
-      <Image
-        src="/img/projects/cosmetics/portfolio_screen3.png"
-        width={1200}
-        height={588}
-        alt=""
-        className="w-full"
-      />
+      <div className="grid md:grid-cols-2 gap-5">
+        <Image
+          src="/img/projects/cosmetics/sk_dk_3.png"
+          width={1200}
+          height={588}
+          alt=""
+          className="w-full"
+        />
+        <Image
+          src="/img/projects/cosmetics/sk_dk_4.png"
+          width={1200}
+          height={588}
+          alt=""
+          className="w-full"
+        />
+      </div>
       <div className="flex flex-col gap-4">
         <Text color="heading" variant="h3" className="md:max-w-3/4">
           Для вовлечения пользователей я внедрила интерактивный квиз. Это
@@ -76,10 +85,10 @@ export default function Cosmetics(): FC {
         </Text>
       </div>
       <Image
-        src="/img/projects/cosmetics/portfolio_mockup4.png"
-        width={1200}
-        height={588}
+        src="/img/projects/cosmetics/sk_dk_5.png"
         alt=""
+        width={590}
+        height={590}
         className="w-full"
       />
       <div className="flex flex-col gap-4">
@@ -95,34 +104,34 @@ export default function Cosmetics(): FC {
           с новостями бренда создают устойчивую коммуникацию с клиентами.
         </Text>
       </div>
-      <div className="flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-5">
+      <div className="grid md:grid-cols-2 gap-10 md:gap-5">
         <Image
-          src="/img/projects/cosmetics/portfolio_screen5.png"
+          src="/img/projects/cosmetics/sk_dk_6.png"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/cosmetics/portfolio_screen6.png"
+          src="/img/projects/cosmetics/sk_dk_7.png"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/cosmetics/portfolio_mockups_7.png"
+          src="/img/projects/cosmetics/sk_dk_8.png"
           alt=""
           width={590}
           height={590}
-          className="col-span-2 w-full"
+          className="md: col-span-2 w-full"
         />
         <Image
-          src="/img/projects/cosmetics/portfolio_screen8.png"
+          src="/img/projects/cosmetics/sk_dk_9.png"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/cosmetics/portfolio_screen9.png"
+          src="/img/projects/cosmetics/sk_dk_10.png"
           alt=""
           width={590}
           height={590}
