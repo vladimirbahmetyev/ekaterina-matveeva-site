@@ -6,7 +6,7 @@ export default function AboutLips() {
   return (
     <div className="flex flex-col gap-10 px-2.5 md:px-30">
       <Image
-        src="/img/projects/aboutLips/lips_1_video.png"
+        src="/img/projects/aboutLips/lips_1_video.webp"
         alt=""
         width={590}
         height={590}
@@ -20,7 +20,7 @@ export default function AboutLips() {
         }
       />
       <Image
-        src="/img/projects/aboutLips/lips_dk_2.png"
+        src="/img/projects/aboutLips/lips_dk_2.webp"
         alt=""
         width={590}
         height={590}
@@ -40,7 +40,7 @@ export default function AboutLips() {
 — создать учебную платформу на Tilda.`}
       />
       <Image
-        src="/img/projects/aboutLips/lips_dk_3.png"
+        src="/img/projects/aboutLips/lips_dk_3.webp"
         alt=""
         width={590}
         height={590}
@@ -55,7 +55,7 @@ export default function AboutLips() {
         }
       />
       <Image
-        src="/img/projects/aboutLips/lips_dk_4.png"
+        src="/img/projects/aboutLips/lips_dk_4.webp"
         alt=""
         width={590}
         height={590}
@@ -71,13 +71,13 @@ export default function AboutLips() {
       />
       <div className="flex flex-col md:flex-row gap-10 md:gap-5">
         <Image
-          src="/img/projects/aboutLips/lips_dk_5.png"
+          src="/img/projects/aboutLips/lips_dk_5.webp"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/aboutLips/lips_dk_6.png"
+          src="/img/projects/aboutLips/lips_dk_6.webp"
           alt=""
           width={590}
           height={590}

@@ -73,7 +73,7 @@ export const WorkWithMe: FC = () => {
           </div>
           <Image
             className="absolute right-0 top-0"
-            src={"/img/main/work/res.png"}
+            src={"/img/main/work/res.webp"}
             width={273}
             height={313}
             alt=""
@@ -125,7 +125,7 @@ export const WorkWithMe: FC = () => {
             </Text>
           </div>
           <Image
-            src={"/img/main/work/com.png"}
+            src={"/img/main/work/com.webp"}
             width={275}
             height={335}
             alt=""
@@ -162,7 +162,7 @@ export const WorkWithMe: FC = () => {
               </Text>
             </div>
             <Image
-              src={"/img/main/work/stamp.png"}
+              src={"/img/main/work/stamp.webp"}
               width={173}
               height={173}
               alt=""
@@ -207,7 +207,7 @@ export const WorkWithMe: FC = () => {
                   Применяю UX-исследования
                 </Text>
                 <Image
-                  src={"/img/main/work/res.png"}
+                  src={"/img/main/work/res.webp"}
                   width={200}
                   height={228}
                   alt=""
@@ -233,7 +233,7 @@ export const WorkWithMe: FC = () => {
                   </Text>
                 </div>
                 <Image
-                  src={"/img/main/work/com.png"}
+                  src={"/img/main/work/com.webp"}
                   width={206}
                   height={230}
                   alt=""
@@ -259,7 +259,7 @@ export const WorkWithMe: FC = () => {
                   </Text>{" "}
                 </div>
                 <Image
-                  src={"/img/main/work/stamp.png"}
+                  src={"/img/main/work/stamp.webp"}
                   width={173}
                   height={173}
                   alt=""

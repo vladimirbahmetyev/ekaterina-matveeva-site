@@ -8,7 +8,7 @@ export default function WomenConference(): FC {
   return (
     <div className="px-2.5 flex flex-col gap-10 md:px-30">
       <Image
-        src="/img/projects/womenConference/portfolio_video2_conference.png"
+        src="/img/projects/womenConference/portfolio_video2_conference.webp"
         width={1200}
         height={588}
         alt=""
@@ -35,13 +35,13 @@ export default function WomenConference(): FC {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Image
-          src="/img/projects/womenConference/conference_dk_1.png"
+          src="/img/projects/womenConference/conference_dk_1.webp"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/womenConference/conference_dk_2.png"
+          src="/img/projects/womenConference/conference_dk_2.webp"
           alt=""
           width={590}
           height={590}
@@ -64,7 +64,7 @@ export default function WomenConference(): FC {
         </Text>
       </div>
       <Image
-        src="/img/projects/womenConference/conference_dk_3.png"
+        src="/img/projects/womenConference/conference_dk_3.webp"
         width={1200}
         height={588}
         alt=""
@@ -86,7 +86,7 @@ export default function WomenConference(): FC {
         </Text>
       </div>
       <Image
-        src="/img/projects/womenConference/conference_dk_4.png"
+        src="/img/projects/womenConference/conference_dk_4.webp"
         width={1200}
         height={588}
         alt=""
@@ -104,7 +104,7 @@ export default function WomenConference(): FC {
       </div>
 
       <Image
-        src="/img/projects/womenConference/conference_dk_5.png"
+        src="/img/projects/womenConference/conference_dk_5.webp"
         alt=""
         width={590}
         height={590}
@@ -124,7 +124,7 @@ export default function WomenConference(): FC {
         </Text>
       </div>
       <Image
-        src="/img/projects/womenConference/conference_dk_6.png"
+        src="/img/projects/womenConference/conference_dk_6.webp"
         alt=""
         width={590}
         height={590}

@@ -25,7 +25,7 @@ export default function Home() {
           />
           <div className="mt-10 md:mt-0 grow-0 bg-white flex flex-col items-center border-[#B6B2A8] border-1 rounded-xl md:rounded-3xl p-4 relative w-full md:w-75">
             <Image
-              src={"/img/footer/klev.png"}
+              src={"/img/footer/klev.webp"}
               alt=""
               width={50}
               height={50}

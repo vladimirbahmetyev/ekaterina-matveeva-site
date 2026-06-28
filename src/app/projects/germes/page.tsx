@@ -6,7 +6,7 @@ export default function Germes(): FC {
   return (
     <div className="flex flex-col px-2.5 gap-10 md:px-30">
       <Image
-        src="/img/projects/germes/yandex_1_video.png"
+        src="/img/projects/germes/yandex_1_video.webp"
         width={1200}
         height={590}
         alt=""
@@ -19,14 +19,14 @@ export default function Germes(): FC {
       />
       <div className="grid gird-cols-1 md:grid-cols-2">
         <Image
-          src="/img/projects/germes/yandex_dk_1.png"
+          src="/img/projects/germes/yandex_dk_1.webp"
           width={590}
           height={590}
           alt=""
         />
 
         <Image
-          src="/img/projects/germes/yandex_dk_2.png"
+          src="/img/projects/germes/yandex_dk_2.webp"
           width={590}
           height={590}
           alt=""
@@ -41,7 +41,7 @@ export default function Germes(): FC {
         }
       />
       <Image
-        src="/img/projects/germes/yandex_dk_3.png"
+        src="/img/projects/germes/yandex_dk_3.webp"
         width={590}
         height={590}
         alt=""
@@ -59,7 +59,7 @@ export default function Germes(): FC {
 — Учёт рабочего времени: автоматическая фиксация прихода и ухода по системе пропусков. Также добавлена иконка дня рождения, чтобы бригадир видел, кого поздравить — небольшая деталь, которая улучшает атмосферу внутри команды.`}
       />
       <Image
-        src="/img/projects/germes/yandex_dk_4.png"
+        src="/img/projects/germes/yandex_dk_4.webp"
         width={590}
         height={590}
         alt=""
@@ -76,37 +76,37 @@ export default function Germes(): FC {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Image
-          src="/img/projects/germes/yandex_dk_5.png"
+          src="/img/projects/germes/yandex_dk_5.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/germes/yandex_dk_6.png"
+          src="/img/projects/germes/yandex_dk_6.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/germes/yandex_dk_7.png"
+          src="/img/projects/germes/yandex_dk_7.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/germes/yandex_dk_8.png"
+          src="/img/projects/germes/yandex_dk_8.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/germes/yandex_dk_9.png"
+          src="/img/projects/germes/yandex_dk_9.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/germes/yandex_dk_10.png"
+          src="/img/projects/germes/yandex_dk_10.webp"
           width={590}
           height={590}
           alt=""

@@ -27,7 +27,7 @@ export const Footer = () => {
           <Heading className="mb-5">Екатерина Матвеева</Heading>
           <Image
             className="rounded-xl mb-5"
-            src="/img/footer/photo.png"
+            src="/img/footer/photo.webp"
             alt="logo"
             width={192}
             height={193}

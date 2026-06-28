@@ -11,7 +11,7 @@ export default function Cosmetics(): FC {
   return (
     <div className="px-2.5 md:px-30 flex flex-col gap-10">
       <Image
-        src="/img/projects/cosmetics/portfolio_video1.png"
+        src="/img/projects/cosmetics/portfolio_video1.webp"
         width={1200}
         height={588}
         alt=""
@@ -30,13 +30,13 @@ export default function Cosmetics(): FC {
       </div>
       <div className="flex flex-col md:flex-row gap-10 md:gap-5">
         <Image
-          src="/img/projects/cosmetics/sk_dk_1.png"
+          src="/img/projects/cosmetics/sk_dk_1.webp"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/cosmetics/sk_dk_2.png"
+          src="/img/projects/cosmetics/sk_dk_2.webp"
           alt=""
           width={590}
           height={590}
@@ -59,14 +59,14 @@ export default function Cosmetics(): FC {
       </div>
       <div className="grid md:grid-cols-2 gap-5">
         <Image
-          src="/img/projects/cosmetics/sk_dk_3.png"
+          src="/img/projects/cosmetics/sk_dk_3.webp"
           width={1200}
           height={588}
           alt=""
           className="w-full"
         />
         <Image
-          src="/img/projects/cosmetics/sk_dk_4.png"
+          src="/img/projects/cosmetics/sk_dk_4.webp"
           width={1200}
           height={588}
           alt=""
@@ -85,7 +85,7 @@ export default function Cosmetics(): FC {
         </Text>
       </div>
       <Image
-        src="/img/projects/cosmetics/sk_dk_5.png"
+        src="/img/projects/cosmetics/sk_dk_5.webp"
         alt=""
         width={590}
         height={590}
@@ -106,32 +106,32 @@ export default function Cosmetics(): FC {
       </div>
       <div className="grid md:grid-cols-2 gap-10 md:gap-5">
         <Image
-          src="/img/projects/cosmetics/sk_dk_6.png"
+          src="/img/projects/cosmetics/sk_dk_6.webp"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/cosmetics/sk_dk_7.png"
+          src="/img/projects/cosmetics/sk_dk_7.webp"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/cosmetics/sk_dk_8.png"
+          src="/img/projects/cosmetics/sk_dk_8.webp"
           alt=""
           width={590}
           height={590}
           className="md: col-span-2 w-full"
         />
         <Image
-          src="/img/projects/cosmetics/sk_dk_9.png"
+          src="/img/projects/cosmetics/sk_dk_9.webp"
           alt=""
           width={590}
           height={590}
         />
         <Image
-          src="/img/projects/cosmetics/sk_dk_10.png"
+          src="/img/projects/cosmetics/sk_dk_10.webp"
           alt=""
           width={590}
           height={590}

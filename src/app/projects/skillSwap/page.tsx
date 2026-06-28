@@ -11,13 +11,13 @@ export default function SkillSwap(): FC {
       />
       <div className="flex flex-col md:flex-row gap-5">
         <Image
-          src="/img/projects/skillSwap/skillswap_1.png"
+          src="/img/projects/skillSwap/skillswap_1.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/skillSwap/skillswap_2.png"
+          src="/img/projects/skillSwap/skillswap_2.webp"
           width={590}
           height={590}
           alt=""
@@ -33,7 +33,7 @@ export default function SkillSwap(): FC {
 — Видео-тизеры для быстрого понимания формата мастер-класса.`}
       />
       <Image
-        src="/img/projects/skillSwap/skillswap_3.png"
+        src="/img/projects/skillSwap/skillswap_3.webp"
         width={590}
         height={590}
         className="w-full"
@@ -47,7 +47,7 @@ export default function SkillSwap(): FC {
 — экстренные сценарии: отмена бронирования, отсутствие результатов поиска, ошибки;`}
       />
       <Image
-        src="/img/projects/skillSwap/skillswap_4.png"
+        src="/img/projects/skillSwap/skillswap_4.webp"
         width={590}
         height={590}
         alt=""
@@ -59,32 +59,32 @@ export default function SkillSwap(): FC {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Image
-          src="/img/projects/skillSwap/skillswap_5.png"
+          src="/img/projects/skillSwap/skillswap_5.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/skillSwap/skillswap_6.png"
+          src="/img/projects/skillSwap/skillswap_6.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/skillSwap/skillswap_7.png"
+          src="/img/projects/skillSwap/skillswap_7.webp"
           width={590}
           height={590}
           alt=""
           className="col-span-1 md:col-span-2 w-full"
         />
         <Image
-          src="/img/projects/skillSwap/skillswap_8.png"
+          src="/img/projects/skillSwap/skillswap_8.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/skillSwap/skillswap_9.png"
+          src="/img/projects/skillSwap/skillswap_9.webp"
           width={590}
           height={590}
           alt=""

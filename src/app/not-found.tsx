@@ -19,14 +19,14 @@ export default function Custom404() {
         width={1394}
         height={616}
         alt="bg"
-        src="/img/404/404.png"
+        src="/img/404/404.webp"
         className="absolute -top-15 z-10 left-1/2 -translate-x-1/2 hidden md:block"
       />
       <Image
         width={360}
         height={637}
         alt="bg"
-        src="/img/404/404_mb.png"
+        src="/img/404/404_mb.webp"
         className="absolute z-10 left-1/2 -translate-x-1/2 md:hidden"
       />
       <div className="mt-25 md:mt-15 flex flex-col items-center gap-4 relative z-20 px-5 md:px-0">
@@ -38,7 +38,7 @@ export default function Custom404() {
           width={250}
           height={250}
           alt="cat"
-          src={"/img/404/404_cat.png"}
+          src={"/img/404/404_cat.webp"}
           className="py-1 md:py-5 w-37.5 md:w-62.5"
         />
         <Text variant="text" color="heading" className="md:mb-5">

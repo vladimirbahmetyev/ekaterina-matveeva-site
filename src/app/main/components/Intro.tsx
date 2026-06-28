@@ -9,7 +9,7 @@ export const Intro = () => (
       <div className="hidden md:flex flex-col justify-center">
         <Image
           className="mt-5"
-          src={"/img/main/kv_2.png"}
+          src={"/img/main/kv_2.webp"}
           alt=""
           width={252}
           height={310}
@@ -24,7 +24,7 @@ export const Intro = () => (
           width={239}
           height={320}
           alt="kv"
-          src={"/img/main/intro_mobile.png"}
+          src={"/img/main/intro_mobile.webp"}
         />
         <Heading>Екатерина Матвеева</Heading>
         <Text
@@ -45,7 +45,7 @@ export const Intro = () => (
             src={"/svg/yellow-heart.svg"}
             alt="hellow heart"
           />
-          <Image src={"/img/main/kv_1.png"} alt="" width={190} height={260} />
+          <Image src={"/img/main/kv_1.webp"} alt="" width={190} height={260} />
         </div>
       </div>
     </div>

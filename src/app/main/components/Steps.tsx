@@ -117,7 +117,7 @@ export const Steps: FC = () => {
         >
           <SwiperSlide className="w-full">
             <SwiperCard
-              imgUrl={"/img/main/swiper/mobile_home_step1.png"}
+              imgUrl={"/img/main/swiper/mobile_home_step1.webp"}
               step="Этап 1 из 5"
               title="Брифинг, коммерческое предложение, договор."
               text={`Чтобы узнать подробности и задачи, я предлагаю созвониться или заполнить электронный бриф самостоятельно.\n\nПосле этого, я сделаю для вас индивидуальный документ с расчетом сроков работ и стоимости в нескольких вариантах.\n\nВы выбираете подходящий тариф и я высылаю договор.`}
@@ -125,7 +125,7 @@ export const Steps: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <SwiperCard
-              imgUrl={"/img/main/swiper/mobile_home_step2.png"}
+              imgUrl={"/img/main/swiper/mobile_home_step2.webp"}
               step="Этап 2 из 5"
               title="Аналитика, структура сайта, референсы"
               text={`Я знакомлюсь с вашей нишей, погружаюсь в проект.\n\nПровожу исследование конкурентов, анализ целевой аудитории и её потребности.\n\nНа основе результатов исследованния состовляю мудборд и собираю референсы.\n\nЗнакомлюсь с вашими ожиданиями по дизайну.`}
@@ -133,7 +133,7 @@ export const Steps: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <SwiperCard
-              imgUrl={"/img/main/swiper/mobile_home_step3.png"}
+              imgUrl={"/img/main/swiper/mobile_home_step3.webp"}
               step="Этап 3 из 5"
               title="Концепция дизайна, создание макетов"
               text={`Создаю несколько вариантов оформления сайта, на примере первых блоков.\n\nПровожу презентацию с демонстрацией вариантов, аргументацией решений.\n\nСоздаю макеты всех страниц в выбранной стилистике, презентую, вношу правки.`}
@@ -141,7 +141,7 @@ export const Steps: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <SwiperCard
-              imgUrl={"/img/main/swiper/mobile_home_step4.png"}
+              imgUrl={"/img/main/swiper/mobile_home_step4.webp"}
               step="Этап 4 из 5"
               title="Вёрстка сайта"
               text={`Перехожу к технической настройке сайта на платформе Tilda: переношу макеты, настраиваю переходы по ссылкам, добавляю анимацию.\n\nАдаптирую дизайн под все типы устройств.\n\nДелаю seo-настройки, подключаю домен, формы, оплаты, CRM и другие технические настройки.`}
@@ -149,7 +149,7 @@ export const Steps: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <SwiperCard
-              imgUrl={"/img/main/swiper/mobile_home_step5.png"}
+              imgUrl={"/img/main/swiper/mobile_home_step5.webp"}
               step="Этап 5 из 5"
               title="Поддержка проекта"
               text={`После завершения работы я оказываю тех.поддержку в течении 1-2 недели.\n\nВ дальнейшем, я не пропадаю, а остаюсь на связи чтобы помочь решить возможные вопросы по сайту или подготовить другие дизайн-материалы для вашего продукта, например: презентации, PDF-файлы для рассылок, чек-листы, баннеры для рекламы, оформление группы ВК и др.`}

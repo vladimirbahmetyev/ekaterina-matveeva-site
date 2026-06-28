@@ -11,13 +11,13 @@ export default function WhereYouWant(): FC {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Image
-          src="/img/projects/mendi/mendi_2.png"
+          src="/img/projects/mendi/mendi_2.webp"
           width={590}
           height={590}
           alt=""
         />
         <Image
-          src="/img/projects/mendi/mendi_3.png"
+          src="/img/projects/mendi/mendi_3.webp"
           width={590}
           height={590}
           alt=""
@@ -33,7 +33,7 @@ export default function WhereYouWant(): FC {
  — Добавлять лекарства из встроенной библиотеки или вручную. — Вести общую семейную ленту приёмов или переключаться между профилями пациентов.`}
       />
       <Image
-        src="/img/projects/mendi/mendi_4.png"
+        src="/img/projects/mendi/mendi_4.webp"
         width={590}
         height={590}
         alt=""
@@ -44,7 +44,7 @@ export default function WhereYouWant(): FC {
         description="Пользователи часто принимают лекарства и БАДы без врачебного контроля и сомневаются в правильности дозировок — поэтому важны подсказки о совместимости. Кроме этого, для многих актуален поиск аналогов назначенных препаратов. Большинство респондентов не пользуются специализированными приложениями и часто забывают приём лекарств."
       />
       <Image
-        src="/img/projects/mendi/mendi_5.png"
+        src="/img/projects/mendi/mendi_5.webp"
         width={590}
         height={590}
         alt=""
@@ -56,32 +56,32 @@ export default function WhereYouWant(): FC {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Image
-          src="/img/projects/mendi/mendi_6.png"
+          src="/img/projects/mendi/mendi_6.webp"
           width={590}
           height={590}
           alt=""
         />{" "}
         <Image
-          src="/img/projects/mendi/mendi_7.png"
+          src="/img/projects/mendi/mendi_7.webp"
           width={590}
           height={590}
           alt=""
         />{" "}
         <Image
-          src="/img/projects/mendi/mendi_8.png"
+          src="/img/projects/mendi/mendi_8.webp"
           width={590}
           height={590}
           alt=""
           className="col-span-1 md:col-span-2 w-full"
         />{" "}
         <Image
-          src="/img/projects/mendi/mendi_9.png"
+          src="/img/projects/mendi/mendi_9.webp"
           width={590}
           height={590}
           alt=""
         />{" "}
         <Image
-          src="/img/projects/mendi/mendi_10.png"
+          src="/img/projects/mendi/mendi_10.webp"
           width={590}
           height={590}
           alt=""
