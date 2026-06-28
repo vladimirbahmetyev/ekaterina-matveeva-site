@@ -316,7 +316,6 @@ export const Navigation: FC = () => {
           )}{" "}
         </AnimatePresence>
       </div>
-      <div className="min-h-18 w-full md:block hidden" />
       <div className="top-0 fixed z-100 hidden md:flex px-30 w-full justify-between bg-[#F9F5EC] py-6">
         {rootUrls.map((val) => (
           <a href={`/#${val.id}`} key={val.id}>

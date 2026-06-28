@@ -9,7 +9,7 @@ export default function SkillSwap(): FC {
         title="Вводные данные"
         description="Нужно было создать удобное и эмоционально приятное приложение для iOS, которое помогает пользователям находить новые хобби и развивать навыки через онлайн-мастер-классы. Основной акцент — удобная навигация, простое бронирование, наглядный прогресси живой, мотивирующий пользовательский опыт."
       />
-      <div className="flex flex-col md:flex-row gap-5">
+      <div className="grid sm:grid-cols-2 gap-5">
         <Image
           src="/img/projects/skillSwap/skillswap_1.webp"
           width={590}
@@ -57,7 +57,7 @@ export default function SkillSwap(): FC {
         title="Отдельной фишкой приложения стал маскот — единорог, сопровождающий пользователя на всех этапах: от регистрации до просмотра статистики. Он мотивирует, подсказывает и создаёт ощущение поддержки."
         description="Визуально приложение получилось ярким и живым: в интерфейсе используются насыщенные оттенки, что формирует собственную узнаваемую атмосферу и привлекает молодую активную аудиторию."
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-5">
         <Image
           src="/img/projects/skillSwap/skillswap_5.webp"
           width={590}
@@ -75,7 +75,7 @@ export default function SkillSwap(): FC {
           width={590}
           height={590}
           alt=""
-          className="col-span-1 md:col-span-2 w-full"
+          className="col-span-1 sm:col-span-2 w-full"
         />
         <Image
           src="/img/projects/skillSwap/skillswap_8.webp"

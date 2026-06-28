@@ -9,7 +9,7 @@ export default function WhereYouWant(): FC {
         title="Вводные данные"
         description="Требовалось создать удобное приложение, которое помогает пользователям контролировать приём лекарств — как собственных, так и членов семьи. Проект должен был решить сразу несколько распространённых проблем: забывчивость при приёме медикаментов, отсутствие контроля совместимости лекарств, сложность в отслеживании лечения нескольких родственников и потерю мотивации завершать курс лечения."
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Image
           src="/img/projects/mendi/mendi_2.webp"
           width={590}
@@ -54,7 +54,7 @@ export default function WhereYouWant(): FC {
         title="Особое внимание уделялось простоте интерфейса, контрастным акцентам и наглядным элементам навигации, чтобы приложение было удобно использовать людям разного возраста."
         description="Была разработана визуальная концепция и создан интерактивный прототип для тестирования. Я провела серию пользовательских тестов, проверив гипотезы о навигации, понятности интерфейса и восприятии визуальных элементов. После анализа результатов были внесены финальные корректировки и оптимизированы ключевые пользовательские сценарии."
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Image
           src="/img/projects/mendi/mendi_6.webp"
           width={590}
@@ -72,7 +72,7 @@ export default function WhereYouWant(): FC {
           width={590}
           height={590}
           alt=""
-          className="col-span-1 md:col-span-2 w-full"
+          className="col-span-1 sm:col-span-2 w-full"
         />{" "}
         <Image
           src="/img/projects/mendi/mendi_9.webp"

@@ -280,7 +280,7 @@ export default function GraphMaterials() {
             <OrderButton />
           </div>
         </div>
-        <div className="grid md:grid-cols-3 gap-5 mt-15">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-15">
           {Material.map((project) => (
             <ProjectCard
               {...project}

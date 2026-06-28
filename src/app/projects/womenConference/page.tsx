@@ -142,6 +142,7 @@ function WomenConference() {
         width={1200}
         height={588}
         alt=""
+        className="w-full"
       />
       <div className="flex flex-col gap-4">
         <ExternalLinkButton
@@ -163,7 +164,7 @@ function WomenConference() {
           конкурентов.
         </Text>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Image
           src="/img/projects/womenConference/conference_dk_1.webp"
           alt=""
@@ -198,6 +199,7 @@ function WomenConference() {
         width={1200}
         height={588}
         alt=""
+        className="w-full"
       />
       <div className="flex flex-col gap-4">
         <Text variant="h3" color="heading">
@@ -220,6 +222,7 @@ function WomenConference() {
         width={1200}
         height={588}
         alt=""
+        className="w-full"
       />
       <div className="flex flex-col gap-4">
         <Text variant="h3" color="heading">
@@ -248,10 +251,12 @@ function WomenConference() {
             спикеров
           </Text>
           <div
-            className="cursor-pointer"
+            className="hidden md:block cursor-pointer bg-[#F9F5EC] px-8 py-4 border-1 border-[#B6B2A8] rounded-full w-fit justify-self-end"
             onClick={() => openPopup("presentation_conference")}
           >
-            <Text>Узнать подробнее</Text>
+            <Text color="beige" variant="text">
+              Узнать подробнее
+            </Text>
           </div>
         </div>
         <Text variant="text" color="dark-beige">
@@ -268,6 +273,14 @@ function WomenConference() {
         height={590}
         className="w-full"
       />
+      <div
+        className="flex justify-center md:hidden cursor-pointer bg-[#F9F5EC] px-8 py-4 border-1 border-[#B6B2A8] rounded-full w-full justify-self-end"
+        onClick={() => openPopup("presentation_conference")}
+      >
+        <Text color="beige" variant="text">
+          Узнать подробнее
+        </Text>
+      </div>
       <div className="flex flex-col gap-4">
         <Text variant="h3" color="heading">
           Визуальная подача и структура сайта усилили восприятие бренда

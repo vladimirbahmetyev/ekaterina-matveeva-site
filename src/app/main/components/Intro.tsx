@@ -15,7 +15,7 @@ export const Intro = () => (
           height={310}
         />
       </div>
-      <div className="mt-18 flex flex-col items-center justify-center gap-3 md:gap-6 ">
+      <div className="mt-18 flex flex-col items-center justify-center gap-3 md:gap-6 w-full ">
         <Text className="hidden md:block" variant="text" color="dark-beige">
           Web · UI/UX designer
         </Text>
@@ -49,18 +49,18 @@ export const Intro = () => (
         </div>
       </div>
     </div>
-    <div className="grid grid-cols-3 w-full mt-[-40px] justify-items-center">
-      <Text variant="text" color="dark-beige">
+    <div className="grid grid-cols-3 w-full mt-[-40px]">
+      <Text variant="text" color="dark-beige" className="justify-self-start">
         Tilda · Figma
       </Text>
       <Image
-        className="mb-0 animate-bounce"
+        className="mb-0 animate-bounce justify-self-center"
         src="/svg/icon_arrow.svg"
         alt=""
         width={36}
         height={36}
       />
-      <Text variant="text" color="dark-beige">
+      <Text variant="text" color="dark-beige" className="justify-self-end">
         Скачать резюме
       </Text>
     </div>

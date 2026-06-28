@@ -30,7 +30,7 @@ const SwiperCard: FC<SwiperCardProps> = ({ imgUrl, step, text, title }) => {
           height={140}
         />
       )}
-      <div className="p-5 md:p-8 min-h-[73vw] md:min-h-[19vw]">
+      <div className="p-5 md:p-8">
         <div className="flex flex-col gap-4">
           <Text variant="footnote" color="light-beige">
             {step}
@@ -103,6 +103,9 @@ export const Steps: FC = () => {
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
           breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
             768: {
               slidesPerView: 2.5,
               spaceBetween: 20,

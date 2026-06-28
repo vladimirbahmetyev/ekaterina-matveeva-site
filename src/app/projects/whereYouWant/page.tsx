@@ -18,7 +18,7 @@ export default function WhereYouWant(): FC {
           "«КудаУгодно» — онлайн-платформа для поиска туров и отелей, ориентированная на пользователей, которые хотят путешествовать легко, спонтанно и с вдохновением. Главная идея проекта — сделать процесс выбора путешествия простым, эмоциональным и приятным. Проект выполнялся в команде UI/UX дизайнеров."
         }
       />
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2">
         <Image
           src="/img/projects/whereYouWant/kudaygodno_dk_1.webp"
           width={590}
@@ -58,7 +58,7 @@ export default function WhereYouWant(): FC {
  — участие в разработке дизайн-системы, состояний и вариантов компонентов; 
  — проектирование хедера и футера — ключевых навигационных элементов сайта.`}
       />
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-5">
         <Image
           src="/img/projects/whereYouWant/kudaygodno_dk_4.webp"
           width={590}
@@ -76,14 +76,14 @@ export default function WhereYouWant(): FC {
           width={590}
           height={590}
           alt=""
-          className="md:col-span-2 w-full"
+          className="sm:col-span-2 w-full"
         />
       </div>
       <Info
         title="Сайт стал функциональным, эмоционально вовлекающим и удобным в использовании. Продуманная структура, фишки и дизайн-система обеспечили проекту устойчивое конкурентное преимущество и масштабируемость."
         description="Наша команда создала полноценный тревел-сервис с нуля — от исследовательской базы до визуальной реализации. Моя работа в проекте продемонстрировала умение создавать визуально целостный продукт, выстраивать системный подход к дизайну и взаимодействовать с большой командой коллег."
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Image
           src="/img/projects/whereYouWant/kudaygodno_dk_7.webp"
           width={590}

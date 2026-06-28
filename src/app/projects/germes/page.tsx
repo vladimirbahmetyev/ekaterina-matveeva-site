@@ -10,6 +10,7 @@ export default function Germes(): FC {
         width={1200}
         height={590}
         alt=""
+        className="w-full"
       />
       <Info
         title={"Вводные данные"}
@@ -17,7 +18,7 @@ export default function Germes(): FC {
           "Проект «Гермес» — это внутренняя система учёта и управления работой сотрудников складского комплекса Яндекс.Маркета. Изначально в компании использовалось множество разных инструментов, частично дублирующих друг друга. Это затрудняло работу бригадиров, снижало прозрачность процессов и мешало комплексному учёту данных. Цель редизайна — сделать «Гермес» центральным инструментом управления персоналом, объединив все функции в одной удобной системе."
         }
       />
-      <div className="grid gird-cols-1 md:grid-cols-2">
+      <div className="grid gird-cols-1 sm:grid-cols-2">
         <Image
           src="/img/projects/germes/yandex_dk_1.webp"
           width={590}
@@ -74,7 +75,7 @@ export default function Germes(): FC {
           "Благодаря проведённым интервью, тестированию и итерациям наша команда создала продукт, который отвечает бизнес-задачам и реальным потребностям пользователей."
         }
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Image
           src="/img/projects/germes/yandex_dk_5.webp"
           width={590}

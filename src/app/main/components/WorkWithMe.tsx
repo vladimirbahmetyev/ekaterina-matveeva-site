@@ -188,6 +188,9 @@ export const WorkWithMe: FC = () => {
           spaceBetween={8}
           modules={[Navigation]}
           breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
             768: {
               slidesPerView: 2.5,
               spaceBetween: 20,

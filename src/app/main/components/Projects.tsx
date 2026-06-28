@@ -146,7 +146,7 @@ export const Projects = () => {
           );
         })}
       </div>
-      <div className="md:grid md:grid-cols-3 md:gap-5">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
         {projectsToDraw.map((project) => (
           <ProjectCard {...project} key={project.title} />
         ))}

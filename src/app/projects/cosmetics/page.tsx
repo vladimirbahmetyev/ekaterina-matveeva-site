@@ -15,6 +15,7 @@ export default function Cosmetics(): FC {
         width={1200}
         height={588}
         alt=""
+        className="w-full"
       />
       <div className="flex flex-col gap-4">
         <Text color="heading" variant="h3">
@@ -28,7 +29,7 @@ export default function Cosmetics(): FC {
           покупателя и эффективным инструментом для бизнеса.
         </Text>
       </div>
-      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
+      <div className="grid sm:grid-cols-2 gap-10 sm:gap-5">
         <Image
           src="/img/projects/cosmetics/sk_dk_1.webp"
           alt=""
@@ -57,7 +58,7 @@ export default function Cosmetics(): FC {
           технические параметры.
         </Text>
       </div>
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-5">
         <Image
           src="/img/projects/cosmetics/sk_dk_3.webp"
           width={1200}
@@ -104,7 +105,7 @@ export default function Cosmetics(): FC {
           с новостями бренда создают устойчивую коммуникацию с клиентами.
         </Text>
       </div>
-      <div className="grid md:grid-cols-2 gap-10 md:gap-5">
+      <div className="grid sm:grid-cols-2 gap-10 sm:gap-5">
         <Image
           src="/img/projects/cosmetics/sk_dk_6.webp"
           alt=""

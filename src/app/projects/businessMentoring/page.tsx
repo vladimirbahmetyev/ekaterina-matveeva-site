@@ -82,7 +82,7 @@ export default function BusinessMentoring() {
     : presentationCards.slice(0, 3);
   return (
     <div className="flex flex-col gap-10 px-2.5 md:px-30">
-      <div className="flex flex-col gap-10 md:grid md:grid-cols-3">
+      <div className="gap-10 grid sm:grid-cols-2 md:grid-cols-3">
         {cardsToDraw.map((val) => (
           <PresentationCard {...val} key={val.title} />
         ))}
@@ -103,7 +103,7 @@ export default function BusinessMentoring() {
           "Я сотрудничаю с маркетинговым отделом Алекса Яновского на постоянной основе, разрабатывая цифровые и визуальные материалы для продвижения образовательных проектов, мероприятий и онлайн-продуктов. Моя задача — создавать дизайн, который решает маркетинговые цели, используя комплексный подход к дизайну."
         }
       />
-      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
+      <div className="grid sm:grid-cols-2 gap-10 sm:gap-5">
         <Image
           src="/img/projects/businessMentoring/alex_case_dk_1.webp"
           alt=""
@@ -153,7 +153,7 @@ export default function BusinessMentoring() {
           "Применяю нейросети для генерации изображений по мере необходимости, что позволяет быстрее воплощать идеи и создавать уникальные визуалы для маркетинга. "
         }
       />
-      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
+      <div className="grid sm:grid-cols-2 gap-10 sm:gap-5">
         <Image
           src="/img/projects/businessMentoring/alex_case_dk_5.webp"
           alt=""

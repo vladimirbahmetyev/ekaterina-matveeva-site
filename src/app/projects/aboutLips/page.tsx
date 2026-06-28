@@ -24,6 +24,7 @@ export default function AboutLips() {
         alt=""
         width={590}
         height={590}
+        className="w-full"
       />
       <Info
         title={
@@ -69,7 +70,7 @@ export default function AboutLips() {
           "Дополнительно я разработала печатные материалы для учеников — схемы, буклеты и методички по техникам перманентного макияжа. Все материалы студенты получают на обучающей платформе в процеесе прохождения курса, в формате PDF."
         }
       />
-      <div className="flex flex-col md:flex-row gap-10 md:gap-5">
+      <div className="grid sm:grid-cols-2 gap-10 sm:gap-5">
         <Image
           src="/img/projects/aboutLips/lips_dk_5.webp"
           alt=""
