@@ -31,28 +31,24 @@ export const ProjectHeader = () => {
           )}
         </div>
         <div className="flex flex-col w-full md:w-1/3 gap-2 md:gap-4">
-          <div className="flex w-full">
-            <Text variant="text" color="light-beige" className="w-1/2 ">
+          <div className="grid grid-cols-2 w-full">
+            <Text variant="text" color="light-beige">
               тип сайта
             </Text>
-            <Text variant="text" color="heading" className="max-w-1/2">
+            <Text variant="text" color="heading" className="self-start">
               {projectMeta.siteType}
             </Text>
           </div>
-          <div className="flex  w-full">
-            <Text variant="text" color="light-beige" className="w-1/2 ">
+          <div className="grid grid-cols-2 w-full">
+            <Text variant="text" color="light-beige" className="self-start">
               ниша
             </Text>
-            <Text className="text-[#35322A] max-w-1/2">
+            <Text variant="text" color="heading">
               {projectMeta.niche}
             </Text>
           </div>
-          <div className="flex w-full">
-            <Text
-              variant="text"
-              color="light-beige"
-              className="w-1/2 max-w-1/2"
-            >
+          <div className="grid grid-cols-2 w-full">
+            <Text variant="text" color="light-beige">
               формат разработки
             </Text>
             <Text variant="text" color="heading">

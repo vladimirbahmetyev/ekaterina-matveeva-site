@@ -16,6 +16,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Button } from "@/app/ui/buttons/Button";
 import { FC, ReactElement, useState } from "react";
+import { OrderButton } from "../ui/buttons/OrderButton";
 
 const Material: (ProjectCardProps & { popupId: registeredPopups })[] = [
   {
@@ -259,8 +260,8 @@ export default function GraphMaterials() {
   return (
     <MaterialsPopupProvider>
       <div className="flex flex-col px-2.5 py-10 md:px-30">
-        <div className="flex flex-col gap-5">
-          <div className="flex flex-col gap-6 md:max-w-1/2">
+        <div className="grid md:grid-cols-2 gap-5 items-center">
+          <div className="flex flex-col gap-6">
             <NavigationButton text="На главную" back />
             <Text variant="h3" color="heading">
               Создание графических материалов для вашего проекта{" "}
@@ -270,6 +271,9 @@ export default function GraphMaterials() {
               оформление соцсетей, PDF-материалов для рассылки, обложки, банеры,
               креативы и т.п.
             </Text>
+          </div>
+          <div className="md:justify-self-end">
+            <OrderButton />
           </div>
         </div>
         <div className="grid md:grid-cols-3 gap-5 mt-15">

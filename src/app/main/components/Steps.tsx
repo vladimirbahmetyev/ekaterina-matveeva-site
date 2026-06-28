@@ -6,8 +6,10 @@ import { Text } from "@/app/ui/typography/Text";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 interface SwiperCardProps {
   imgUrl?: string;
@@ -18,7 +20,7 @@ interface SwiperCardProps {
 
 const SwiperCard: FC<SwiperCardProps> = ({ imgUrl, step, text, title }) => {
   return (
-    <div className="bg-[#F9F5EC] rounded-xl  min-h-[474px] md:min-h-[603px]">
+    <div className="bg-[#F9F5EC] rounded-xl  min-h-[600px] md:min-h-[603px]">
       {imgUrl && (
         <Image
           className="w-full"
@@ -95,10 +97,11 @@ export const Steps: FC = () => {
           </div>
         </div>
         <Swiper
-          className="mt-3 md:mt-6 relative"
+          className="mt-3 md:mt-6 relative !pb-12"
           slidesPerView={1.1}
           spaceBetween={8}
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
+          pagination={{ clickable: true }}
           breakpoints={{
             768: {
               slidesPerView: 2.5,
