@@ -1,10 +1,140 @@
-import { FC } from "react";
+"use client";
+
+import { useContext } from "react";
 import Image from "next/image";
 import { Text } from "@/app/ui/typography/Text";
 
 import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
+import {
+  MaterialsPopupProvider,
+  PopupContext,
+  registeredPopups,
+} from "@/app/graphMaterials/MaterialsPopupProvider";
+import { Popup } from "@/app/graphMaterials/Popup";
+import { HiddableText, PopupSwiper } from "@/app/graphMaterials/page";
+import "swiper/css";
+import "swiper/css/pagination";
 
-export default function WomenConference(): FC {
+export const popupSwiperData: Record<
+  registeredPopups,
+  {
+    desktop: `/img/graphMaterials/popup/${registeredPopups}/${string}`[];
+    mobile?: `/img/graphMaterials/popup/${registeredPopups}/${string}`[];
+  }
+> = {
+  alex: {
+    desktop: [
+      "/img/graphMaterials/popup/alex/desk_alex_pr_1.webp",
+      "/img/graphMaterials/popup/alex/desk_alex_pr_2.webp",
+      "/img/graphMaterials/popup/alex/desk_alex_pr_3.webp",
+      "/img/graphMaterials/popup/alex/desk_alex_pr_4.webp",
+      "/img/graphMaterials/popup/alex/desk_alex_pr_5.webp",
+    ],
+    mobile: [
+      "/img/graphMaterials/popup/alex/mb_alex_pr_1.webp",
+      "/img/graphMaterials/popup/alex/mb_alex_pr_2.webp",
+      "/img/graphMaterials/popup/alex/mb_alex_pr_3.webp",
+      "/img/graphMaterials/popup/alex/mb_alex_pr_4.webp",
+      "/img/graphMaterials/popup/alex/mb_alex_pr_5.webp",
+      "/img/graphMaterials/popup/alex/mb_alex_pr_6.webp",
+    ],
+  },
+  commercial: {
+    desktop: [
+      "/img/graphMaterials/popup/commercial/1.webp",
+      "/img/graphMaterials/popup/commercial/2.webp",
+      "/img/graphMaterials/popup/commercial/3.webp",
+    ],
+  },
+  languageSchool: {
+    desktop: ["/img/graphMaterials/popup/languageSchool/guide_desktop.webp"],
+    mobile: [
+      "/img/graphMaterials/popup/languageSchool/1.webp",
+      "/img/graphMaterials/popup/languageSchool/2.webp",
+      "/img/graphMaterials/popup/languageSchool/3.webp",
+      "/img/graphMaterials/popup/languageSchool/4.webp",
+    ],
+  },
+  lips: {
+    desktop: [
+      "/img/graphMaterials/popup/lips/1.webp",
+      "/img/graphMaterials/popup/lips/2.webp",
+      "/img/graphMaterials/popup/lips/3.webp",
+    ],
+  },
+  presentation_conference: {
+    desktop: [
+      "/img/graphMaterials/popup/presentation_conference/1.webp",
+      "/img/graphMaterials/popup/presentation_conference/2.webp",
+      "/img/graphMaterials/popup/presentation_conference/3.webp",
+      "/img/graphMaterials/popup/presentation_conference/4.webp",
+      "/img/graphMaterials/popup/presentation_conference/5.webp",
+      "/img/graphMaterials/popup/presentation_conference/6.webp",
+      "/img/graphMaterials/popup/presentation_conference/7.webp",
+      "/img/graphMaterials/popup/presentation_conference/8.webp",
+      "/img/graphMaterials/popup/presentation_conference/9.webp",
+      "/img/graphMaterials/popup/presentation_conference/10.webp",
+    ],
+  },
+  presentation_jul: {
+    desktop: [
+      "/img/graphMaterials/popup/presentation_jul/1.webp",
+      "/img/graphMaterials/popup/presentation_jul/2.webp",
+      "/img/graphMaterials/popup/presentation_jul/3.webp",
+      "/img/graphMaterials/popup/presentation_jul/4.webp",
+      "/img/graphMaterials/popup/presentation_jul/5.webp",
+    ],
+  },
+  presentation_massage: {
+    desktop: [
+      "/img/graphMaterials/popup/presentation_massage/1.webp",
+      "/img/graphMaterials/popup/presentation_massage/2.webp",
+      "/img/graphMaterials/popup/presentation_massage/3.webp",
+      "/img/graphMaterials/popup/presentation_massage/4.webp",
+      "/img/graphMaterials/popup/presentation_massage/5.webp",
+      "/img/graphMaterials/popup/presentation_massage/6.webp",
+      "/img/graphMaterials/popup/presentation_massage/7.webp",
+      "/img/graphMaterials/popup/presentation_massage/8.webp",
+    ],
+  },
+  presentation_smm: {
+    desktop: [
+      "/img/graphMaterials/popup/presentation_smm/1.webp",
+      "/img/graphMaterials/popup/presentation_smm/2.webp",
+      "/img/graphMaterials/popup/presentation_smm/3.webp",
+      "/img/graphMaterials/popup/presentation_smm/4.webp",
+      "/img/graphMaterials/popup/presentation_smm/5.webp",
+      "/img/graphMaterials/popup/presentation_smm/6.webp",
+      "/img/graphMaterials/popup/presentation_smm/7.webp",
+    ],
+  },
+  speakers: {
+    desktop: ["/img/graphMaterials/popup/speakers/speakers_desktop.webp"],
+    mobile: ["/img/graphMaterials/popup/speakers/speakers_mobile.webp"],
+  },
+  vk: {
+    desktop: ["/img/graphMaterials/popup/vk/1.webp"],
+    mobile: ["/img/graphMaterials/popup/vk/1_mobile.webp"],
+  },
+  wings: {
+    desktop: [
+      "/img/graphMaterials/popup/wings/1.webp",
+      "/img/graphMaterials/popup/wings/2.webp",
+      "/img/graphMaterials/popup/wings/3.webp",
+      "/img/graphMaterials/popup/wings/4.webp",
+      "/img/graphMaterials/popup/wings/5.webp",
+      "/img/graphMaterials/popup/wings/6.webp",
+      "/img/graphMaterials/popup/wings/7.webp",
+      "/img/graphMaterials/popup/wings/8.webp",
+      "/img/graphMaterials/popup/wings/9.webp",
+      "/img/graphMaterials/popup/wings/10.webp",
+      "/img/graphMaterials/popup/wings/11.webp",
+    ],
+  },
+};
+
+function WomenConference() {
+  const { openPopup } = useContext(PopupContext);
   return (
     <div className="px-2.5 flex flex-col gap-10 md:px-30">
       <Image
@@ -112,10 +242,18 @@ export default function WomenConference(): FC {
       />
 
       <div className="flex flex-col gap-4">
-        <Text variant="h3" color="heading">
-          Кроме сайта я подготовила презентацию для выступления и карточки для
-          спикеров
-        </Text>
+        <div className="grid grid-cols-3">
+          <Text variant="h3" color="heading" className="col-span-2">
+            Кроме сайта я подготовила презентацию для выступления и карточки для
+            спикеров
+          </Text>
+          <div
+            className="cursor-pointer"
+            onClick={() => openPopup("presentation_conference")}
+          >
+            <Text>Узнать подробнее</Text>
+          </div>
+        </div>
         <Text variant="text" color="dark-beige">
           Презентация помогала в продвижении конференции,сопровождая выступление
           на других мероприятиях. Карточки спикеров нужны для публикации в
@@ -142,6 +280,41 @@ export default function WomenConference(): FC {
           UX был стратегически верным.
         </Text>
       </div>
+
+      <Popup popupId="presentation_conference">
+        <div>
+          <Text variant="h3" color="heading" className="mb-6">
+            Презентация для привлечения аудитории на мероприятие
+          </Text>
+          <HiddableText
+            preview={
+              <Text color="heading" variant="text" preserveFormatting>
+                {`Листайте галерею, чтобы рассмотреть слайды презентации.`}
+              </Text>
+            }
+            main={
+              <Text color="heading" variant="text" preserveFormatting>
+                {`Презентация была выполнена для выступления на конференции для организатора мероприятий. 
+      
+      Цель: заинтересовать и прорекламировать участникам планируемое мероприятие в другом городе.
+      
+      Для комфортного выступления спикера, мной была подготовлена не только визуальная часть презентации, но и написан текст для выступления.`}
+              </Text>
+            }
+          />
+          <PopupSwiper
+            slides={popupSwiperData["presentation_conference"].desktop}
+          />
+        </div>
+      </Popup>
     </div>
+  );
+}
+
+export default function WomenConferenceWrap() {
+  return (
+    <MaterialsPopupProvider>
+      <WomenConference />
+    </MaterialsPopupProvider>
   );
 }

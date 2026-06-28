@@ -13,7 +13,7 @@ export const ProjectHeader = () => {
       <NavigationButton
         back
         text="На главную"
-        className="md:block hidden mb-3"
+        className="md:flex hidden mb-3"
       />
       <div className="flex flex-col md:flex-row gap-4 md:justify-between mt-10">
         <div className="flex flex-col gap-6 md:w-1/3">

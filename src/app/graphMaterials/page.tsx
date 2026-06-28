@@ -87,7 +87,7 @@ const Material: (ProjectCardProps & { popupId: registeredPopups })[] = [
   },
 ] as const;
 
-const popupSwiperData: Record<
+export const popupSwiperData: Record<
   registeredPopups,
   {
     desktop: `/img/graphMaterials/popup/${registeredPopups}/${string}`[];
@@ -205,10 +205,10 @@ const popupSwiperData: Record<
   },
 };
 
-const HiddableText: FC<{ preview: ReactElement; main: ReactElement }> = ({
-  preview,
-  main,
-}) => {
+export const HiddableText: FC<{
+  preview: ReactElement;
+  main: ReactElement;
+}> = ({ preview, main }) => {
   const [isShown, setIsShown] = useState(false);
   return (
     <div className="mb-5">
@@ -233,7 +233,7 @@ const HiddableText: FC<{ preview: ReactElement; main: ReactElement }> = ({
   );
 };
 
-const PopupSwiper: FC<{ slides: string[]; classNames?: string }> = ({
+export const PopupSwiper: FC<{ slides: string[]; classNames?: string }> = ({
   slides,
   classNames,
 }) => {
