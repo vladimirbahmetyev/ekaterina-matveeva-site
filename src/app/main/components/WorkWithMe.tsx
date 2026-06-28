@@ -159,7 +159,7 @@ export const WorkWithMe: FC = () => {
               <Text variant="text" color="beige">
                 Я зарегистрирована как самозанятая, выдаю чеки и работаю
                 по договору, который защищает обе стороны
-              </Text>{" "}
+              </Text>
             </div>
             <Image
               src={"/img/main/work/stamp.png"}

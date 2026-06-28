@@ -108,6 +108,7 @@ const popupSwiperData: Record<
       "/img/graphMaterials/popup/alex/mb_alex_pr_3.png",
       "/img/graphMaterials/popup/alex/mb_alex_pr_4.png",
       "/img/graphMaterials/popup/alex/mb_alex_pr_5.png",
+      "/img/graphMaterials/popup/alex/mb_alex_pr_6.png",
     ],
   },
   commercial: {
@@ -183,7 +184,10 @@ const popupSwiperData: Record<
     desktop: ["/img/graphMaterials/popup/speakers/speakers_desktop.png"],
     mobile: ["/img/graphMaterials/popup/speakers/speakers_mobile.png"],
   },
-  vk: { desktop: ["/img/graphMaterials/popup/vk/1.png"] },
+  vk: {
+    desktop: ["/img/graphMaterials/popup/vk/1.png"],
+    mobile: ["/img/graphMaterials/popup/vk/1_mobile.png"],
+  },
   wings: {
     desktop: [
       "/img/graphMaterials/popup/wings/1.png",
@@ -568,7 +572,14 @@ export default function GraphMaterials() {
 ✓ Генерация изображений с помощью нейросетей;
 ✓ Установка всех материалов напрямую в группе, при необходимости.`}
           </Text>
-          <PopupSwiper slides={popupSwiperData["vk"].desktop} />
+          <PopupSwiper
+            classNames="md:block hidden"
+            slides={popupSwiperData["vk"].desktop}
+          />
+          <PopupSwiper
+            classNames="md:hidden"
+            slides={popupSwiperData["vk"].mobile || []}
+          />
         </div>
       </Popup>
     </MaterialsPopupProvider>
