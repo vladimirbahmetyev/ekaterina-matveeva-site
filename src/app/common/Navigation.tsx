@@ -223,7 +223,12 @@ export const Navigation: FC = () => {
                       Я на связи пн-пт 8:00-18:00 мск
                     </Text>
                     <div className="grid grid-cols-1 gap-2">
-                      <div className="border-1 border-[#FFCB6B] px-3 py-5 rounded-xl">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://t.me/prezakatya"
+                        className="border-1 border-[#FFCB6B] px-3 py-5 rounded-xl"
+                      >
                         <Text
                           className="mb-8"
                           variant="body-text"
@@ -237,7 +242,7 @@ export const Navigation: FC = () => {
                         <Text variant="body-text" color="beige">
                           – предпочитаемый способ связи
                         </Text>
-                      </div>
+                      </a>
                       <div className="px-3 py-5 bg-[#F9F5EC] rounded-xl">
                         <Text
                           variant="body-text"
@@ -250,7 +255,10 @@ export const Navigation: FC = () => {
                           Резюме
                         </Text>
                       </div>
-                      <div className="px-3 py-5 bg-[#F9F5EC] rounded-xl">
+                      <a
+                        href="mailto:matveevae.work@gmail.com"
+                        className="px-3 py-5 bg-[#F9F5EC] rounded-xl"
+                      >
                         <Text
                           variant="body-text"
                           color="beige"
@@ -261,8 +269,13 @@ export const Navigation: FC = () => {
                         <Text variant="h3" color="heading">
                           matveevae.work@gmail.com
                         </Text>
-                      </div>
-                      <div className="px-3 py-5 bg-[#F9F5EC] rounded-xl">
+                      </a>
+                      <a
+                        href="https://vk.com/prezakatya"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-5 bg-[#F9F5EC] rounded-xl"
+                      >
                         <Text
                           variant="body-text"
                           color="beige"
@@ -273,8 +286,13 @@ export const Navigation: FC = () => {
                         <Text variant="h3" color="heading">
                           vk.com/prezakatya
                         </Text>
-                      </div>
-                      <div className="px-3 py-5 bg-[#F9F5EC] rounded-xl">
+                      </a>
+                      <a
+                        href="https://www.instagram.com/preza.katya/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-5 bg-[#F9F5EC] rounded-xl"
+                      >
                         <Text
                           variant="body-text"
                           color="beige"
@@ -288,7 +306,7 @@ export const Navigation: FC = () => {
                         <Text variant="h3" color="heading">
                           Instagram*
                         </Text>
-                      </div>
+                      </a>
                       <div className="min-h-20 w-full" />
                     </div>
                   </div>

@@ -4,6 +4,7 @@ import { Text } from "@/app/ui/typography/Text";
 
 import { useProjectMeta } from "@/app/hooks/useProjectMeta";
 import { NavigationButton } from "@/app/ui/buttons/NavigationButton";
+import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
 
 export const ProjectHeader = () => {
   const projectMeta = useProjectMeta();
@@ -22,6 +23,12 @@ export const ProjectHeader = () => {
           <Text variant="text" color="beige">
             {projectMeta.description}
           </Text>
+          {projectMeta.link && (
+            <ExternalLinkButton
+              link={projectMeta.link}
+              className="hidden md:inline-flex w-fit"
+            />
+          )}
         </div>
         <div className="flex flex-col w-full md:w-1/3 gap-2 md:gap-4">
           <div className="flex w-full">

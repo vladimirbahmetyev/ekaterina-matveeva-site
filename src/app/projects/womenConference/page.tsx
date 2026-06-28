@@ -7,7 +7,6 @@ import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
 export default function WomenConference(): FC {
   return (
     <div className="px-2.5 flex flex-col gap-10 md:px-30">
-      <ExternalLinkButton className="md:hidden" link="" />
       <Image
         src="/img/projects/womenConference/portfolio_video2_conference.png"
         width={1200}
@@ -15,6 +14,10 @@ export default function WomenConference(): FC {
         alt=""
       />
       <div className="flex flex-col gap-4">
+        <ExternalLinkButton
+          link="https://jul-n.ru/event"
+          className="md:hidden"
+        />
         <Text variant="h3" color="heading">
           Вводные данные
         </Text>

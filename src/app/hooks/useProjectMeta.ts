@@ -16,6 +16,7 @@ export type projectMetaType = {
   siteType: string;
   niche: string;
   type: string;
+  link?: string;
 };
 
 const projects: Partial<Record<project, projectMetaType>> = {
@@ -35,6 +36,7 @@ const projects: Partial<Record<project, projectMetaType>> = {
     siteType: "лендинг",
     niche: "мероприятия, афиша событий",
     type: "тильда",
+    link: "https://jul-n.ru/event",
   },
   businessMentoring: {
     title:
@@ -52,6 +54,7 @@ const projects: Partial<Record<project, projectMetaType>> = {
     siteType: "лендинг",
     niche: "бьюти, онлайн-курсы",
     type: "тильда",
+    link: "https://jul-n.ru",
   },
   germes: {
     title: "Система учета работы сотрудников на складе Яндекс Маркета",

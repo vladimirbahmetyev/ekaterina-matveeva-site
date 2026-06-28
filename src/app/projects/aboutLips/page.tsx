@@ -1,4 +1,5 @@
 import { Info } from "@/app/projects/components/Info";
+import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
 import Image from "next/image";
 
 export default function AboutLips() {
@@ -11,6 +12,7 @@ export default function AboutLips() {
         height={590}
         className="w-full"
       />
+      <ExternalLinkButton link="https://jul-n.ru/" className="md:hidden" />
       <Info
         title={"Вводные данные"}
         description={
@@ -35,8 +37,7 @@ export default function AboutLips() {
         title={
           "Я разработала дизайн и верстку лендинга на Tilda, а также настроила обучающую платформу и создала дополнительны pdf-материалы для обучения."
         }
-        description={
-`Задачи проекта 
+        description={`Задачи проекта 
 — разработать лендинг для продажи и оплаты онлайн-курса; 
 — реализовать возможность записи на бесплатный пробный урок; 
 — структурировать и визуализировать программу обучения с модулями и блоками; 
@@ -44,8 +45,7 @@ export default function AboutLips() {
 — оформить тарифы, бонусы и сертификаты; 
 — интегрировать систему оплаты и сбора заявок; 
 — дополнительно создать PDF-материалы для учеников
-— создать учебную платформу на Tilda.`
-        }
+— создать учебную платформу на Tilda.`}
       />
       <Image
         src="/img/projects/aboutLips/lips_4.png"

@@ -15,6 +15,7 @@ export const ExternalLinkButton: FC<ExternalLinkButtonProps> = ({
     <a
       href={link}
       target="_blank"
+      rel="noopener noreferrer"
       className={`bg-[#777162] px-5 py-3 rounded-full flex justify-center gap-1 items-center ${className ? className : ""}`}
     >
       <Text className="text-white font-medium">Перейти на сайт</Text>

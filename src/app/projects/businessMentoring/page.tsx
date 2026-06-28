@@ -13,64 +13,64 @@ const presentationCards: PresentationCardProps[] = [
   {
     imgUrl: "/img/projects/businessMentoring/alex_17.png",
     title: "Лендинг для сбора заявок на индивидуальное обучение (консалтинг)",
-    link: "google.com",
+    link: "https://alexyanovsky.pro/indiv_work",
   },
   {
     imgUrl: "/img/projects/businessMentoring/alex_18.png",
     title: "Лендинг для сбора заявок на интенсив по бизнесу с AI",
-    link: "google.com",
+    link: "https://alexyanovsky.com/ai_business/",
   },
   {
     imgUrl: "/img/projects/businessMentoring/alex_8.png",
     title: "Лендинг для сбора заявок на интенсив по масштабированию бизнеса",
-    link: "google.com",
+    link: "https://alexyanovsky.com/mbr_strategy/",
   },
   {
     imgUrl: "/img/projects/businessMentoring/alex_1.png",
     title: "Лендинг для сбора заявок на онлайн-курс “Предприниматель”",
-    link: "google.com",
+    link: "https://alexyanovsky.com/entrepreneur_new/",
   },
   {
     imgUrl: "/img/projects/businessMentoring/alex_15.png",
     title: "Лендинг для анонса мероприятия в Майами",
-    link: "google.com",
+    link: "https://alexyanovsky.com/miami_may/",
   },
   {
     imgUrl: "/img/projects/businessMentoring/alex_16.png",
     title: "Информационный сайт консалтинговой компании ",
-    link: "google.com",
+    link: "https://biz-education.pro",
   },
   {
     imgUrl: "/img/projects/businessMentoring/alex_2.png",
     title: "Лендинг афиша выезного бизнес-тренинга в Турции”",
-    link: "google.com",
+    link: "https://alexyanovsky.com/may_trening_turkey2025/",
   },
 
   {
     imgUrl: "/img/projects/businessMentoring/alex_3.png",
     title: "Лендинг для сбора заявок в онлайн-сообщество “Алекс Клуб”",
-    link: "google.com",
+    link: "https://alexyanovsky.com/alex_club_site/",
   },
 
   {
     imgUrl: "/img/projects/businessMentoring/alex_4.png",
     title: "Онлайн-распродажа записейТОП-программ Алекса Яновского",
-    link: "google.com",
+    link: "https://alexyanovsky.com/summer_sales/",
   },
   {
     imgUrl: "/img/projects/businessMentoring/alex_6.png",
     title: "Онлайн-распродажа инструментов для управления бизнесом",
-    link: "google.com",
+    link: "https://alexyanovsky.com/bonus_7steps/",
   },
   {
     imgUrl: "/img/projects/businessMentoring/alex_7.png",
     title: "Лендинг афиша выезного бизнес-тренинга в Ташкенте",
-    link: "google.com",
+    link: "https://alexyanovsky.com/vip_trening2025/",
   },
   {
     imgUrl: "/img/projects/businessMentoring/alex_5.png",
     title: "Лендинг для сбора заявок на онлайн-курс “Мастер группа”",
-    link: "google.com",
+    link: "https://alexyanovsky.com/mastergr/",
   },
 ];
 
@@ -128,6 +128,7 @@ export default function BusinessMentoring() {
         alt=""
         width={590}
         height={590}
+        className="w-full"
       />
       <Info
         title={

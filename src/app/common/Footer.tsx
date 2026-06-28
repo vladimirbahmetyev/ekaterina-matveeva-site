@@ -49,29 +49,43 @@ export const Footer = () => {
             </Text>
             <Image src="/svg/external.svg" alt="" width={15} height={15} />
           </a>
-          <Text
-            variant="h4"
-            color="dark-beige"
-            className="justify-center md:justify-start"
-          >
-            matveevae.work@gmail.com
-          </Text>
+          <a href="mailto:matveevae.work@gmail.com">
+            <Text
+              variant="h4"
+              color="dark-beige"
+              className="justify-center md:justify-start"
+            >
+              matveevae.work@gmail.com
+            </Text>
+          </a>
         </div>
         <div className="md:order-1">
-          <Text
-            variant="h4"
-            color="dark-beige"
-            className="mb-3 flex justify-center md:justify-start"
+          <a
+            href="https://vk.com/prezakatya"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Вконтакте
-          </Text>
-          <Text
-            variant="h4"
-            color="dark-beige"
-            className="mb-5 flex justify-center md:justify-start"
+            <Text
+              variant="h4"
+              color="dark-beige"
+              className="mb-3 flex justify-center md:justify-start"
+            >
+              Вконтакте
+            </Text>
+          </a>
+          <a
+            href="https://www.instagram.com/preza.katya/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Instagram*
-          </Text>
+            <Text
+              variant="h4"
+              color="dark-beige"
+              className="mb-5 flex justify-center md:justify-start"
+            >
+              Instagram*
+            </Text>
+          </a>
           <Text
             variant="footnote"
             color="light-beige"
