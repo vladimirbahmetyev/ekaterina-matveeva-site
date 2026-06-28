@@ -12,15 +12,18 @@ interface CardProps {
   children?: React.ReactNode;
   variant?: cardType;
   className?: string;
+  ref?: React.Ref<HTMLDivElement>;
 }
 
 export const Card: FC<CardProps> = ({
   children,
   variant = white,
   className,
+  ref,
 }) => (
   <div
     className={`flex flex-col border-[1px] rounded-xl p-5 ${CardStyleMap[variant]} ${className}`}
+    ref={ref}
   >
     {children}
   </div>

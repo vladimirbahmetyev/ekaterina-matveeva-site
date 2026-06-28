@@ -21,7 +21,7 @@ export const NavigationButton: FC<BackProps> = ({
   const router = useRouter();
   const onClick = () => {
     if (back) {
-      router.back();
+      router.push("/#cases");
     } else {
       router.push(url);
     }

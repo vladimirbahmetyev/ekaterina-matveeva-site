@@ -199,18 +199,6 @@ const popupSwiperData: Record<
     ],
   },
 };
-// <HiddableText
-//   preview={
-//     <Text color="heading" variant="text" preserveFormatting>
-//       {``}
-//     </Text>
-//   }
-//   main={
-//     <Text color="heading" variant="text" preserveFormatting>
-//       {``}
-//     </Text>
-//   }
-// />
 
 const HiddableText: FC<{ preview: ReactElement; main: ReactElement }> = ({
   preview,
@@ -227,7 +215,14 @@ const HiddableText: FC<{ preview: ReactElement; main: ReactElement }> = ({
           </Text>
         </div>
       ) : (
-        main
+        <>
+          {main}
+          <div onClick={() => setIsShown(false)} className="cursor-pointer">
+            <Text variant="text" color="yellow" className="underline! mt-5">
+              Свернуть
+            </Text>
+          </div>
+        </>
       )}
     </div>
   );
@@ -265,7 +260,7 @@ export default function GraphMaterials() {
     <MaterialsPopupProvider>
       <div className="flex flex-col px-2.5 py-10 md:px-30">
         <div className="flex flex-col gap-5">
-          <div className="flex flex-col gap-6 max-w-1/2">
+          <div className="flex flex-col gap-6 md:max-w-1/2">
             <NavigationButton text="На главную" back />
             <Text variant="h3" color="heading">
               Создание графических материалов для вашего проекта{" "}
@@ -277,7 +272,7 @@ export default function GraphMaterials() {
             </Text>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-5 mt-15">
+        <div className="grid md:grid-cols-3 gap-5 mt-15">
           {Material.map((project) => (
             <ProjectCard
               {...project}
@@ -320,14 +315,16 @@ export default function GraphMaterials() {
                 color="beige"
                 preserveFormatting
               >{`Листайте галерею, чтобы рассмотреть слайды презентации.
-
 Презентация была выполнена для выступления на конференции для дизайнера креативных образов.`}</Text>
             }
             main={
               <Text variant="text" color="beige" preserveFormatting>
-                {` Цель выступления: прорекламировать услуги арендыдизайнерских
+                {`
+Цель выступления: прорекламировать услуги арендыдизайнерских
 крыльев для проведения фотосессий, праздников и других
-мероприятий. Для комфортного выступления спикера, мной
+мероприятий.
+
+Для комфортного выступления спикера, мной
 былаподготовлена не только визуальная часть презентации, но и
 написантекст для выступления.`}
               </Text>
@@ -370,7 +367,7 @@ export default function GraphMaterials() {
           />
           <PopupSwiper
             slides={popupSwiperData["presentation_jul"].desktop}
-            classNames="w-6/10 mx-auto"
+            classNames="md:w-6/10 mx-auto"
           />
         </div>
       </Popup>
@@ -499,7 +496,14 @@ export default function GraphMaterials() {
               </Text>
             }
           />
-          <PopupSwiper slides={popupSwiperData["speakers"].desktop} />
+          <PopupSwiper
+            classNames="hidden md:block"
+            slides={popupSwiperData["speakers"].desktop}
+          />
+          <PopupSwiper
+            classNames="md:hidden"
+            slides={popupSwiperData["speakers"].mobile}
+          />
         </div>
       </Popup>
       <Popup popupId="languageSchool">
@@ -512,7 +516,14 @@ export default function GraphMaterials() {
 Гайд создан для рассылки в соцсетях в качестве лид-магнита.`}
           </Text>
           <div>
-            <PopupSwiper slides={popupSwiperData["languageSchool"].desktop} />
+            <PopupSwiper
+              classNames="md:block hidden"
+              slides={popupSwiperData["languageSchool"].desktop}
+            />
+            <PopupSwiper
+              classNames="md:hidden"
+              slides={popupSwiperData["languageSchool"].mobile}
+            />
           </div>
         </div>
       </Popup>
@@ -544,18 +555,6 @@ export default function GraphMaterials() {
           <Text variant="h3" color="heading">
             Оформление групп ВКонтакте
           </Text>
-          {/* <HiddableText
-            preview={
-              <Text color="heading" variant="text" preserveFormatting>
-                {``}
-              </Text>
-            }
-            main={
-              <Text color="heading" variant="text" preserveFormatting>
-                {``}
-              </Text>
-            }
-          /> */}
           <Text color="heading" variant="text" preserveFormatting>
             {`✓ Подбор шрифтовой пары и цветового сочетания, разработка фирменного стиля, при необходимости;
 ✓ Дизайн обложки для группы в двух версиях: мобильная и десктопная;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import Image from "next/image";
 import {
@@ -23,6 +23,27 @@ export function Popup({
   };
 
   const nodeRef = useRef<HTMLDivElement>(null);
+  const popupRef = useRef<HTMLDivElement>(null);
+  const [isOverflow, setIsOverflow] = useState(false);
+
+  useEffect(() => {
+    const el = popupRef.current;
+    if (!el) {
+      return;
+    }
+    const observer = new ResizeObserver(() => {
+      if (isOverflow && el?.scrollHeight <= el?.clientHeight) {
+        setIsOverflow(false);
+      } else {
+        setIsOverflow(el?.scrollHeight > el?.clientHeight);
+      }
+    });
+
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+    };
+  }, [isOpen]);
 
   return (
     <CSSTransition
@@ -34,7 +55,7 @@ export function Popup({
     >
       <div
         ref={nodeRef}
-        className="content fixed h-screen w-screen bg-[#00000080] top-0 left-0 justify-center flex pt-20 z-100"
+        className={`content fixed h-screen w-screen bg-[#00000080] top-0 left-0 justify-center flex pt-20 z-100 ${isOverflow ? "items-stretch" : "items-center"} md:items-stretch`}
         onClick={() => closePopup(popupId)}
       >
         <Image
@@ -46,8 +67,9 @@ export function Popup({
           className="absolute top-2 right-2 cursor-pointer"
         />
         <div
-          className={`bg-white p-5 rounded-xl max-w-9/10 aspect-1213/900 max-h-9/10 overflow-scroll ${classNames ? classNames : ""}`}
+          className={`bg-white p-5 rounded-xl max-w-9/10 aspect-1213/900 max-h-9/10 ${isOverflow ? "overflow-scroll" : ""} md:overflow-scroll ${classNames ? classNames : ""}`}
           onClick={handlePopupContentClick}
+          ref={popupRef}
         >
           {children}
         </div>

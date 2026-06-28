@@ -104,7 +104,12 @@ export const projects: ProjectCardProps[] = [
 
 export const Projects = () => {
   const [isAllOpen, setIsAllOpen] = useState(false);
-  const handleViewClick = () => setIsAllOpen((prev) => !prev);
+  const handleViewClick = () => {
+    if (isAllOpen) {
+      document.getElementById("cases")?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsAllOpen((prev) => !prev);
+  };
 
   const [selectedTag, setSelectedTag] = useState("all");
   const handleTagClick = (newVal: string) => setSelectedTag(newVal);

@@ -49,12 +49,12 @@ export const Intro = () => (
         </div>
       </div>
     </div>
-    <div className="flex w-full justify-between items-center mt-[-40px]">
+    <div className="grid grid-cols-3 w-full mt-[-40px] justify-items-center">
       <Text variant="text" color="dark-beige">
         Tilda · Figma
       </Text>
       <Image
-        className="mb-0"
+        className="mb-0 animate-bounce"
         src="/svg/icon_arrow.svg"
         alt=""
         width={36}

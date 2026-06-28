@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { Card } from "@/app/ui/card/Card";
 import { Text } from "@/app/ui/typography/Text";
 import Image from "next/image";
@@ -9,7 +9,7 @@ import { SwiperRef, SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-
+import { useScrollReveal } from "@/app/hooks/useScrollReveal";
 export const WorkWithMe: FC = () => {
   const swiper = useRef<null | SwiperRef>(null);
   const [isFirst, setIsFirst] = useState(false);
@@ -28,6 +28,13 @@ export const WorkWithMe: FC = () => {
     }
     onSwipe();
   };
+  const ref_1 = useScrollReveal();
+  const ref_2 = useScrollReveal(100);
+  const ref_3 = useScrollReveal(200);
+  const ref_4 = useScrollReveal(300);
+  const ref_5 = useScrollReveal(400);
+  const ref_6 = useScrollReveal(500);
+
   return (
     <div
       className="flex flex-col px-0 md:px-30 gap-1 items-center mt-5 md:pt-15"
@@ -49,6 +56,7 @@ export const WorkWithMe: FC = () => {
         <Card
           variant="filled"
           className={"md:col-start-2 col-span-2 md:row-start-1 relative"}
+          ref={ref_1}
         >
           <div className="relative flex flex-col justify-between h-full">
             <Text className="max-w-[50%]" color="dark-beige" variant="h4">
@@ -71,7 +79,11 @@ export const WorkWithMe: FC = () => {
             alt=""
           />
         </Card>
-        <Card variant="white" className="md:col-start-1 min-h-[313px]">
+        <Card
+          ref={ref_2}
+          variant="white"
+          className="md:col-start-1 min-h-[313px]"
+        >
           <div className="flex flex-col justify-between h-full">
             <Text variant="h4" color="dark-beige">
               Глубоко погружаюсь в проект
@@ -82,7 +94,7 @@ export const WorkWithMe: FC = () => {
             </Text>
           </div>
         </Card>
-        <Card variant="orange" className="">
+        <Card variant="orange" className="" ref={ref_3}>
           <div className="flex flex-col justify-between h-full">
             <div className="flex flex-col gap-3">
               <Image src={"/svg/group.svg"} alt="" width={37} height={37} />
@@ -97,6 +109,7 @@ export const WorkWithMe: FC = () => {
           </div>
         </Card>
         <Card
+          ref={ref_4}
           variant="filled"
           className={"md:col-start-3 col-span-2 relative overflow-hidden"}
         >
@@ -119,7 +132,11 @@ export const WorkWithMe: FC = () => {
             className="absolute top-0 right-0"
           />
         </Card>
-        <Card variant="white" className="md:col-start-2 md:row-start-2">
+        <Card
+          variant="white"
+          className="md:col-start-2 md:row-start-2"
+          ref={ref_5}
+        >
           <div className="flex flex-col justify-between h-full">
             <Text color="dark-beige" variant="h4">
               Ответственно подхожу к своей работе
@@ -130,6 +147,7 @@ export const WorkWithMe: FC = () => {
           </div>
         </Card>
         <Card
+          ref={ref_6}
           variant="filled"
           className="md:col-start-1 md:row-start-2 relative"
         >

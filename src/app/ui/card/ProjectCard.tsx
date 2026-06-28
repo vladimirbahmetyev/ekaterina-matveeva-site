@@ -8,6 +8,7 @@ import {
   PopupContext,
   registeredPopups,
 } from "@/app/graphMaterials/MaterialsPopupProvider";
+import { useScrollReveal } from "@/app/hooks/useScrollReveal";
 
 export interface ProjectCardProps {
   imgUrl: string;
@@ -26,11 +27,13 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   popupId,
 }) => {
   const { openPopup } = useContext(PopupContext);
+  const ref = useScrollReveal();
   return (
     <a
       className="flex flex-col w-full gap-2 mb-10"
       onClick={popupId ? () => openPopup(popupId) : () => {}}
       href={link}
+      ref={ref}
     >
       {imgUrl && (
         <Image

@@ -1,6 +1,7 @@
 "use client";
 
 import { FC, useEffect, useRef, useState } from "react";
+import { CSSTransition } from "react-transition-group";
 import { Text } from "@/app/ui/typography/Text";
 import { Heading } from "@/app/ui/typography/Heading";
 import Image from "next/image";
@@ -75,6 +76,7 @@ export const Services = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const timerToClose = useRef(null);
   const popupRootRef = useRef(null);
+  const nodeRef = useRef<HTMLDivElement>(null);
   const onPopupLeave = () => {
     timerToClose.current = setTimeout(() => setIsPopupOpen(false), 200);
   };
@@ -114,8 +116,18 @@ export const Services = () => {
             ref={popupRootRef}
           >
             <Image src="/svg/info.svg" alt="info" width={37} height={37} />
-            {isPopupOpen && (
-              <div className="min-w-70 aspect-277/330 md:min-w-100 absolute top-[100%] right-[100%] md:aspect-392/328 border-1 border-[#B6B2A8] p-3 rounded-2xl z-10 bg-white rounded-tr-[0px]!">
+            <CSSTransition
+              in={isPopupOpen}
+              timeout={300}
+              classNames="popup"
+              mountOnEnter
+              unmountOnExit
+              nodeRef={nodeRef}
+            >
+              <div
+                className="min-w-70 aspect-277/330 md:min-w-100 absolute top-[100%] right-[100%] md:aspect-392/328 border-1 border-[#B6B2A8] p-3 rounded-2xl z-10 bg-white rounded-tr-[0px]!"
+                ref={nodeRef}
+              >
                 <Text color="heading" variant="body-text">
                   Каждый проект уникален и имеет свои задачи. Поэтому точную
                   сумму я смогу назвать только после знакомства с вашим
@@ -137,7 +149,7 @@ export const Services = () => {
                   проверенного графического дизайнера).
                 </Text>
               </div>
-            )}
+            </CSSTransition>
           </div>
         </div>
       </div>
