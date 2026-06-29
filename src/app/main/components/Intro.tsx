@@ -5,11 +5,11 @@ import { OrderButton } from "@/app/ui/buttons/OrderButton";
 import Link from "next/link";
 
 export const Intro = () => (
-  <div id="top" className="px-4 md:px-30 h-screen w-full pb-10">
-    <div className="flex gap-2 h-full justify-between ">
+  <div id="top" className="px-4 h-screen w-full pb-10">
+    <div className="grid lg:grid-cols-[1fr_520px_1fr] gap-2 h-full">
       <div className="hidden md:flex flex-col justify-center">
         <Image
-          className="mt-5"
+          className="mt-5 w-full"
           src={"/img/main/kv_2.webp"}
           alt=""
           width={252}
@@ -38,7 +38,7 @@ export const Intro = () => (
         <OrderButton />
       </div>
       <div className="hidden md:flex flex-col justify-center mt-10 items-end">
-        <div className="flex flex-col gap-5 items-end mt-12">
+        <div className="flex flex-col gap-5 items-end mt-12 w-full">
           <Image
             className="w-10"
             height={41}
@@ -46,7 +46,13 @@ export const Intro = () => (
             src={"/svg/yellow-heart.svg"}
             alt="hellow heart"
           />
-          <Image src={"/img/main/kv_1.webp"} alt="" width={190} height={260} />
+          <Image
+            className="w-full"
+            src={"/img/main/kv_1.webp"}
+            alt=""
+            width={190}
+            height={260}
+          />
         </div>
       </div>
     </div>
