@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 export function useScrollReveal(delay = 0) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | HTMLAnchorElement>(null);
 
   useEffect(() => {
     const el = ref.current;

@@ -18,12 +18,12 @@ export const ProjectHeader = () => {
       <div className="flex flex-col lg:flex-row gap-4 lg:justify-between mt-10">
         <div className="flex flex-col gap-6 lg:w-1/3">
           <Text variant="h3" color="heading">
-            {projectMeta.title}
+            {projectMeta?.title}
           </Text>
           <Text variant="text" color="beige">
-            {projectMeta.description}
+            {projectMeta?.description}
           </Text>
-          {projectMeta.link && (
+          {projectMeta?.link && (
             <ExternalLinkButton
               link={projectMeta.link}
               className="hidden lg:inline-flex w-fit"
@@ -36,7 +36,7 @@ export const ProjectHeader = () => {
               тип сайта
             </Text>
             <Text variant="text" color="heading" className="self-start">
-              {projectMeta.siteType}
+              {projectMeta?.siteType}
             </Text>
           </div>
           <div className="grid grid-cols-2 w-full">
@@ -44,7 +44,7 @@ export const ProjectHeader = () => {
               ниша
             </Text>
             <Text variant="text" color="heading">
-              {projectMeta.niche}
+              {projectMeta?.niche}
             </Text>
           </div>
           <div className="grid grid-cols-2 w-full">
@@ -52,7 +52,7 @@ export const ProjectHeader = () => {
               формат разработки
             </Text>
             <Text variant="text" color="heading">
-              {projectMeta.type}
+              {projectMeta?.type}
             </Text>
           </div>
         </div>

@@ -66,7 +66,7 @@ const projects: Partial<Record<project, projectMetaType>> = {
     type: "в сотрудничестве с программистами",
   },
   whereYouWant: {
-    title: "Сервис по подбору туров и путешевсткий КудаУгодно",
+    title: "Сервис по подбору турови путешевсткий КудаУгодно",
     description:
       "Мностраничный сайт для поиска и бронирования туров и отелей по выгодным ценам",
     siteType: "многостраничный сайт",
@@ -74,27 +74,27 @@ const projects: Partial<Record<project, projectMetaType>> = {
     type: "в сотрудничестве с программистами",
   },
   mendi: {
-    title: "Приложение для отслеживания приёма лекарств Mendi",
+    title: "Приложение для отслеживанияприёма лекарств Mendi",
     description:
       "Мобильное приложение (iOS) для стартапа Mendi, главная функция которого - трекер приёма лекарств, напоминания о приёме, статистика прёма медикаментов",
     siteType: "мобильное приложение (iOS)",
     niche: "медицина, здоровье",
-    type: "в сотрудничестве с программистами",
+    type: "в сотрудничествес программистами",
   },
   skillSwap: {
-    title: "Приложение для прохождения мастер-классов SkillSwap",
+    title: "Приложение для прохождениямастер-классов SkillSwap",
     description:
       "Мобильное приложение (iOS) для проекта SkillSwap, в котором можно находить новые хобии и совершенствоваться в своих навыках. Основной формат: онлайн-мастер-классы с экспертами",
     siteType: "мобильное приложение (iOS)",
     niche: "самообразование, развлечения",
-    type: "в сотрудничестве с программистами",
+    type: "в сотрудничествес программистами",
   },
 };
 
-export const useProjectMeta: () => projectMetaType = () => {
-  const currentPage = usePathname().split("\/").at(-1) || "";
-  if (!!currentPage && projects[currentPage] !== undefined) {
-    return projects[currentPage];
+export const useProjectMeta: () => projectMetaType | undefined = () => {
+  const currentPage = usePathname().split("\/").at(-1) || undefined;
+  if (!!currentPage && projects[currentPage as project] !== undefined) {
+    return projects[currentPage as project];
   }
   return { title: "", description: "", siteType: "", niche: "", type: "" };
 };

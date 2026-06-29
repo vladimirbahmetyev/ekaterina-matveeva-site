@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useContext } from "react";
+import { FC, RefObject, useContext } from "react";
 import Image from "next/image";
 import { Text } from "@/app/ui/typography/Text";
 import { project } from "@/app/hooks/useProjectMeta";
@@ -33,7 +33,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
       className="flex flex-col w-full gap-2 mb-10"
       onClick={popupId ? () => openPopup(popupId) : () => {}}
       href={link}
-      ref={ref}
+      ref={ref as RefObject<HTMLAnchorElement>}
     >
       {imgUrl && (
         <Image

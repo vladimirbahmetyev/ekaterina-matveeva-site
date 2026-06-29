@@ -1,23 +1,27 @@
 "use client";
 
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, RefObject, useEffect, useRef, useState } from "react";
 import { Card } from "@/app/ui/card/Card";
 import { Text } from "@/app/ui/typography/Text";
 import Image from "next/image";
 import { Heading } from "@/app/ui/typography/Heading";
-import { SwiperRef, SwiperSlide, Swiper } from "swiper/react";
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { useScrollReveal } from "@/app/hooks/useScrollReveal";
+
 export const WorkWithMe: FC = () => {
-  const swiper = useRef<null | SwiperRef>(null);
+  const swiper = useRef<null | SwiperType>(null);
   const [isFirst, setIsFirst] = useState(false);
   const [isLast, setIsLast] = useState(false);
 
   const onSwipe = () => {
-    setIsLast(swiper.current?.isEnd);
-    setIsFirst(swiper.current?.isBeginning);
+    const { isEnd, isBeginning } = swiper.current ?? {};
+    setIsLast(isEnd ?? false);
+    setIsFirst(isBeginning ?? false);
   };
 
   const onArrowClick = (direction: "next" | "prev") => {
@@ -56,7 +60,7 @@ export const WorkWithMe: FC = () => {
         <Card
           variant="filled"
           className={"lg:col-start-2 col-span-2 lg:row-start-1 relative"}
-          ref={ref_1}
+          ref={ref_1 as RefObject<HTMLDivElement>}
         >
           <div className="relative flex flex-col justify-between h-full">
             <Text className="max-w-[50%]" color="dark-beige" variant="h4">
@@ -80,7 +84,7 @@ export const WorkWithMe: FC = () => {
           />
         </Card>
         <Card
-          ref={ref_2}
+          ref={ref_2 as RefObject<HTMLDivElement>}
           variant="white"
           className="lg:col-start-1 min-h-[313px]"
         >
@@ -94,7 +98,11 @@ export const WorkWithMe: FC = () => {
             </Text>
           </div>
         </Card>
-        <Card variant="orange" className="" ref={ref_3}>
+        <Card
+          variant="orange"
+          className=""
+          ref={ref_3 as RefObject<HTMLDivElement>}
+        >
           <div className="flex flex-col justify-between h-full">
             <div className="flex flex-col gap-3">
               <Image src={"/svg/group.svg"} alt="" width={37} height={37} />
@@ -109,7 +117,7 @@ export const WorkWithMe: FC = () => {
           </div>
         </Card>
         <Card
-          ref={ref_4}
+          ref={ref_4 as RefObject<HTMLDivElement>}
           variant="filled"
           className={"lg:col-start-3 col-span-2 relative overflow-hidden"}
         >
@@ -135,7 +143,7 @@ export const WorkWithMe: FC = () => {
         <Card
           variant="white"
           className="lg:col-start-2 lg:row-start-2"
-          ref={ref_5}
+          ref={ref_5 as RefObject<HTMLDivElement>}
         >
           <div className="flex flex-col justify-between h-full">
             <Text color="dark-beige" variant="h4">
@@ -147,7 +155,7 @@ export const WorkWithMe: FC = () => {
           </div>
         </Card>
         <Card
-          ref={ref_6}
+          ref={ref_6 as RefObject<HTMLDivElement>}
           variant="filled"
           className="lg:col-start-1 lg:row-start-2 relative"
         >

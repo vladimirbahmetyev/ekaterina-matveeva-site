@@ -13,7 +13,7 @@ export const ProjectFooter = () => {
         url="/"
         className="order-2 lg:order-1 lg:justify-self-start"
       />
-      {projectMeta.link && (
+      {projectMeta?.link && (
         <ExternalLinkButton
           link={projectMeta.link}
           className="lg:order-2 lg:justify-self-end"

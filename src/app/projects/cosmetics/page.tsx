@@ -7,7 +7,7 @@ import { Text } from "@/app/ui/typography/Text";
 import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
 import { Info } from "@/app/projects/components/Info";
 
-export default function Cosmetics(): FC {
+export default function Cosmetics() {
   return (
     <div className="px-2.5 lg:px-30 flex flex-col gap-10">
       <Image

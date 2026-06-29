@@ -45,7 +45,7 @@ export const Text: FC<TextProps> = ({
 }) => {
   const colorClass = color ? colorMap[color] : "";
   const formattingClass = preserveFormatting ? "whitespace-pre-wrap" : "";
-  const typographyClass = variantMap[variant];
+  const typographyClass = variantMap[variant as variantType];
   return (
     <div
       className={`font-[Manrope] ${className} ${colorClass} ${formattingClass} ${typographyClass}`}

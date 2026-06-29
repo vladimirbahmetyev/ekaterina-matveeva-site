@@ -21,6 +21,7 @@ const colorMap: Record<colorType, string> = {
   beige: "!text-[#A7A090]",
   "dark-beige": "!text-[#777162]",
   white: "!text-[#FFFFFF]",
+  yellow: "!text-[#E3A127]",
 };
 
 export const Heading: FC<HeadingProps> = ({

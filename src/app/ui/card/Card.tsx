@@ -22,7 +22,7 @@ export const Card: FC<CardProps> = ({
   ref,
 }) => (
   <div
-    className={`flex flex-col border-[1px] rounded-xl p-5 ${CardStyleMap[variant]} ${className}`}
+    className={`flex flex-col border-[1px] rounded-xl p-5 ${CardStyleMap[variant as cardType]} ${className}`}
     ref={ref}
   >
     {children}

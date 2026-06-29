@@ -511,7 +511,7 @@ export default function GraphMaterials() {
           />
           <PopupSwiper
             classNames="lg:hidden"
-            slides={popupSwiperData["speakers"].mobile}
+            slides={popupSwiperData["speakers"]?.mobile || []}
           />
         </div>
       </Popup>
@@ -531,7 +531,7 @@ export default function GraphMaterials() {
             />
             <PopupSwiper
               classNames="lg:hidden"
-              slides={popupSwiperData["languageSchool"].mobile}
+              slides={popupSwiperData["languageSchool"]?.mobile || []}
             />
           </div>
         </div>

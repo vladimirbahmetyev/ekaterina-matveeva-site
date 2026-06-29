@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Info } from "@/app/projects/components/Info";
 import Image from "next/image";
 
-export default function SkillSwap(): FC {
+export default function SkillSwap() {
   return (
     <div className="flex flex-col px-2.5 lg:px-30 gap-10">
       <Info

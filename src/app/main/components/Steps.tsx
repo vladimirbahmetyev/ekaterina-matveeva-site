@@ -8,8 +8,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
 
 interface SwiperCardProps {
   imgUrl?: string;
@@ -52,13 +53,14 @@ const SwiperCard: FC<SwiperCardProps> = ({ imgUrl, step, text, title }) => {
 };
 
 export const Steps: FC = () => {
-  const swiper = useRef<null | SwiperRef>(null);
+  const swiper = useRef<null | SwiperType>(null);
   const [isFirst, setIsFirst] = useState(false);
   const [isLast, setIsLast] = useState(false);
 
   const onSwipe = () => {
-    setIsLast(swiper.current?.isEnd);
-    setIsFirst(swiper.current?.isBeginning);
+    const { isEnd, isBeginning } = swiper.current ?? {};
+    setIsLast(isEnd ?? false);
+    setIsFirst(isBeginning ?? false);
   };
 
   const onArrowClick = (direction: "next" | "prev") => {

@@ -74,25 +74,27 @@ const Service: FC<ServiceProps> = ({ title, bordered, price, description }) => {
 
 export const Services = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const timerToClose = useRef(null);
-  const popupRootRef = useRef(null);
+  const timerToClose = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const popupRootRef = useRef<HTMLDivElement | null>(null);
   const nodeRef = useRef<HTMLDivElement>(null);
   const onPopupLeave = () => {
     timerToClose.current = setTimeout(() => setIsPopupOpen(false), 200);
   };
 
   const onPopupEnter = () => {
-    clearTimeout(timerToClose.current);
+    if (timerToClose.current) {
+      clearTimeout(timerToClose.current);
+    }
     setIsPopupOpen(true);
   };
 
-  const onInfoClick = (evt) => {
+  const onInfoClick = () => {
     setIsPopupOpen(true);
   };
 
   useEffect(() => {
-    function handleDocumentClick(evt) {
-      if (!popupRootRef.current?.contains(evt.target)) {
+    function handleDocumentClick(evt: MouseEvent) {
+      if (!popupRootRef.current?.contains(evt.target as Node)) {
         setIsPopupOpen(false);
       }
     }

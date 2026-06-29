@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Info } from "@/app/projects/components/Info";
 import Image from "next/image";
 
-export default function WhereYouWant(): FC {
+export default function WhereYouWant() {
   return (
     <div className="flex flex-col px-2.5 gap-10 lg:px-30">
       <Info
