@@ -7,7 +7,7 @@ import Link from "next/link";
 export const Intro = () => (
   <div id="top" className="px-4 h-screen w-full pb-10">
     <div className="grid lg:grid-cols-[1fr_520px_1fr] gap-2 h-full">
-      <div className="hidden md:flex flex-col justify-center">
+      <div className="hidden lg:flex flex-col justify-center">
         <Image
           className="mt-5 w-full"
           src={"/img/main/kv_2.webp"}
@@ -16,12 +16,12 @@ export const Intro = () => (
           height={310}
         />
       </div>
-      <div className="mt-18 flex flex-col items-center justify-center gap-3 md:gap-6 w-full ">
-        <Text className="hidden md:block" variant="text" color="dark-beige">
+      <div className="mt-18 flex flex-col items-center justify-center gap-3 lg:gap-6 w-full ">
+        <Text className="hidden lg:block" variant="text" color="dark-beige">
           Web · UI/UX designer
         </Text>
         <Image
-          className="md:hidden mb-2"
+          className="lg:hidden mb-2"
           width={239}
           height={320}
           alt="kv"
@@ -29,7 +29,7 @@ export const Intro = () => (
         />
         <Heading>Екатерина Матвеева</Heading>
         <Text
-          className="text-center mb-3 md:mb-0"
+          className="text-center mb-3 lg:mb-0"
           variant="h3"
           color="dark-beige"
         >
@@ -37,7 +37,7 @@ export const Intro = () => (
         </Text>
         <OrderButton />
       </div>
-      <div className="hidden md:flex flex-col justify-center mt-10 items-end">
+      <div className="hidden lg:flex flex-col justify-center mt-10 items-end">
         <div className="flex flex-col gap-5 items-end mt-12 w-full">
           <Image
             className="w-10"
