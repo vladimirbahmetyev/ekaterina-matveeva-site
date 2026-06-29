@@ -14,6 +14,7 @@ import { Popup } from "@/app/graphMaterials/Popup";
 import { HiddableText, PopupSwiper } from "@/app/graphMaterials/page";
 import "swiper/css";
 import "swiper/css/pagination";
+import BackgroundVideo from "next-video/background-video";
 
 export const popupSwiperData: Record<
   registeredPopups,
@@ -137,13 +138,13 @@ function WomenConference() {
   const { openPopup } = useContext(PopupContext);
   return (
     <div className="px-2.5 flex flex-col gap-10 lg:px-30">
-      <Image
-        src="/img/projects/womenConference/portfolio_video2_conference.webp"
-        width={1200}
-        height={588}
-        alt=""
-        className="w-full"
-      />
+      <div className="rounded-2xl overflow-hidden">
+        <BackgroundVideo
+          src={
+            "https://whgtds5inw9f5bmn.public.blob.vercel-storage.com/video/zk.mp4"
+          }
+        />
+      </div>
       <div className="flex flex-col gap-4">
         <ExternalLinkButton
           link="https://jul-n.ru/event"

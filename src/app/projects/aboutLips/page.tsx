@@ -1,17 +1,18 @@
 import { Info } from "@/app/projects/components/Info";
 import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
 import Image from "next/image";
+import BackgroundVideo from "next-video/background-video";
 
 export default function AboutLips() {
   return (
     <div className="flex flex-col gap-10 px-2.5 lg:px-30">
-      <Image
-        src="/img/projects/aboutLips/lips_1_video.webp"
-        alt=""
-        width={590}
-        height={590}
-        className="w-full"
-      />
+      <div className="rounded-2xl overflow-hidden">
+        <BackgroundVideo
+          src={
+            "https://whgtds5inw9f5bmn.public.blob.vercel-storage.com/video/pro_lips.mp4"
+          }
+        />
+      </div>
       <ExternalLinkButton link="https://jul-n.ru/" className="lg:hidden" />
       <Info
         title={"Вводные данные"}

@@ -12,6 +12,7 @@
     "@types/react-transition-group": "^4.4.12",
     "motion": "^12.42.0",
     "next": "16.1.2",
+    "next-video": "^2.8.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-transition-group": "^4.4.5",

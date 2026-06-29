@@ -1,10 +1,18 @@
 import { FC } from "react";
 import { Info } from "@/app/projects/components/Info";
 import Image from "next/image";
+import BackgroundVideo from "next-video/background-video";
 
 export default function WhereYouWant() {
   return (
     <div className="flex flex-col px-2.5 gap-10 lg:px-30">
+      <div className="rounded-2xl overflow-hidden">
+        <BackgroundVideo
+          src={
+            "https://whgtds5inw9f5bmn.public.blob.vercel-storage.com/video/mendi.mp4"
+          }
+        />
+      </div>
       <Info
         title="Вводные данные"
         description="Требовалось создать удобное приложение, которое помогает пользователям контролировать приём лекарств — как собственных, так и членов семьи. Проект должен был решить сразу несколько распространённых проблем: забывчивость при приёме медикаментов, отсутствие контроля совместимости лекарств, сложность в отслеживании лечения нескольких родственников и потерю мотивации завершать курс лечения."

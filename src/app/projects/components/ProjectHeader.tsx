@@ -9,7 +9,7 @@ import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
 export const ProjectHeader = () => {
   const projectMeta = useProjectMeta();
   return (
-    <div className="px-2.5 lg:px-30 pt-15! lg:pt-[auto] lg:py-15 pb-10">
+    <div className="px-2.5 lg:px-30 pt-15! lg:py-15 pb-10 lg:!pt-25">
       <NavigationButton
         back
         text="На главную"

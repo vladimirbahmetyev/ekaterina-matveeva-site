@@ -1,17 +1,18 @@
 import { FC } from "react";
 import { Info } from "@/app/projects/components/Info";
 import Image from "next/image";
+import BackgroundVideo from "next-video/background-video";
 
 export default function WhereYouWant() {
   return (
     <div className="flex flex-col px-2.5 gap-10 lg:px-30">
-      <Image
-        src="/img/projects/whereYouWant/kudaygodno_1_video.webp"
-        width={590}
-        height={590}
-        alt=""
-        className="w-full"
-      />
+      <div className="rounded-2xl overflow-hidden">
+        <BackgroundVideo
+          src={
+            "https://whgtds5inw9f5bmn.public.blob.vercel-storage.com/video/kuda_ygodno.mp4"
+          }
+        />
+      </div>
       <Info
         title={"Вводные данные"}
         description={

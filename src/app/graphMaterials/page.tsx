@@ -263,7 +263,7 @@ export const PopupSwiper: FC<{ slides: string[]; classNames?: string }> = ({
 export default function GraphMaterials() {
   return (
     <MaterialsPopupProvider>
-      <div className="flex flex-col px-2.5 py-10 lg:px-30">
+      <div className="flex flex-col px-2.5 py-10 lg:px-30 lg:!pt-25">
         <div className="grid lg:grid-cols-2 gap-5 items-center">
           <div className="flex flex-col gap-6">
             <NavigationButton text="На главную" back />

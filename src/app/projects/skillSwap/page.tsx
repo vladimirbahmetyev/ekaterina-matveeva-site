@@ -1,10 +1,18 @@
 import { FC } from "react";
 import { Info } from "@/app/projects/components/Info";
 import Image from "next/image";
+import BackgroundVideo from "next-video/background-video";
 
 export default function SkillSwap() {
   return (
     <div className="flex flex-col px-2.5 lg:px-30 gap-10">
+      <div className="rounded-2xl overflow-hidden">
+        <BackgroundVideo
+          src={
+            "https://whgtds5inw9f5bmn.public.blob.vercel-storage.com/video/SkillSwap.mp4"
+          }
+        />
+      </div>
       <Info
         title="Вводные данные"
         description="Нужно было создать удобное и эмоционально приятное приложение для iOS, которое помогает пользователям находить новые хобби и развивать навыки через онлайн-мастер-классы. Основной акцент — удобная навигация, простое бронирование, наглядный прогресси живой, мотивирующий пользовательский опыт."
