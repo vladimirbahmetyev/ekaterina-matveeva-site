@@ -8,14 +8,14 @@ import { Text } from "@/app/ui/typography/Text";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center relative z-30">
       <main className="flex w-full flex-col items-center justify-between">
         <Intro />
         <WorkWithMe />
         <Steps />
         <Projects />
         <Services />
-        <div className="px-2.5 lg:px-30 w-full mb-10 lg:mb-[-60px] sm:flex sm:justify-center lg:justify-between">
+        <div className="px-2.5 lg:px-30 w-full mb-10 lg:mb-[-60px] sm:flex sm:justify-center lg:justify-between z-10 relative">
           <Image
             src="/svg/heart.svg"
             alt=""

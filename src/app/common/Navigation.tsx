@@ -53,7 +53,8 @@ export const Navigation: FC = () => {
     };
   }, [isOpen]);
 
-  const handleBackTap = () => {
+  const handleBackTap = (evt: React.MouseEvent) => {
+    evt.stopPropagation();
     setSubroute(null);
   };
 
@@ -72,7 +73,7 @@ export const Navigation: FC = () => {
   return (
     <>
       <div className="lg:hidden">
-        <div className="fixed z-30 top-0 w-full flex items-center py-3.5 justify-between px-5 bg-[#F9F5EC]">
+        <div className="fixed z-40 top-0 w-full flex items-center py-3.5 justify-between px-5 bg-[#F9F5EC]">
           <Link href="/#top">
             <Text variant="body-text" color="beige">
               Web · UI/UX designer
@@ -99,7 +100,7 @@ export const Navigation: FC = () => {
                 stiffness: 300,
                 damping: 40,
               }}
-              className="fixed w-screen h-screen bg-white top-0 left-0 z-30 mb-3"
+              className="fixed w-screen h-screen bg-white top-0 left-0 z-50 mb-3"
             >
               <div className="px-5 py-5 bg-[#434343] flex items-center justify-between">
                 <Text color="white" preserveFormatting variant={"text"}>
@@ -147,7 +148,7 @@ export const Navigation: FC = () => {
                 stiffness: 300,
                 damping: 40,
               }}
-              className="fixed w-screen h-screen bg-white z-40 top-0 left-0"
+              className="fixed w-screen h-screen bg-white z-60 top-0 left-0"
             >
               <div
                 className="bg-[#434343] px-5 py-3"
@@ -155,7 +156,7 @@ export const Navigation: FC = () => {
               >
                 <div
                   className="flex py-3.5 gap-4 items-center"
-                  onClick={handleBackTap}
+                  onClick={(evt) => handleBackTap(evt)}
                 >
                   <Image
                     src="/svg/arrow-back.svg"

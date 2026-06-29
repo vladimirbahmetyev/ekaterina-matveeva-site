@@ -17,13 +17,28 @@ export const Footer = () => {
     observer.observe(document.body, { attributes: true });
     return () => observer.disconnect();
   }, []);
+
   return (
     <footer
       id="contacts"
       className="flex flex-col items-center justify-center gap-6 relative z-20"
     >
       {!is404 && (
-        <div className="flex flex-col items-center justify-center px-2.5 w-full lg:mb-[-60px]">
+        <div className="flex flex-col items-center justify-center px-2.5 w-full lg:mb-[-60px] relative">
+          <Image
+            src="/img/footer/bg.png"
+            width={915}
+            height={371}
+            alt="bg"
+            className="absolute top-0 -z-10 hidden lg:block"
+          />
+          <Image
+            src="/img/footer/bg_mobile.jpg"
+            width={271}
+            height={407}
+            alt="bg"
+            className="absolute top-0 -z-10 lg:hidden"
+          />
           <Heading className="mb-5">Екатерина Матвеева</Heading>
           <Image
             className="rounded-xl mb-5"
