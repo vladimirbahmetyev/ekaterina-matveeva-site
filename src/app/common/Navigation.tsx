@@ -4,7 +4,7 @@ import { Text } from "@/app/ui/typography/Text";
 import { projects } from "@/app/main/components/Projects";
 
 import { FC, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -41,6 +41,8 @@ export const Navigation: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [subroute, setSubroute] = useState<navigationSubroute | null>(null);
   const router = useRouter();
+  const pathname = usePathname();
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("menu-open");
@@ -70,15 +72,53 @@ export const Navigation: FC = () => {
     setIsOpen(false);
     setSubroute(null);
   };
+
+  const isMain = pathname === "/";
+
   return (
     <>
       <div className="lg:hidden">
-        <div className="fixed z-40 top-0 w-full flex items-center py-3.5 justify-between px-5 bg-[#F9F5EC]">
-          <Link href="/#top">
-            <Text variant="body-text" color="beige">
-              Web · UI/UX designer
-            </Text>
-          </Link>
+        <div
+          className={`overflow-hidden transition-all duration-300 fixed z-40 top-0 w-full flex items-center py-3.5 justify-between px-5 bg-[${isMain ? "#F9F5EC" : "#434343"}]`}
+        >
+          <AnimatePresence mode="wait">
+            {isMain ? (
+              <motion.div
+                initial={{ y: -50 }}
+                animate={{ y: 0 }}
+                exit={{ y: 50 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                key="main"
+              >
+                <Link href="/#top">
+                  <Text variant="body-text" color="beige">
+                    Web · UI/UX designer
+                  </Text>
+                </Link>
+              </motion.div>
+            ) : (
+              <motion.div
+                key="back"
+                initial={{ y: -50 }}
+                animate={{ y: 0 }}
+                exit={{ y: 50 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              >
+                <Link href="/#top" className="flex py-2 gap-4 items-center">
+                  <Image
+                    src="/svg/arrow-back.svg"
+                    alt=""
+                    width={24}
+                    height={24}
+                  />
+                  <Text color="white" variant="text">
+                    Назад
+                  </Text>
+                </Link>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           <Image
             className="cursor-pointer"
             src={"/svg/burger.svg"}
@@ -155,7 +195,7 @@ export const Navigation: FC = () => {
                 onClick={() => handleSubrouteClick("main")}
               >
                 <div
-                  className="flex py-3.5 gap-4 items-center"
+                  className="flex py-2 gap-4 items-center"
                   onClick={(evt) => handleBackTap(evt)}
                 >
                   <Image
