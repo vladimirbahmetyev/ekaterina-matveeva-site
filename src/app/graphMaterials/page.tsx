@@ -290,7 +290,7 @@ export default function GraphMaterials() {
           ))}
         </div>
       </div>
-      <Popup popupId="alex" classNames="aspect-1200/500!">
+      <Popup popupId="alex">
         <Text className="mb-5" variant="h4" color="heading">
           Баннеры, креативы для рекламы, превью для видео
         </Text>
