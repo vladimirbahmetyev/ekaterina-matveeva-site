@@ -263,8 +263,8 @@ export const PopupSwiper: FC<{ slides: string[]; classNames?: string }> = ({
 export default function GraphMaterials() {
   return (
     <MaterialsPopupProvider>
-      <div className="flex flex-col px-2.5 py-10 md:px-30">
-        <div className="grid md:grid-cols-2 gap-5 items-center">
+      <div className="flex flex-col px-2.5 py-10 lg:px-30">
+        <div className="grid lg:grid-cols-2 gap-5 items-center">
           <div className="flex flex-col gap-6">
             <NavigationButton text="На главную" back />
             <Text variant="h3" color="heading">
@@ -276,11 +276,11 @@ export default function GraphMaterials() {
               креативы и т.п.
             </Text>
           </div>
-          <div className="md:justify-self-end">
+          <div className="lg:justify-self-end">
             <OrderButton />
           </div>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-15">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-15">
           {Material.map((project) => (
             <ProjectCard
               {...project}
@@ -305,11 +305,11 @@ export default function GraphMaterials() {
         />
         <PopupSwiper
           slides={popupSwiperData["alex"].desktop}
-          classNames="hidden md:block"
+          classNames="hidden lg:block"
         />
         <PopupSwiper
           slides={popupSwiperData["alex"].mobile || []}
-          classNames="md:hidden"
+          classNames="lg:hidden"
         />
       </Popup>
       <Popup popupId="wings">
@@ -376,7 +376,7 @@ export default function GraphMaterials() {
           />
           <PopupSwiper
             slides={popupSwiperData["presentation_jul"].desktop}
-            classNames="md:w-6/10 mx-auto"
+            classNames="lg:w-6/10 mx-auto"
           />
         </div>
       </Popup>
@@ -506,11 +506,11 @@ export default function GraphMaterials() {
             }
           />
           <PopupSwiper
-            classNames="hidden md:block"
+            classNames="hidden lg:block"
             slides={popupSwiperData["speakers"].desktop}
           />
           <PopupSwiper
-            classNames="md:hidden"
+            classNames="lg:hidden"
             slides={popupSwiperData["speakers"].mobile}
           />
         </div>
@@ -526,11 +526,11 @@ export default function GraphMaterials() {
           </Text>
           <div>
             <PopupSwiper
-              classNames="md:block hidden"
+              classNames="lg:block hidden"
               slides={popupSwiperData["languageSchool"].desktop}
             />
             <PopupSwiper
-              classNames="md:hidden"
+              classNames="lg:hidden"
               slides={popupSwiperData["languageSchool"].mobile}
             />
           </div>
@@ -573,11 +573,11 @@ export default function GraphMaterials() {
 ✓ Установка всех материалов напрямую в группе, при необходимости.`}
           </Text>
           <PopupSwiper
-            classNames="md:block hidden"
+            classNames="lg:block hidden"
             slides={popupSwiperData["vk"].desktop}
           />
           <PopupSwiper
-            classNames="md:hidden"
+            classNames="lg:hidden"
             slides={popupSwiperData["vk"].mobile || []}
           />
         </div>

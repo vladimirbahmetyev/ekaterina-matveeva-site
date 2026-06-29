@@ -9,14 +9,14 @@ import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
 export const ProjectHeader = () => {
   const projectMeta = useProjectMeta();
   return (
-    <div className="px-2.5 md:px-30 pt-15! md:pt-[auto] md:py-15 pb-10">
+    <div className="px-2.5 lg:px-30 pt-15! lg:pt-[auto] lg:py-15 pb-10">
       <NavigationButton
         back
         text="На главную"
-        className="md:flex hidden mb-3"
+        className="lg:flex hidden mb-3"
       />
-      <div className="flex flex-col md:flex-row gap-4 md:justify-between mt-10">
-        <div className="flex flex-col gap-6 md:w-1/3">
+      <div className="flex flex-col lg:flex-row gap-4 lg:justify-between mt-10">
+        <div className="flex flex-col gap-6 lg:w-1/3">
           <Text variant="h3" color="heading">
             {projectMeta.title}
           </Text>
@@ -26,11 +26,11 @@ export const ProjectHeader = () => {
           {projectMeta.link && (
             <ExternalLinkButton
               link={projectMeta.link}
-              className="hidden md:inline-flex w-fit"
+              className="hidden lg:inline-flex w-fit"
             />
           )}
         </div>
-        <div className="flex flex-col w-full md:w-1/3 gap-2 md:gap-4">
+        <div className="flex flex-col w-full lg:w-1/3 gap-2 lg:gap-4">
           <div className="grid grid-cols-2 w-full">
             <Text variant="text" color="light-beige">
               тип сайта

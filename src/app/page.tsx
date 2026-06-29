@@ -15,15 +15,15 @@ export default function Home() {
         <Steps />
         <Projects />
         <Services />
-        <div className="px-2.5 md:px-30 w-full mb-10 md:mb-[-60px] sm:flex sm:justify-center md:justify-between">
+        <div className="px-2.5 lg:px-30 w-full mb-10 lg:mb-[-60px] sm:flex sm:justify-center lg:justify-between">
           <Image
             src="/svg/heart.svg"
             alt=""
             width={42}
             height={56}
-            className="hidden md:block"
+            className="hidden lg:block"
           />
-          <div className="mt-10 md:mt-0 grow-0 bg-white flex flex-col items-center border-[#B6B2A8] border-1 rounded-xl md:rounded-3xl p-4 relative w-full sm:w-75">
+          <div className="mt-10 lg:mt-0 grow-0 bg-white flex flex-col items-center border-[#B6B2A8] border-1 rounded-xl lg:rounded-3xl p-4 relative w-full sm:w-75">
             <Image
               src={"/img/footer/klev.webp"}
               alt=""

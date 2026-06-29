@@ -28,12 +28,12 @@ const colorMap: Record<colorType, string> = {
 };
 
 const variantMap: Record<variantType, string> = {
-  h3: "text-[16px]/[120%] md:text-[20px]/[120%] md:font-semibold md:tracking-[3%]",
-  h4: "text-[16px]/[120%] font-semibold md:text-[18px]/[120%]",
+  h3: "text-[16px]/[120%] tracking-0 lg:text-[20px]/[120%] lg:font-semibold lg:tracking-[3%]",
+  h4: "text-[16px]/[120%] font-semibold lg:text-[18px]/[120%]",
   text: "text-[16px]/[120%]",
-  "body-text": "text-[14px]/[120%] md:text-[16px]/[120%]",
-  caption: "text-[12px]/[140%] md:text-[12px]/[140%] md:tracking-[0%]",
-  footnote: "text-[10px]/[110%] md:text-[14px]/[110%] md:tracking-[3%]",
+  "body-text": "text-[14px]/[120%] lg:text-[16px]/[120%]",
+  caption: "text-[12px]/[140%] lg:text-[12px]/[140%] lg:tracking-[0%]",
+  footnote: "text-[10px]/[110%] lg:text-[14px]/[110%] lg:tracking-[3%]",
 };
 
 export const Text: FC<TextProps> = ({

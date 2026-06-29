@@ -20,7 +20,7 @@ interface SwiperCardProps {
 
 const SwiperCard: FC<SwiperCardProps> = ({ imgUrl, step, text, title }) => {
   return (
-    <div className="bg-[#F9F5EC] rounded-xl  min-h-[600px] md:min-h-[603px]">
+    <div className="bg-[#F9F5EC] rounded-xl  min-h-[600px] lg:min-h-[603px]">
       {imgUrl && (
         <Image
           className="w-full"
@@ -30,7 +30,7 @@ const SwiperCard: FC<SwiperCardProps> = ({ imgUrl, step, text, title }) => {
           height={140}
         />
       )}
-      <div className="p-5 md:p-8">
+      <div className="p-5 lg:p-8">
         <div className="flex flex-col gap-4">
           <Text variant="footnote" color="light-beige">
             {step}
@@ -73,15 +73,15 @@ export const Steps: FC = () => {
   return (
     <div
       id="steps"
-      className="max-w-full flex flex-col items-center gap-2 my-10 md:my-15 md:pt-10"
+      className="max-w-full flex flex-col items-center gap-2 my-10 lg:my-15 lg:pt-10"
     >
       <Heading className="mb-2">Этапы работы</Heading>
       <div className="max-w-full pl-2.5">
-        <div className="flex flex-col md:flex-row items-center gap-2 justify-center md:px-30 w-full relative">
+        <div className="flex flex-col lg:flex-row items-center gap-2 justify-center lg:px-30 w-full relative">
           <Text className="text-center max-w-[40ch]" variant="h4" color="beige">
             Благодаря которым сотрудничество будет понятным и безопасным
           </Text>
-          <div className="flex gap-2 items-center md:absolute right-[120px] top-0">
+          <div className="flex gap-2 items-center lg:absolute right-[120px] top-0">
             <div
               className="rotate-180 cursor-pointer"
               onClick={() => onArrowClick("prev")}
@@ -97,7 +97,7 @@ export const Steps: FC = () => {
           </div>
         </div>
         <Swiper
-          className="mt-3 md:mt-6 relative !pb-12"
+          className="mt-3 lg:mt-6 relative !pb-12"
           slidesPerView={1.1}
           spaceBetween={8}
           modules={[Navigation, Pagination]}
@@ -106,7 +106,7 @@ export const Steps: FC = () => {
             640: {
               slidesPerView: 2,
             },
-            768: {
+            1024: {
               slidesPerView: 2.5,
               spaceBetween: 20,
               slidesOffsetBefore: 120,

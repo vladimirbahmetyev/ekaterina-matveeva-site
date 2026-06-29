@@ -7,16 +7,16 @@ import { ExternalLinkButton } from "@/app/ui/buttons/ExternalLinkButton";
 export const ProjectFooter = () => {
   const projectMeta = useProjectMeta();
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center w-full  px-2.5 md:px-30 mt-10 gap-5">
+    <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center w-full  px-2.5 lg:px-30 mt-10 gap-5">
       <NavigationButton
         text="На главную"
         url="/"
-        className="order-2 md:order-1 md:justify-self-start"
+        className="order-2 lg:order-1 lg:justify-self-start"
       />
       {projectMeta.link && (
         <ExternalLinkButton
           link={projectMeta.link}
-          className="md:order-2 md:justify-self-end"
+          className="lg:order-2 lg:justify-self-end"
         />
       )}
     </div>

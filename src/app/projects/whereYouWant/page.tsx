@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WhereYouWant(): FC {
   return (
-    <div className="flex flex-col px-2.5 gap-10 md:px-30">
+    <div className="flex flex-col px-2.5 gap-10 lg:px-30">
       <Image
         src="/img/projects/whereYouWant/kudaygodno_1_video.webp"
         width={590}

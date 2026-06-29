@@ -2,6 +2,7 @@ import { Text } from "@/app/ui/typography/Text";
 import Image from "next/image";
 import { Heading } from "@/app/ui/typography/Heading";
 import { OrderButton } from "@/app/ui/buttons/OrderButton";
+import Link from "next/link";
 
 export const Intro = () => (
   <div id="top" className="px-4 md:px-30 h-screen w-full pb-10">
@@ -53,13 +54,15 @@ export const Intro = () => (
       <Text variant="text" color="dark-beige" className="justify-self-start">
         Tilda · Figma
       </Text>
-      <Image
-        className="mb-0 animate-bounce justify-self-center"
-        src="/svg/icon_arrow.svg"
-        alt=""
-        width={36}
-        height={36}
-      />
+      <Link href={"/#approach"} className="flex justify-center items-center">
+        <Image
+          className="mb-0 animate-bounce justify-self-center"
+          src="/svg/icon_arrow.svg"
+          alt=""
+          width={36}
+          height={36}
+        />
+      </Link>
       <Text variant="text" color="dark-beige" className="justify-self-end">
         Скачать резюме
       </Text>

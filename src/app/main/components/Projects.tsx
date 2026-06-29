@@ -119,7 +119,7 @@ export const Projects = () => {
   return (
     <div
       id="cases"
-      className="flex flex-col items-center gap-2 md:px-30 md:mt-10 pb-10 px-4"
+      className="flex flex-col items-center gap-2 lg:px-30 lg:mt-10 pb-10 px-4"
     >
       <Heading variant="h2" className="mb-2">
         Рабочие проекты
@@ -127,7 +127,7 @@ export const Projects = () => {
       <Text className="mb-6 mb-10" variant="h4" color="beige">
         Портфолио с дизайн-кейсами
       </Text>
-      <div className="flex justify-center md:justify-start gap-2 mb-10 flex-wrap">
+      <div className="flex justify-center lg:justify-start gap-2 mb-10 flex-wrap">
         {filterTags.map((val) => {
           return (
             <div
@@ -146,7 +146,7 @@ export const Projects = () => {
           );
         })}
       </div>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {projectsToDraw.map((project) => (
           <ProjectCard {...project} key={project.title} />
         ))}

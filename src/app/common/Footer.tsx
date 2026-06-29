@@ -23,7 +23,7 @@ export const Footer = () => {
       className="flex flex-col items-center justify-center gap-6 relative z-20"
     >
       {!is404 && (
-        <div className="flex flex-col items-center justify-center px-2.5 w-full md:mb-[-60px]">
+        <div className="flex flex-col items-center justify-center px-2.5 w-full lg:mb-[-60px]">
           <Heading className="mb-5">Екатерина Матвеева</Heading>
           <Image
             className="rounded-xl mb-5"
@@ -41,9 +41,9 @@ export const Footer = () => {
         </div>
       )}
 
-      <div className="flex flex-col md:flex-row gap-3 items-center md:justify-between md:w-full md:px-30 relative">
-        <div className="md:order-2">
-          <a className="flex justify-center md:justify-start gap-2 items-center mb-3">
+      <div className="flex flex-col lg:flex-row gap-3 items-center lg:justify-between lg:w-full lg:px-30 relative">
+        <div className="lg:order-2">
+          <a className="flex justify-center lg:justify-start gap-2 items-center mb-3">
             <Text variant="h4" color="dark-beige">
               Скачать резюме{" "}
             </Text>
@@ -53,13 +53,13 @@ export const Footer = () => {
             <Text
               variant="h4"
               color="dark-beige"
-              className="justify-center md:justify-start"
+              className="justify-center lg:justify-start"
             >
               matveevae.work@gmail.com
             </Text>
           </a>
         </div>
-        <div className="md:order-1">
+        <div className="lg:order-1">
           <a
             href="https://vk.com/prezakatya"
             target="_blank"
@@ -68,7 +68,7 @@ export const Footer = () => {
             <Text
               variant="h4"
               color="dark-beige"
-              className="mb-3 flex justify-center md:justify-start"
+              className="mb-3 flex justify-center lg:justify-start"
             >
               Вконтакте
             </Text>
@@ -81,7 +81,7 @@ export const Footer = () => {
             <Text
               variant="h4"
               color="dark-beige"
-              className="mb-5 flex justify-center md:justify-start"
+              className="mb-5 flex justify-center lg:justify-start"
             >
               Instagram*
             </Text>
@@ -89,7 +89,7 @@ export const Footer = () => {
           <Text
             variant="footnote"
             color="light-beige"
-            className="text-center flex justify-center md:justify-start"
+            className="text-center flex justify-center lg:justify-start"
           >
             *признан экстремистской организацией в РФ
           </Text>
@@ -99,10 +99,10 @@ export const Footer = () => {
           alt=""
           width={42}
           height={56}
-          className="absolute right-[110%] bottom-[20%] md:hidden"
+          className="absolute right-[110%] bottom-[20%] lg:hidden"
         />
       </div>
-      <div className="flex justify-between gap-3 px-2.5 md:px-30 py-3 md:py-5 border-t-[#F2F1F1] border-t-1 w-full">
+      <div className="flex justify-between gap-3 px-2.5 lg:px-30 py-3 lg:py-5 border-t-[#F2F1F1] border-t-1 w-full">
         <Text
           variant="caption"
           color="light-beige"
@@ -113,7 +113,7 @@ export const Footer = () => {
         <Text
           variant="caption"
           color="light-beige"
-          className="max-w-[40%] md:max-w-[auto]"
+          className="max-w-[40%] lg:max-w-[auto]"
         >
           Дизайн разработала Матвеева Екатерина
         </Text>

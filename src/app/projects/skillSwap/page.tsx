@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function SkillSwap(): FC {
   return (
-    <div className="flex flex-col px-2.5 md:px-30 gap-10">
+    <div className="flex flex-col px-2.5 lg:px-30 gap-10">
       <Info
         title="Вводные данные"
         description="Нужно было создать удобное и эмоционально приятное приложение для iOS, которое помогает пользователям находить новые хобби и развивать навыки через онлайн-мастер-классы. Основной акцент — удобная навигация, простое бронирование, наглядный прогресси живой, мотивирующий пользовательский опыт."

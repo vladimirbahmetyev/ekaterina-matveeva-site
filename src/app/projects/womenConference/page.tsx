@@ -136,7 +136,7 @@ export const popupSwiperData: Record<
 function WomenConference() {
   const { openPopup } = useContext(PopupContext);
   return (
-    <div className="px-2.5 flex flex-col gap-10 md:px-30">
+    <div className="px-2.5 flex flex-col gap-10 lg:px-30">
       <Image
         src="/img/projects/womenConference/portfolio_video2_conference.webp"
         width={1200}
@@ -147,7 +147,7 @@ function WomenConference() {
       <div className="flex flex-col gap-4">
         <ExternalLinkButton
           link="https://jul-n.ru/event"
-          className="md:hidden"
+          className="lg:hidden"
         />
         <Text variant="h3" color="heading">
           Вводные данные
@@ -251,7 +251,7 @@ function WomenConference() {
             спикеров
           </Text>
           <div
-            className="hidden md:block cursor-pointer bg-[#F9F5EC] px-8 py-4 border-1 border-[#B6B2A8] rounded-full w-fit justify-self-end"
+            className="hidden lg:block cursor-pointer bg-[#F9F5EC] px-8 py-4 border-1 border-[#B6B2A8] rounded-full w-fit justify-self-end"
             onClick={() => openPopup("presentation_conference")}
           >
             <Text color="beige" variant="text">
@@ -274,7 +274,7 @@ function WomenConference() {
         className="w-full"
       />
       <div
-        className="flex justify-center md:hidden cursor-pointer bg-[#F9F5EC] px-8 py-4 border-1 border-[#B6B2A8] rounded-full w-full justify-self-end"
+        className="flex justify-center lg:hidden cursor-pointer bg-[#F9F5EC] px-8 py-4 border-1 border-[#B6B2A8] rounded-full w-full justify-self-end"
         onClick={() => openPopup("presentation_conference")}
       >
         <Text color="beige" variant="text">

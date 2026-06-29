@@ -65,7 +65,7 @@ const Service: FC<ServiceProps> = ({ title, bordered, price, description }) => {
           </Text>
         )}
       </div>
-      <Text variant="text" color="beige" className="md:max-w-1/2">
+      <Text variant="text" color="beige" className="lg:max-w-1/2">
         {description}
       </Text>
     </div>
@@ -103,9 +103,9 @@ export const Services = () => {
   return (
     <div
       id="price"
-      className="flex flex-col gap-6 px-2.5 md:px-30 mb-12 mt-10 md:w-full"
+      className="flex flex-col gap-6 px-2.5 lg:px-30 mb-12 mt-10 lg:w-full"
     >
-      <div className="flex flex-col items-center gap-2 mb-8 md:mb-14">
+      <div className="flex flex-col items-center gap-2 mb-8 lg:mb-14">
         <div className="flex gap-5 items-center">
           <Heading>Услуги и стоимость</Heading>
           <div
@@ -125,7 +125,7 @@ export const Services = () => {
               nodeRef={nodeRef}
             >
               <div
-                className="min-w-70 aspect-277/330 md:min-w-100 absolute top-[100%] right-[100%] md:aspect-392/328 border-1 border-[#B6B2A8] p-3 rounded-2xl z-10 bg-white rounded-tr-[0px]!"
+                className="min-w-70 aspect-277/330 lg:min-w-100 absolute top-[100%] right-[100%] lg:aspect-392/328 border-1 border-[#B6B2A8] p-3 rounded-2xl z-10 bg-white rounded-tr-[0px]!"
                 ref={nodeRef}
               >
                 <Text color="heading" variant="body-text">

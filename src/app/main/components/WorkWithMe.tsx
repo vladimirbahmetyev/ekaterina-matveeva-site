@@ -37,12 +37,12 @@ export const WorkWithMe: FC = () => {
 
   return (
     <div
-      className="flex flex-col px-0 md:px-30 gap-1 items-center mt-5 md:pt-15"
+      className="flex flex-col px-0 lg:px-30 gap-1 items-center mt-5 lg:pt-15"
       id="approach"
     >
       <Heading variant="h2">Работа со мной</Heading>
       <Text
-        className="px-5 md:px-0 text-center mb-0 md:mb-10"
+        className="px-5 lg:px-0 text-center mb-0 lg:mb-10"
         variant="h4"
         color="light-beige"
       >
@@ -50,12 +50,12 @@ export const WorkWithMe: FC = () => {
       </Text>
       <div
         className={
-          "hidden md:grid grid-cols-1 md:grid-cols-4 grid-rows-6 md:grid-rows-2 gap-2 md:gap-5"
+          "hidden lg:grid grid-cols-1 lg:grid-cols-4 grid-rows-6 lg:grid-rows-2 gap-2 lg:gap-5"
         }
       >
         <Card
           variant="filled"
-          className={"md:col-start-2 col-span-2 md:row-start-1 relative"}
+          className={"lg:col-start-2 col-span-2 lg:row-start-1 relative"}
           ref={ref_1}
         >
           <div className="relative flex flex-col justify-between h-full">
@@ -82,7 +82,7 @@ export const WorkWithMe: FC = () => {
         <Card
           ref={ref_2}
           variant="white"
-          className="md:col-start-1 min-h-[313px]"
+          className="lg:col-start-1 min-h-[313px]"
         >
           <div className="flex flex-col justify-between h-full">
             <Text variant="h4" color="dark-beige">
@@ -111,7 +111,7 @@ export const WorkWithMe: FC = () => {
         <Card
           ref={ref_4}
           variant="filled"
-          className={"md:col-start-3 col-span-2 relative overflow-hidden"}
+          className={"lg:col-start-3 col-span-2 relative overflow-hidden"}
         >
           <div className="flex flex-col justify-between h-full w-[50%]">
             <div className="flex  justify-between mb-1.5">
@@ -134,7 +134,7 @@ export const WorkWithMe: FC = () => {
         </Card>
         <Card
           variant="white"
-          className="md:col-start-2 md:row-start-2"
+          className="lg:col-start-2 lg:row-start-2"
           ref={ref_5}
         >
           <div className="flex flex-col justify-between h-full">
@@ -149,7 +149,7 @@ export const WorkWithMe: FC = () => {
         <Card
           ref={ref_6}
           variant="filled"
-          className="md:col-start-1 md:row-start-2 relative"
+          className="lg:col-start-1 lg:row-start-2 relative"
         >
           <>
             <div className="flex flex-col justify-between h-full relative z-10">
@@ -171,7 +171,7 @@ export const WorkWithMe: FC = () => {
           </>
         </Card>
       </div>
-      <div className="md:hidden relative max-w-[100vw] px-5">
+      <div className="lg:hidden relative max-w-[100vw] px-5">
         <div className="flex gap-2 items-center justify-center mb-3">
           <div
             className="rotate-180 cursor-pointer"
@@ -191,7 +191,7 @@ export const WorkWithMe: FC = () => {
             640: {
               slidesPerView: 2,
             },
-            768: {
+            1024: {
               slidesPerView: 2.5,
               spaceBetween: 20,
               slidesOffsetBefore: 120,

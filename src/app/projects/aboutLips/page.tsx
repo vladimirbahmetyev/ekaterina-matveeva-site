@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AboutLips() {
   return (
-    <div className="flex flex-col gap-10 px-2.5 md:px-30">
+    <div className="flex flex-col gap-10 px-2.5 lg:px-30">
       <Image
         src="/img/projects/aboutLips/lips_1_video.webp"
         alt=""
@@ -12,7 +12,7 @@ export default function AboutLips() {
         height={590}
         className="w-full"
       />
-      <ExternalLinkButton link="https://jul-n.ru/" className="md:hidden" />
+      <ExternalLinkButton link="https://jul-n.ru/" className="lg:hidden" />
       <Info
         title={"Вводные данные"}
         description={

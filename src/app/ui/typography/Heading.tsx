@@ -11,8 +11,8 @@ interface HeadingProps {
 }
 
 const VariantMap: Record<variantType, string> = {
-  h1: "text-[38px]/[100%] md:text-[64px]/[100%]",
-  h2: "text-[38px]/[100%] md:text-[48px]/[100%]",
+  h1: "text-[38px]/[100%] lg:text-[64px]/[100%]",
+  h2: "text-[38px]/[100%] lg:text-[48px]/[100%]",
 };
 
 const colorMap: Record<colorType, string> = {

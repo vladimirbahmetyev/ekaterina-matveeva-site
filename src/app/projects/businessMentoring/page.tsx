@@ -81,8 +81,8 @@ export default function BusinessMentoring() {
     ? presentationCards
     : presentationCards.slice(0, 3);
   return (
-    <div className="flex flex-col gap-10 px-2.5 md:px-30">
-      <div className="gap-10 grid sm:grid-cols-2 md:grid-cols-3">
+    <div className="flex flex-col gap-10 px-2.5 lg:px-30">
+      <div className="gap-10 grid sm:grid-cols-2 lg:grid-cols-3">
         {cardsToDraw.map((val) => (
           <PresentationCard {...val} key={val.title} />
         ))}

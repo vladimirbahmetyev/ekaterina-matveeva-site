@@ -10,6 +10,10 @@ import { AnimatePresence, motion } from "motion/react";
 
 const rootUrls = [
   {
+    label: "Главная",
+    id: "top",
+  },
+  {
     label: "Подход и ценности",
     id: "approach",
   },
@@ -67,7 +71,7 @@ export const Navigation: FC = () => {
   };
   return (
     <>
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <div className="fixed z-30 top-0 w-full flex items-center py-3.5 justify-between px-5 bg-[#F9F5EC]">
           <Link href="/#top">
             <Text variant="body-text" color="beige">
@@ -316,7 +320,7 @@ export const Navigation: FC = () => {
           )}{" "}
         </AnimatePresence>
       </div>
-      <div className="top-0 fixed z-100 hidden md:flex px-30 w-full justify-between bg-[#F9F5EC] py-6">
+      <div className="top-0 fixed z-100 hidden lg:flex px-30 w-full justify-between bg-[#F9F5EC] py-6">
         {rootUrls.map((val) => (
           <a href={`/#${val.id}`} key={val.id}>
             <Text variant="text" color="beige">

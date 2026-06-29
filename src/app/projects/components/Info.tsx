@@ -7,11 +7,16 @@ interface InfoProps {
 }
 
 export const Info: FC<InfoProps> = ({ title, description }) => (
-  <div className="flex flex-col gap-4 md:mt-10">
+  <div className="flex flex-col gap-4 lg:mt-10">
     <Text variant="h3" color="heading">
       {title}
     </Text>
-    <Text variant="text" color="beige" className="md:max-w-2/3" preserveFormatting>
+    <Text
+      variant="text"
+      color="beige"
+      className="lg:max-w-2/3"
+      preserveFormatting
+    >
       {description}
     </Text>
   </div>

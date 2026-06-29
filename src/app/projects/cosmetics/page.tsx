@@ -9,7 +9,7 @@ import { Info } from "@/app/projects/components/Info";
 
 export default function Cosmetics(): FC {
   return (
-    <div className="px-2.5 md:px-30 flex flex-col gap-10">
+    <div className="px-2.5 lg:px-30 flex flex-col gap-10">
       <Image
         src="/img/projects/cosmetics/portfolio_video1.webp"
         width={1200}
@@ -21,7 +21,7 @@ export default function Cosmetics(): FC {
         <Text color="heading" variant="h3">
           Вводные данные
         </Text>
-        <Text color="beige" variant="text" className="md:max-w-2/3">
+        <Text color="beige" variant="text" className="lg:max-w-2/3">
           Компания, занимающаяся поставками и продажей японской косметики в
           России, обратилась ко мне с задачей создать современный
           интернет-магазин, который объединит функции продажи, информирования и
@@ -44,12 +44,12 @@ export default function Cosmetics(): FC {
         />
       </div>
       <div className="flex flex-col gap-4">
-        <Text color="heading" variant="h3" className="md:maw-w-4/5">
+        <Text color="heading" variant="h3" className="lg:maw-w-4/5">
           Сайт был полностью разработан мной на платформе Tilda. Визуальное
           оформление я построилана сочетании минимализма и акцента на продукции,
           чтобы подчеркнуть премиальность бренда.
         </Text>
-        <Text color="beige" variant="text" className="md:max-w-2/3">
+        <Text color="beige" variant="text" className="lg:max-w-2/3">
           Я реализовала сайт интернет-магазина с возможностью покупки и
           оформления доставки. Внедрила систему сбора контактов потенциальных
           клиентов, наполнила каталог товаров с фильтрацией, сортировкой и
@@ -75,11 +75,11 @@ export default function Cosmetics(): FC {
         />
       </div>
       <div className="flex flex-col gap-4">
-        <Text color="heading" variant="h3" className="md:max-w-3/4">
+        <Text color="heading" variant="h3" className="lg:max-w-3/4">
           Для вовлечения пользователей я внедрила интерактивный квиз. Это
           позволило компании эффективно собирать лиды и расширять базу клиентов.
         </Text>
-        <Text color="beige" variant="text" className="md:max-w-2/3">
+        <Text color="beige" variant="text" className="lg:max-w-2/3">
           Посетитель отвечает на несколько вопросов о типе своей кожи, выделяет
           проблемы с которыми он сталкиевается в ходе за ней и получает гайд по
           уходу в обмен на контактные данные.
@@ -97,7 +97,7 @@ export default function Cosmetics(): FC {
           В результате проекта клиент получил не просто интернет-магазин, а
           полноценную платформу, объединяющую продажи, маркетинг и контент.
         </Text>
-        <Text color="beige" variant="text" className="md:max-w-3/4">
+        <Text color="beige" variant="text" className="lg:max-w-3/4">
           Благодаря продуманной структуре и интуитивному интерфейсу пользователи
           быстро находят нужные товары и совершают покупку в несколько кликов.
           Квиз с гайд-подарком помогает регулярно пополнять базу подписчиков и
@@ -123,7 +123,7 @@ export default function Cosmetics(): FC {
           alt=""
           width={590}
           height={590}
-          className="md: col-span-2 w-full"
+          className="lg: col-span-2 w-full"
         />
         <Image
           src="/img/projects/cosmetics/sk_dk_9.webp"
