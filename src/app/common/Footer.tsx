@@ -21,7 +21,7 @@ export const Footer = () => {
   return (
     <footer
       id="contacts"
-      className="flex flex-col items-center justify-center gap-6 relative z-20"
+      className={`flex flex-col items-center justify-center gap-6  z-20 ${is404 ? "absolute bottom-0 w-full" : "relative"}`}
     >
       {!is404 && (
         <div className="flex flex-col items-center justify-center px-2.5 w-full lg:mb-[-60px] relative">
