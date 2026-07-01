@@ -16,18 +16,16 @@ export const PresentationCard: FC<PresentationCardProps> = ({
 }) => {
   const ref = useScrollReveal();
   return (
-    <div
+    <a
       className={"flex flex-col gap-3"}
-      ref={ref as RefObject<HTMLDivElement>}
+      ref={ref as RefObject<HTMLAnchorElement>}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <Image src={imgUrl} alt="" width={386} height={474} />
       <Text className="text-[#777162]">{title}</Text>
-      <a
-        href={link}
-        className="flex items-center gap-2"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <div className="flex items-center gap-2">
         <Text className="text-[#E3A127]">Посетить сайт</Text>
         <Image
           className="rotate-135"
@@ -36,7 +34,7 @@ export const PresentationCard: FC<PresentationCardProps> = ({
           width={11}
           height={10}
         />
-      </a>
-    </div>
+      </div>
+    </a>
   );
 };
