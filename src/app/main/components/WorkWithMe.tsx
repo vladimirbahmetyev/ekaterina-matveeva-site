@@ -10,18 +10,20 @@ import { Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import "swiper/css/pagination";
+
+import { Navigation, Pagination } from "swiper/modules";
 import { useScrollReveal } from "@/app/hooks/useScrollReveal";
 
 export const WorkWithMe: FC = () => {
   const swiper = useRef<null | SwiperType>(null);
-  const [isFirst, setIsFirst] = useState(false);
+  const [isFirst, setIsFirst] = useState(true);
   const [isLast, setIsLast] = useState(false);
 
   const onSwipe = () => {
     const { isEnd, isBeginning } = swiper.current ?? {};
     setIsLast(isEnd ?? false);
-    setIsFirst(isBeginning ?? false);
+    setIsFirst(isBeginning ?? true);
   };
 
   const onArrowClick = (direction: "next" | "prev") => {
@@ -50,7 +52,7 @@ export const WorkWithMe: FC = () => {
         variant="h4"
         color="light-beige"
       >
-        Это качественный результатс комфортом для всех
+        Это качественный результат с комфортом для всех
       </Text>
       <div
         className={
@@ -179,7 +181,7 @@ export const WorkWithMe: FC = () => {
           </>
         </Card>
       </div>
-      <div className="lg:hidden relative max-w-[100vw] px-5">
+      <div className="lg:hidden relative max-w-[100vw]">
         <div className="flex gap-2 items-center justify-center mb-3">
           <div
             className="rotate-180 cursor-pointer"
@@ -192,9 +194,11 @@ export const WorkWithMe: FC = () => {
           </div>
         </div>
         <Swiper
-          slidesPerView={1}
+          slidesOffsetBefore={20}
+          slidesPerView={1.1}
           spaceBetween={8}
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
+          pagination={{ clickable: true }}
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -222,12 +226,13 @@ export const WorkWithMe: FC = () => {
                   width={200}
                   height={228}
                   alt=""
+                  className="self-end lg:self-auto"
                 />
                 <div className="flex flex-col gap-2">
                   <Text color="beige" variant="text">
                     Чтобы сделать интерфейс интуитивным и удобным
                   </Text>
-                  <Text color="beige" variant="text">
+                  <Text color="light-beige" variant="text">
                     JTBD, персоны, интервью, опросы, анализ конкурентов и
                     аудитории
                   </Text>

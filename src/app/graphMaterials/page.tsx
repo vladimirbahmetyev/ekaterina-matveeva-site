@@ -301,7 +301,7 @@ export default function GraphMaterials() {
         <Button
           className="mb-5 inline-flex"
           text={"Узнать про кейс подробнее"}
-          link="/projects/businessMentoring"
+          link="/projects/businessMentoring#top"
         />
         <PopupSwiper
           slides={popupSwiperData["alex"].desktop}

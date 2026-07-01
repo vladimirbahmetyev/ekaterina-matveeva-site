@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
+import { tr } from "motion/react-client";
 
 interface SwiperCardProps {
   imgUrl?: string;
@@ -60,7 +61,7 @@ export const Steps: FC = () => {
   const onSwipe = () => {
     const { isEnd, isBeginning } = swiper.current ?? {};
     setIsLast(isEnd ?? false);
-    setIsFirst(isBeginning ?? false);
+    setIsFirst(isBeginning ?? true);
   };
 
   const onArrowClick = (direction: "next" | "prev") => {

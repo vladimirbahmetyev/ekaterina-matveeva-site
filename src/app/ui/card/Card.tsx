@@ -5,7 +5,7 @@ type cardType = "white" | "orange" | "filled";
 const CardStyleMap: Record<cardType, string> = {
   white: "border-[#EDE5D5]",
   orange: "border-[#FFCB6B]",
-  filled: "border-[transparent] bg-[#F9F5EC]",
+  filled: "border-[#EDE5D5] bg-[#F9F5EC]",
 };
 
 interface CardProps {
